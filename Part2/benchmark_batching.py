@@ -95,7 +95,8 @@ def benchmark_training(
         optimizer = torch.optim.Adam(model_copy.parameters(), lr=0.001)
         loss_fn = nn.CrossEntropyLoss()
         
-        dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
+        # drop_last=True to avoid batch_size=1 for last incomplete batch
+        dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True, drop_last=True)
         
         processed = 0
         start_time = time.time()
