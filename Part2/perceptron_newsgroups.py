@@ -160,14 +160,14 @@ if __name__ == "__main__":
         "-f",
         "--features",
         type=str,
-        default="bow+neg+punct+topic+caps",
+        default="bow",
         help="Feature type, e.g., bow+len",
     )
     parser.add_argument(
-        "-e", "--epochs", type=int, default=30, help="Number of epochs"
+        "-e", "--epochs", type=int, default=10, help="Number of epochs"
     )
     parser.add_argument(
-        "-l", "--learning_rate", type=float, default=0.0005, help="Learning rate"
+        "-l", "--learning_rate", type=float, default=0.001, help="Learning rate"
     )
     args = parser.parse_args()
 

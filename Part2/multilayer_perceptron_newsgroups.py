@@ -142,18 +142,18 @@ class MultilayerPerceptronModel(nn.Module):
         self.l1 = nn.Linear(embed_dim, 256)
         self.bn1 = nn.BatchNorm1d(256)
         self.tanh1 = nn.Tanh()  # Tanh activation
-        self.dropout1 = nn.Dropout(0.3)
+        self.dropout1 = nn.Dropout(0.1)
 
         # Second layer
         self.l2 = nn.Linear(256, 128)
         self.bn2 = nn.BatchNorm1d(128)
         self.relu2 = nn.ReLU()  # Mix activations
-        self.dropout2 = nn.Dropout(0.3)
+        self.dropout2 = nn.Dropout(0.1)
 
         # Third layer
         self.l3 = nn.Linear(128, 64)
         self.relu3 = nn.ReLU()
-        self.dropout3 = nn.Dropout(0.2)
+        self.dropout3 = nn.Dropout(0.1)
         
         # Output layer
         self.l4 = nn.Linear(64, num_classes)
@@ -269,7 +269,7 @@ class Trainer:
         for epoch in range(num_epochs):
             self.model.train()
             total_loss = 0
-            dataloader = DataLoader(training_data, batch_size=64, shuffle=True)
+            dataloader = DataLoader(training_data, batch_size=4, shuffle=True)
             for inputs_b_l, lengths_b, labels_b in tqdm(dataloader):
                 logits_b_c = self.model(inputs_b_l, lengths_b)
     
@@ -302,14 +302,14 @@ if __name__ == "__main__":
         "-d",
         "--data",
         type=str,
-        default="sst2",
+        default="newsgroups",
         help="Data source, one of ('sst2', 'newsgroups')",
     )
     parser.add_argument(
-        "-e", "--epochs", type=int, default=10, help="Number of epochs"
+        "-e", "--epochs", type=int, default=20, help="Number of epochs"
     )
     parser.add_argument(
-        "-l", "--learning_rate", type=float, default=0.003, help="Learning rate"
+        "-l", "--learning_rate", type=float, default=0.001, help="Learning rate"
     )
     args = parser.parse_args()
 
@@ -339,7 +339,7 @@ if __name__ == "__main__":
     trainer = Trainer(model)
 
     print("Training the model...")
-    optimizer = torch.optim.Adam(model.parameters(), lr=lr)
+    optimizer = torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=1e-4)
     trainer.train(train_ds, val_ds, optimizer, num_epochs)
 
     # Evaluate on dev

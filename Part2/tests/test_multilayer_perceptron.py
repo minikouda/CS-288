@@ -1,6 +1,6 @@
 import pytest
 import torch
-from multilayer_perceptron import (
+from self.Part2.multilayer_perceptron_newsgroups import (
     DataPoint,
     MultilayerPerceptronModel,
     Tokenizer,
