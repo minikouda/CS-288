@@ -201,8 +201,9 @@ class MultilayerPerceptronModel(nn.Module):
 
 
 class Trainer:
-    def __init__(self, model: nn.Module):
-        self.model = model
+    def __init__(self, model: nn.Module, device: torch.device = None):
+        self.device = device if device is not None else torch.device('cpu')
+        self.model = model.to(self.device)
 
     def predict(self, data: BOWDataset) -> List[int]:
         """Predicts a label for an input.
@@ -220,9 +221,11 @@ class Trainer:
 
         with torch.no_grad():
             for inputs_b_l, lengths_b, labels_b in tqdm(dataloader):
+                inputs_b_l = inputs_b_l.to(self.device)
+                lengths_b = lengths_b.to(self.device)
                 logits_b_c = self.model(inputs_b_l, lengths_b)
                 preds_b = torch.argmax(logits_b_c, dim=1)
-                all_predictions.extend(preds_b.tolist())
+                all_predictions.extend(preds_b.cpu().tolist())
         return all_predictions
         
     def evaluate(self, data: BOWDataset) -> float:
@@ -241,9 +244,11 @@ class Trainer:
         
         with torch.no_grad():
             for inputs_b_l, lengths_b, labels_b in dataloader:
+                inputs_b_l = inputs_b_l.to(self.device)
+                lengths_b = lengths_b.to(self.device)
                 logits_b_c = self.model(inputs_b_l, lengths_b)
                 preds_b = torch.argmax(logits_b_c, dim=1)
-                all_predictions.extend(preds_b.tolist())
+                all_predictions.extend(preds_b.cpu().tolist())
                 all_targets.extend(labels_b.tolist())
         
         return accuracy(all_predictions, all_targets)
@@ -271,6 +276,10 @@ class Trainer:
             total_loss = 0
             dataloader = DataLoader(training_data, batch_size=4, shuffle=True)
             for inputs_b_l, lengths_b, labels_b in tqdm(dataloader):
+                inputs_b_l = inputs_b_l.to(self.device)
+                lengths_b = lengths_b.to(self.device)
+                labels_b = labels_b.to(self.device)
+                
                 logits_b_c = self.model(inputs_b_l, lengths_b)
     
                 loss_fn = nn.CrossEntropyLoss()
@@ -330,13 +339,19 @@ if __name__ == "__main__":
     dev_ds = BOWDataset(dev_data, tokenizer, label2id, max_length)
     test_ds = BOWDataset(test_data, tokenizer, label2id, max_length)
 
+    # Setup device (GPU if available)
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    print(f"Using device: {device}")
+    if device.type == 'cuda':
+        print(f"GPU: {torch.cuda.get_device_name(0)}")
+    
     model = MultilayerPerceptronModel(
         vocab_size=len(tokenizer.token2id),
         num_classes=len(label2id),
         padding_index=Tokenizer.TOK_PADDING_INDEX,
     )
 
-    trainer = Trainer(model)
+    trainer = Trainer(model, device=device)
 
     print("Training the model...")
     optimizer = torch.optim.Adam(model.parameters(), lr=lr, weight_decay=1e-4)
