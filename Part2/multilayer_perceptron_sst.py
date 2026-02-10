@@ -269,7 +269,7 @@ class Trainer:
         for epoch in range(num_epochs):
             self.model.train()
             total_loss = 0
-            dataloader = DataLoader(training_data, batch_size=64, shuffle=True)
+            dataloader = DataLoader(training_data, batch_size=4, shuffle=True)
             for inputs_b_l, lengths_b, labels_b in tqdm(dataloader):
                 logits_b_c = self.model(inputs_b_l, lengths_b)
     
