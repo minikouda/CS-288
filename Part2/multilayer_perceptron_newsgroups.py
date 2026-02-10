@@ -315,10 +315,10 @@ if __name__ == "__main__":
         help="Data source, one of ('sst2', 'newsgroups')",
     )
     parser.add_argument(
-        "-e", "--epochs", type=int, default=25, help="Number of epochs"
+        "-e", "--epochs", type=int, default=60, help="Number of epochs"
     )
     parser.add_argument(
-        "-l", "--learning_rate", type=float, default=0.001, help="Learning rate"
+        "-l", "--learning_rate", type=float, default=0.0006, help="Learning rate"
     )
     args = parser.parse_args()
 

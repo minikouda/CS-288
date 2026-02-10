@@ -142,21 +142,15 @@ class MultilayerPerceptronModel(nn.Module):
         self.l1 = nn.Linear(embed_dim, 256)
         self.bn1 = nn.BatchNorm1d(256)
         self.tanh1 = nn.Tanh()  # Tanh activation
-        self.dropout1 = nn.Dropout(0.2)
+        self.dropout1 = nn.Dropout(0.3)
 
         # Second layer
         self.l2 = nn.Linear(256, 128)
-        self.bn2 = nn.BatchNorm1d(128)
         self.relu2 = nn.ReLU()  # Mix activations
-        self.dropout2 = nn.Dropout(0.2)
+        self.dropout2 = nn.Dropout(0.3)
 
-        # Third layer
-        self.l3 = nn.Linear(128, 64)
-        self.relu3 = nn.ReLU()
-        self.dropout3 = nn.Dropout(0.1)
-        
         # Output layer
-        self.l4 = nn.Linear(64, num_classes)
+        self.l3 = nn.Linear(128, num_classes)
 
     def forward(
         self, input_features_b_l: torch.Tensor, input_length_b: torch.Tensor
@@ -185,17 +179,11 @@ class MultilayerPerceptronModel(nn.Module):
         
         # Layer 2: ReLU with batch norm
         hidden2 = self.l2(hidden1)
-        hidden2 = self.bn2(hidden2)
         hidden2 = self.relu2(hidden2)
         hidden2 = self.dropout2(hidden2)
         
-        # Layer 3: ReLU
-        hidden3 = self.l3(hidden2)
-        hidden3 = self.relu3(hidden3)
-        hidden3 = self.dropout3(hidden3)
-        
         # Output layer
-        output = self.l4(hidden3)
+        output = self.l3(hidden2)
         
         return output 
 
@@ -315,10 +303,10 @@ if __name__ == "__main__":
         help="Data source, one of ('sst2', 'newsgroups')",
     )
     parser.add_argument(
-        "-e", "--epochs", type=int, default=30, help="Number of epochs"
+        "-e", "--epochs", type=int, default=10, help="Number of epochs"
     )
     parser.add_argument(
-        "-l", "--learning_rate", type=float, default=0.001, help="Learning rate"
+        "-l", "--learning_rate", type=float, default=0.005, help="Learning rate"
     )
     args = parser.parse_args()
 
@@ -354,7 +342,7 @@ if __name__ == "__main__":
     trainer = Trainer(model, device=device)
 
     print("Training the model...")
-    optimizer = torch.optim.Adam(model.parameters(), lr=lr, weight_decay=1e-4)
+    optimizer = torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=1e-4)
     trainer.train(train_ds, val_ds, optimizer, num_epochs)
 
     # Evaluate on dev
