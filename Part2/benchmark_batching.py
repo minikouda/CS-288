@@ -196,19 +196,21 @@ def run_benchmark(
     print("\n" + "="*80)
     print("TRAINING BENCHMARK")
     print("="*80)
+    print("Note: Batch size 1 skipped for training (BatchNorm requires batch_size > 1)")
     print(f"{'Batch Size':<12} {'Mean Time (s)':<15} {'Std Dev (s)':<15} {'Speedup':<10}")
     print("-"*80)
     
     training_results = []
     baseline_training_time = None
+    training_batch_sizes = [bs for bs in batch_sizes if bs > 1]
     
-    for batch_size in batch_sizes:
+    for batch_size in training_batch_sizes:
         mean_time, std_time = benchmark_training(
             model, dataset, batch_size, device, num_examples, num_runs
         )
         training_results.append((batch_size, mean_time, std_time))
         
-        if batch_size == 1:
+        if baseline_training_time is None:
             baseline_training_time = mean_time
             speedup = 1.0
         else:
@@ -226,11 +228,12 @@ def run_benchmark(
     
     print(f"Best inference batch size: {inference_results[best_inference_idx][0]}")
     print(f"  Time: {inference_results[best_inference_idx][1]:.4f} ± {inference_results[best_inference_idx][2]:.4f}s")
-    print(f"  Speedup: {baseline_inference_time / inference_results[best_inference_idx][1]:.2f}x")
+    print(f"  Speedup vs batch_size=1: {baseline_inference_time / inference_results[best_inference_idx][1]:.2f}x")
     
     print(f"\nBest training batch size: {training_results[best_training_idx][0]}")
     print(f"  Time: {training_results[best_training_idx][1]:.4f} ± {training_results[best_training_idx][2]:.4f}s")
-    print(f"  Speedup: {baseline_training_time / training_results[best_training_idx][1]:.2f}x")
+    baseline_bs = training_results[0][0]
+    print(f"  Speedup vs batch_size={baseline_bs}: {training_results[0][1] / training_results[best_training_idx][1]:.2f}x")
     
     print("\n" + "="*80)
     
@@ -256,10 +259,15 @@ def run_benchmark(
         
         f.write("\nTRAINING RESULTS\n")
         f.write("-"*80 + "\n")
+        f.write("Note: Batch size 1 skipped (BatchNorm requires batch_size > 1)\n")
         f.write(f"{'Batch Size':<12} {'Mean Time (s)':<15} {'Std Dev (s)':<15} {'Speedup':<10}\n")
         f.write("-"*80 + "\n")
+        baseline_bs = training_results[0][0]
         for i, (bs, mean_t, std_t) in enumerate(training_results):
-            speedup = baseline_training_time / mean_t
+            if i == 0:
+                speedup = 1.0
+            else:
+                speedup = training_results[0][1] / mean_t
             f.write(f"{bs:<12} {mean_t:<15.4f} {std_t:<15.4f} {speedup:<10.2f}x\n")
     
     print(f"Results saved to: {output_file}")
