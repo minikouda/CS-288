@@ -3,7 +3,7 @@
 import enum
 import random
 from dataclasses import dataclass
-from typing import Any, List, Tuple
+from typing import Any, List, Tuple, Optional
 
 import pandas as pd
 
@@ -19,19 +19,30 @@ class DataType(enum.Enum):
 class DataPoint:
     id: int
     text: str
-    label: str | None
+    label: Optional[str]
 
 
 def read_labeled_data(
     data_filename: str, labels_filename: str
 ) -> List[DataPoint]:
-    # TODO: implement this! Expected # of lines: <10
-    raise NotImplementedError
+    data = pd.read_csv(data_filename)
+    labels = pd.read_csv(labels_filename)
+    res = []
+    for idx, row in data.iterrows():
+        label_row = labels.iloc[idx]
+        d = DataPoint( id=int(row['id']), text=row['text'], label=str(label_row['label']))
+        res.append(d)
+    return res
+    
 
 
 def read_unlabeled_data(data_filename: str) -> List[DataPoint]:
-    # TODO: implement this! Expected # of lines: <10
-    raise NotImplementedError
+    data = pd.read_csv(data_filename)
+    res = []
+    for idx, row in data.iterrows():
+        d = DataPoint( id=int(row['id']), text=row['text'], label=None)
+        res.append(d)
+    return res
 
 
 def load_data(

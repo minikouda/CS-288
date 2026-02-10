@@ -24,9 +24,12 @@ def featurize_data(
     data: List[DataPoint], feature_types: Set[str]
 ) -> List[DataPointWithFeatures]:
     """Add features to each datapoint based on feature types"""
-    # TODO: Implement this!
-    raise NotImplementedError
-
+    featurize = make_featurize(feature_types)
+    ret = []
+    for d in data:
+        features = featurize(d.text)
+        ret.append(DataPointWithFeatures( id=d.id, text=d.text, label=d.label, features=features))
+    return ret
 
 class PerceptronModel:
     """Perceptron model for classification."""
@@ -49,8 +52,12 @@ class PerceptronModel:
         Returns:
             The output score.
         """
-        # TODO: Implement this! Expected # of lines: <10
-        raise NotImplementedError
+        features = datapoint.features
+        ret = 0
+        for f, value in features.items():
+            key = self._get_weight_key(f, label)
+            ret += self.weights[key] * value
+        return ret
 
     def predict(self, datapoint: DataPointWithFeatures) -> str:
         """Predicts a label for an input.
@@ -61,8 +68,8 @@ class PerceptronModel:
         Returns:
             The predicted class.
         """
-        # TODO: Implement this! Expected # of lines: <5
-        raise NotImplementedError
+        return max(self.labels, key=lambda label: self.score(datapoint, label))
+
 
     def update_parameters(
         self, datapoint: DataPointWithFeatures, prediction: str, lr: float
@@ -74,8 +81,15 @@ class PerceptronModel:
             prediction: The predicted label.
             lr: Learning rate.
         """
-        # TODO: Implement this! Expected # of lines: <10
-        raise NotImplementedError
+        true_label = datapoint.label
+        if prediction == true_label: return
+        for feature, value in datapoint.features.items():
+            true_label_weights = self._get_weight_key(feature, true_label)
+            prediction_label_weights = self._get_weight_key(feature, prediction)
+            update_weights = lr * value
+            self.weights[true_label_weights] += update_weights
+            self.weights[prediction_label_weights] -= update_weights
+
 
     def train(
         self,
@@ -94,8 +108,14 @@ class PerceptronModel:
             num_epochs: Number of training epochs.
             lr: Learning rate.
         """
-        # TODO: Implement this!
-        raise NotImplementedError
+        for epoch in range(num_epochs):
+            for datapoint in tqdm(training_data, desc=f"Epoch {epoch+1}/{num_epochs}"):
+                if datapoint.label not in self.labels:
+                    self.labels.add(datapoint.label)
+                prediction = self.predict(datapoint)
+                self.update_parameters(datapoint, prediction, lr)
+            val_acc = self.evaluate(val_data)
+            print(f"Epoch {epoch+1}/{num_epochs} - Validation Accuracy: {val_acc:.4f}")
 
     def save_weights(self, path: str) -> None:
         with open(path, "w") as f:
@@ -116,8 +136,15 @@ class PerceptronModel:
         Returns:
             accuracy (float): The accuracy of the model on the data.
         """
-        # TODO: Implement this!
-        raise NotImplementedError
+        targets = [datapoint.label for datapoint in data]
+        preds = [self.predict(datapoint) for datapoint in data]
+        ret = accuracy(preds, targets)
+        if save_path: 
+            save_results(data, preds, save_path)
+            print('Save successfully')
+        if not targets or targets[0] is None: 
+            return 0
+        return ret
 
 
 if __name__ == "__main__":
@@ -126,21 +153,21 @@ if __name__ == "__main__":
         "-d",
         "--data",
         type=str,
-        default="sst2",
+        default="newsgroups",
         help="Data source, one of ('sst2', 'newsgroups')",
     )
     parser.add_argument(
         "-f",
         "--features",
         type=str,
-        default="bow",
+        default="bow+neg+punct+topic+caps",
         help="Feature type, e.g., bow+len",
     )
     parser.add_argument(
-        "-e", "--epochs", type=int, default=3, help="Number of epochs"
+        "-e", "--epochs", type=int, default=30, help="Number of epochs"
     )
     parser.add_argument(
-        "-l", "--learning_rate", type=float, default=0.1, help="Learning rate"
+        "-l", "--learning_rate", type=float, default=0.0005, help="Learning rate"
     )
     args = parser.parse_args()
 

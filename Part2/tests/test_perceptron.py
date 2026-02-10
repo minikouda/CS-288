@@ -1,4 +1,4 @@
-from perceptron import DataPointWithFeatures, PerceptronModel
+from self.Part2.perceptron_newsgroups import DataPointWithFeatures, PerceptronModel
 
 import pytest
 
