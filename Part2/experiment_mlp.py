@@ -1,21 +1,3 @@
-"""
-Experiment with different MLP configurations: activation functions, optimizers, learning rates.
-
-Usage examples:
-    # Test different activations
-    python experiment_mlp.py --activation relu --optimizer adam --lr 0.001
-    python experiment_mlp.py --activation tanh --optimizer adam --lr 0.001
-    python experiment_mlp.py --activation sigmoid --optimizer adam --lr 0.001
-    
-    # Test different optimizers
-    python experiment_mlp.py --activation relu --optimizer sgd --lr 0.01
-    python experiment_mlp.py --activation relu --optimizer adagrad --lr 0.01
-    python experiment_mlp.py --activation relu --optimizer adam --lr 0.001
-    
-    # Grid search
-    python experiment_mlp.py --grid_search
-"""
-
 import argparse
 import csv
 import os

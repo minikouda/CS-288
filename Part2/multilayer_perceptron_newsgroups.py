@@ -259,6 +259,7 @@ class Trainer:
         val_data: BOWDataset,
         optimizer: torch.optim.Optimizer,
         num_epochs: int,
+        label_smoothing: float = 0.0,
     ) -> None:
         """Trains the MLP.
 
@@ -269,6 +270,7 @@ class Trainer:
             val_data: Validation data.
             optimizer: The optimization method.
             num_epochs: The number of training epochs.
+            label_smoothing: Label smoothing factor (0.0 = no smoothing, 0.1 = 10% smoothing).
         """
         torch.manual_seed(0)
         for epoch in range(num_epochs):
@@ -282,7 +284,7 @@ class Trainer:
                 
                 logits_b_c = self.model(inputs_b_l, lengths_b)
     
-                loss_fn = nn.CrossEntropyLoss()
+                loss_fn = nn.CrossEntropyLoss(label_smoothing=label_smoothing)
                 loss = loss_fn(logits_b_c, labels_b)
     
                 optimizer.zero_grad()
@@ -320,10 +322,14 @@ if __name__ == "__main__":
     parser.add_argument(
         "-l", "--learning_rate", type=float, default=0.001, help="Learning rate"
     )
+    parser.add_argument(
+        "-s", "--label_smoothing", type=float, default=0.1, help="Label smoothing factor (0.0-1.0)"
+    )
     args = parser.parse_args()
 
     num_epochs = args.epochs
     lr = args.learning_rate
+    label_smoothing = args.label_smoothing
     data_type = DataType(args.data)
 
     train_data, val_data, dev_data, test_data = load_data(data_type)
@@ -353,9 +359,9 @@ if __name__ == "__main__":
 
     trainer = Trainer(model, device=device)
 
-    print("Training the model...")
+    print(f"Training the model with label smoothing: {label_smoothing}...")
     optimizer = torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=1e-4)
-    trainer.train(train_ds, val_ds, optimizer, num_epochs)
+    trainer.train(train_ds, val_ds, optimizer, num_epochs, label_smoothing=label_smoothing)
 
     # Evaluate on dev
     dev_acc = trainer.evaluate(dev_ds)
