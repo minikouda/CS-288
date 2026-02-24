@@ -1,0 +1,9 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.10.19, pytest-9.0.2, pluggy-1.6.0
+rootdir: /Users/zhangshizhe/Dropbox/UCB/Course/288_CS/HW/self/cs288-sp26-a2
+plugins: anyio-4.12.1
+collected 6 items
+
+part2/tests/test_accounting.py ......                                    [100%]
+
+============================== 6 passed in 0.03s ===============================
