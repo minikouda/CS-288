@@ -1,9 +1,20 @@
 ============================= test session starts ==============================
-platform darwin -- Python 3.10.19, pytest-9.0.2, pluggy-1.6.0
+platform darwin -- Python 3.10.19, pytest-9.0.2, pluggy-1.6.0 -- /opt/homebrew/Caskroom/miniconda/base/envs/cs288a2/bin/python3.10
+cachedir: .pytest_cache
 rootdir: /Users/zhangshizhe/Dropbox/UCB/Course/288_CS/HW/self/cs288-sp26-a2
 plugins: anyio-4.12.1
-collected 6 items
+collecting ... collected 11 items
 
-part2/tests/test_accounting.py ......                                    [100%]
+part3/tests/test_nn_utils.py::test_softmax_matches_pytorch PASSED        [  9%]
+part3/tests/test_nn_utils.py::test_cross_entropy PASSED                  [ 18%]
+part3/tests/test_nn_utils.py::test_gradient_clipping PASSED              [ 27%]
+part3/tests/test_nn_utils.py::test_token_accuracy_all_correct PASSED     [ 36%]
+part3/tests/test_nn_utils.py::test_token_accuracy_partial_correct PASSED [ 45%]
+part3/tests/test_nn_utils.py::test_token_accuracy_with_ignore_index PASSED [ 54%]
+part3/tests/test_nn_utils.py::test_token_accuracy_all_wrong PASSED       [ 63%]
+part3/tests/test_nn_utils.py::test_perplexity_near_perfect PASSED        [ 72%]
+part3/tests/test_nn_utils.py::test_perplexity_uniform PASSED             [ 81%]
+part3/tests/test_nn_utils.py::test_perplexity_with_ignore_index PASSED   [ 90%]
+part3/tests/test_nn_utils.py::test_perplexity_matches_exp_cross_entropy PASSED [100%]
 
-============================== 6 passed in 0.03s ===============================
+============================== 11 passed in 1.34s ==============================

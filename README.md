@@ -1,4 +1,4 @@
-CS 288 Spring 2026 : Assignment 1
+CS 288 Spring 2026
 
 By: Shizhe Zhang
 
