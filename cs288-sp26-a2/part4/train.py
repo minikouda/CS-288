@@ -104,9 +104,10 @@ CONFIGS = {
         "few_shot_k": 3,
     },
     "h100": {
-        # ~300M params optimised for H100 (80GB VRAM) — ~45 min
-        # Large vocab, deep model, full TinyStories, bigger batch
-        "pretrain_data": FIXTURES / "tinystories_full.txt",
+        # ~300M params optimised for H100 (96GB VRAM) — ~45 min
+        # BPE trains on 100k subset (fast); LM pretrains on full 2.1M stories
+        "bpe_data": FIXTURES / "tinystories_100k.txt",   # BPE only — fast
+        "pretrain_data": FIXTURES / "tinystories_full.txt",  # full corpus for LM
         "qa_train": FIXTURES / "squad_train.json",
         "qa_dev":   FIXTURES / "squad_dev.json",
         "qa_test":  FIXTURES / "squad_test.json",
@@ -118,7 +119,7 @@ CONFIGS = {
         "context_length": 512,
         "pretrain_epochs": 3,
         "finetune_epochs": 15,
-        "batch_size": 64,    # H100 can handle big batches
+        "batch_size": 64,
         "lr": 2e-4,
         "few_shot_k": 4,
     },
@@ -594,9 +595,9 @@ def main():
     assert config["qa_train"].exists(),      f"Missing: {config['qa_train']}"
 
     # ── 1. Tokenizer ──────────────────────────────────────────────────────────
-    tokenizer, vocab, merges = train_tokenizer(
-        config["pretrain_data"], config["vocab_size"]
-    )
+    # Use bpe_data if specified (smaller subset = much faster BPE training)
+    bpe_data = config.get("bpe_data", config["pretrain_data"])
+    tokenizer, _, _ = train_tokenizer(bpe_data, config["vocab_size"])
 
     # ── 2. Pretrain ───────────────────────────────────────────────────────────
     pretrain_ckpt = OUTPUTS / f"pretrain_{args.config}.pt"
