@@ -263,10 +263,66 @@ def train_tokenizer(pretrain_data: Path, vocab_size: int):
 
 
 # =============================================================================
+# AMP training loop (replaces Trainer for GPU efficiency)
+# =============================================================================
+
+def amp_train_loop(model, dataloader, optimizer, scheduler, config, device,
+                   compute_loss_fn, num_epochs, label="Training"):
+    """Training loop with AMP (fp16/bf16) for maximum GPU utilisation."""
+    use_bf16 = torch.cuda.is_bf16_supported()
+    dtype = torch.bfloat16 if use_bf16 else torch.float16
+    scaler = torch.cuda.amp.GradScaler(enabled=not use_bf16)  # scaler only needed for fp16
+    print(f"  AMP dtype: {'bfloat16' if use_bf16 else 'float16'}")
+
+    from part3.nn_utils import gradient_clipping
+    log_interval = max(1, len(dataloader) // 10)
+    all_losses = []
+
+    for epoch in range(num_epochs):
+        model.train()
+        total_loss = 0.0
+        t0 = time.time()
+        for step, batch in enumerate(dataloader):
+            optimizer.zero_grad()
+            with torch.cuda.amp.autocast(dtype=dtype):
+                loss = compute_loss_fn(batch, model)
+            scaler.scale(loss).backward()
+            scaler.unscale_(optimizer)
+            gradient_clipping(model.parameters(), config["max_grad_norm"])
+            scaler.step(optimizer)
+            scaler.update()
+            scheduler.step()
+            total_loss += loss.item()
+            if (step + 1) % log_interval == 0:
+                avg = total_loss / (step + 1)
+                elapsed = (time.time() - t0) / 60
+                print(f"  [{label}] epoch {epoch+1}/{num_epochs} step {step+1}/{len(dataloader)} "
+                      f"loss={avg:.4f} time={elapsed:.1f}m")
+        epoch_loss = total_loss / len(dataloader)
+        all_losses.append(epoch_loss)
+        print(f"  [{label}] epoch {epoch+1} done — loss={epoch_loss:.4f} ({(time.time()-t0)/60:.1f} min)")
+
+    return all_losses
+
+
+def make_optimizer_and_scheduler(model, lr, weight_decay, warmup_steps, total_steps):
+    from torch.optim import AdamW
+    from torch.optim.lr_scheduler import CosineAnnealingLR, LinearLR, SequentialLR
+    optimizer = AdamW(model.parameters(), lr=lr, weight_decay=weight_decay)
+    if warmup_steps > 0:
+        warmup = LinearLR(optimizer, start_factor=0.01, end_factor=1.0, total_iters=warmup_steps)
+        main   = CosineAnnealingLR(optimizer, T_max=max(1, total_steps - warmup_steps))
+        scheduler = SequentialLR(optimizer, [warmup, main], milestones=[warmup_steps])
+    else:
+        scheduler = CosineAnnealingLR(optimizer, T_max=total_steps)
+    return optimizer, scheduler
+
+
+# =============================================================================
 # Step 2: Pretrain LM
 # =============================================================================
 
-def pretrain_lm(tokenizer, config: dict, device: str, checkpoint_path: Path = None) -> TransformerLM:
+def pretrain_lm(tokenizer, config: dict, device: str, checkpoint_path=None) -> TransformerLM:
     print("\n" + "=" * 60)
     print("STEP 2: Pretraining Language Model")
     print("=" * 60)
@@ -289,6 +345,11 @@ def pretrain_lm(tokenizer, config: dict, device: str, checkpoint_path: Path = No
         model.load_state_dict(torch.load(checkpoint_path, map_location=device))
         return model
 
+    # torch.compile for ~20-40% extra throughput (PyTorch 2+)
+    if hasattr(torch, "compile"):
+        print("Compiling model with torch.compile ...")
+        model = torch.compile(model)
+
     dataloader = create_pretraining_dataloader(
         file_path=config["pretrain_data"],
         tokenizer=tokenizer,
@@ -296,34 +357,42 @@ def pretrain_lm(tokenizer, config: dict, device: str, checkpoint_path: Path = No
         max_length=config["context_length"],
         stride=config["context_length"] // 2,
         shuffle=True,
+        num_workers=4,      # parallel data loading
     )
     print(f"Data: {config['pretrain_data']} | sequences: {len(dataloader.dataset)} | batches/epoch: {len(dataloader)}")
 
-    train_config = TrainingConfig(
-        num_epochs=config["pretrain_epochs"],
-        learning_rate=config["lr"],
-        weight_decay=0.01,
-        warmup_steps=min(200, len(dataloader) // 5),
-        max_grad_norm=1.0,
-        device=device,
-        log_interval=max(1, len(dataloader) // 10),
+    total_steps = len(dataloader) * config["pretrain_epochs"]
+    warmup_steps = min(200, len(dataloader) // 5)
+    optimizer, scheduler = make_optimizer_and_scheduler(
+        model, config["lr"], 0.01, warmup_steps, total_steps
     )
-    trainer = Trainer(model=model, config=train_config, train_dataloader=dataloader)
 
+    from part3.nn_utils import cross_entropy
+    def lm_loss(batch, m):
+        input_ids = batch["input_ids"].to(device)
+        labels    = batch["labels"].to(device)
+        logits    = m(input_ids)
+        B, T, V   = logits.shape
+        return cross_entropy(logits.view(-1, V), labels.view(-1))
+
+    cfg_for_amp = {"max_grad_norm": 1.0}
     t0 = time.time()
-    results = trainer.train()
-    print(f"Pretrain done in {(time.time()-t0)/60:.1f} min | final loss: {results['train_losses'][-1]:.4f}")
+    amp_train_loop(model, dataloader, optimizer, scheduler, cfg_for_amp,
+                   device, lm_loss, config["pretrain_epochs"], label="Pretrain")
+    print(f"Pretrain total: {(time.time()-t0)/60:.1f} min")
 
-    # Sample generation
+    # Unwrap compiled model for saving / generation
+    raw_model = getattr(model, "_orig_mod", model)
+
     for prompt in ["Once upon a time", "The little dog"]:
-        text = generate_text(model, tokenizer, prompt, max_new_tokens=40, method="greedy")
+        text = generate_text(raw_model, tokenizer, prompt, max_new_tokens=40, method="greedy")
         print(f"  '{prompt}' → '{text[:100]}'")
 
     if checkpoint_path:
-        torch.save(model.state_dict(), checkpoint_path)
+        torch.save(raw_model.state_dict(), checkpoint_path)
         print(f"Checkpoint saved: {checkpoint_path}")
 
-    return model
+    return raw_model
 
 
 # =============================================================================
@@ -335,7 +404,7 @@ def finetune_qa(
     tokenizer,
     config: dict,
     device: str,
-    checkpoint_path: Path = None,
+    checkpoint_path=None,
 ) -> TransformerForMultipleChoice:
     print("\n" + "=" * 60)
     print("STEP 3: Fine-tuning for Multiple-Choice QA")
@@ -354,6 +423,10 @@ def finetune_qa(
         qa_model.load_state_dict(torch.load(checkpoint_path, map_location=device))
         return qa_model
 
+    if hasattr(torch, "compile"):
+        print("Compiling QA model with torch.compile ...")
+        qa_model = torch.compile(qa_model)
+
     with open(config["qa_train"]) as f:
         train_data = json.load(f)
 
@@ -364,35 +437,38 @@ def finetune_qa(
         max_length=config["context_length"],
         num_choices=4,
         shuffle=True,
+        num_workers=4,
     )
-
     print(f"Train examples: {len(train_data)} | batches/epoch: {len(train_loader)}")
 
-    train_config = TrainingConfig(
-        num_epochs=config["finetune_epochs"],
-        learning_rate=config["lr"] / 3,
-        weight_decay=0.01,
-        warmup_steps=min(100, len(train_loader) // 5),
-        max_grad_norm=1.0,
-        device=device,
-        log_interval=max(1, len(train_loader) // 5),
-    )
-    trainer = Trainer(
-        model=qa_model,
-        config=train_config,
-        train_dataloader=train_loader,
-        compute_loss_fn=create_qa_loss_fn(device),
+    ft_lr = config["lr"] / 3
+    total_steps = len(train_loader) * config["finetune_epochs"]
+    warmup_steps = min(100, len(train_loader) // 5)
+    optimizer, scheduler = make_optimizer_and_scheduler(
+        qa_model, ft_lr, 0.01, warmup_steps, total_steps
     )
 
+    from part3.nn_utils import cross_entropy
+    def qa_loss(batch, m):
+        input_ids      = batch["input_ids"].to(device)
+        attention_mask = batch["attention_mask"].to(device)
+        labels         = batch["labels"].to(device)
+        logits         = m(input_ids, attention_mask)
+        return cross_entropy(logits, labels)
+
+    cfg_for_amp = {"max_grad_norm": 1.0}
     t0 = time.time()
-    results = trainer.train()
-    print(f"Finetune done in {(time.time()-t0)/60:.1f} min | final loss: {results['train_losses'][-1]:.4f}")
+    amp_train_loop(qa_model, train_loader, optimizer, scheduler, cfg_for_amp,
+                   device, qa_loss, config["finetune_epochs"], label="Finetune")
+    print(f"Finetune total: {(time.time()-t0)/60:.1f} min")
+
+    raw_qa = getattr(qa_model, "_orig_mod", qa_model)
 
     if checkpoint_path:
-        torch.save(qa_model.state_dict(), checkpoint_path)
+        torch.save(raw_qa.state_dict(), checkpoint_path)
         print(f"Checkpoint saved: {checkpoint_path}")
 
-    return qa_model
+    return raw_qa
 
 
 # =============================================================================
