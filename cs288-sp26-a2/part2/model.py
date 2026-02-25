@@ -443,7 +443,13 @@ def scaled_dot_product_attention(
     scores = Q @ K.transpose(-2,-1) / math.sqrt(d_k)
     
     if mask is not None:
-        scores = scores.masked_fill(mask == False, float('-inf'))
+        scores = scores.masked_fill(~mask, float('-inf'))
+
+        attn = softmax(scores, dim=-1)
+        fully_masked = mask.sum(dim=-1, keepdim=True) == 0
+        if fully_masked.any():
+            attn = attn.masked_fill(fully_masked, 0.0)
+        return attn @ V
 
     return softmax(scores, dim=-1) @ V
 
