@@ -86,12 +86,12 @@ CONFIGS = {
         "few_shot_k": 3,
     },
     "large": {
-        # ~120M params, ~60 min on A100
-        "pretrain_data": FIXTURES / "tinystories_full.txt",
+        # ~120M params — fits T4 16GB; ~60-90 min
+        "pretrain_data": FIXTURES / "tinystories_100k.txt",
         "qa_train": FIXTURES / "squad_train.json",
         "qa_dev":   FIXTURES / "squad_dev.json",
         "qa_test":  FIXTURES / "squad_test.json",
-        "vocab_size": 16384,
+        "vocab_size": 8192,
         "d_model": 768,
         "num_layers": 12,
         "num_heads": 12,
@@ -99,7 +99,7 @@ CONFIGS = {
         "context_length": 512,
         "pretrain_epochs": 3,
         "finetune_epochs": 10,
-        "batch_size": 8,
+        "batch_size": 8,   # safe for T4 16GB
         "lr": 1e-4,
         "few_shot_k": 3,
     },
@@ -138,11 +138,33 @@ def download_datasets(config: dict):
         print("Datasets already present, skipping download.")
         return
 
+    # part4/datasets.py shadows HuggingFace 'datasets' — use importlib to load by file path
+    import importlib.util, importlib
+    _part4_dir = str(Path(__file__).parent)
+
+    # Remove stale cached module if it points to our local datasets.py
+    if "datasets" in sys.modules:
+        cached = sys.modules["datasets"]
+        cached_file = getattr(cached, "__file__", "") or ""
+        if "part4" in cached_file or not hasattr(cached, "load_dataset"):
+            del sys.modules["datasets"]
+
+    # Temporarily pull part4 out of path so HuggingFace datasets is found
+    _had_part4 = _part4_dir in sys.path
+    if _had_part4:
+        sys.path.remove(_part4_dir)
     try:
         import datasets as hf_datasets
+        if not hasattr(hf_datasets, "load_dataset"):
+            raise ImportError
     except ImportError:
         os.system("pip install -q datasets")
+        if "datasets" in sys.modules:
+            del sys.modules["datasets"]
         import datasets as hf_datasets
+    finally:
+        if _had_part4 and _part4_dir not in sys.path:
+            sys.path.insert(0, _part4_dir)
 
     if need_tinystories:
         print("Downloading TinyStories...")
@@ -550,7 +572,7 @@ def evaluate_prompting_pipeline(
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--config", choices=["quick", "medium", "large", "h100"], default="h100")
+    parser.add_argument("--config", choices=["quick", "medium", "large", "h100"], default="large")
     parser.add_argument("--device", default=None)
     parser.add_argument("--skip-pretrain", action="store_true", help="Load pretrain checkpoint")
     parser.add_argument("--skip-finetune", action="store_true", help="Load finetune checkpoint")
