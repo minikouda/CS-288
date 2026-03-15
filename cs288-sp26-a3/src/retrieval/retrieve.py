@@ -3,14 +3,18 @@ import json
 import os
 import numpy as np
 import pickle
-from sentence_transformers import SentenceTransformer
+import re
+from sentence_transformers import SentenceTransformer, CrossEncoder
 
 def tokenize(text):
     return text.lower().split()
 
 class Retriever:
-    def __init__(self, index_dir, model_name="thenlper/gte-base"):
+    def __init__(self, index_dir, model_name="all-MiniLM-L12-v2"):
         self.model = SentenceTransformer(model_name)
+        # Tiny but powerful re-ranker (Fits in 4GB RAM)
+        self.reranker = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
+        
         self.index = faiss.read_index(os.path.join(index_dir, "index.faiss"))
         with open(os.path.join(index_dir, "bm25.pkl"), 'rb') as f:
             self.bm25 = pickle.load(f)
@@ -20,39 +24,54 @@ class Retriever:
             self.metadata = json.load(f)
 
     def retrieve_dense(self, query, k=5):
-        # gte-base works well with direct query encoding
         query_vector = self.model.encode([query], convert_to_numpy=True)
         distances, indices = self.index.search(query_vector, k)
-        results = []
-        for i in range(k):
-            idx = indices[0][i]
-            if idx != -1:
-                results.append(idx)
-        return results
+        return [idx for idx in indices[0] if idx != -1]
 
     def retrieve_bm25(self, query, k=5):
         tokenized_query = tokenize(query)
         scores = self.bm25.get_scores(tokenized_query)
-        top_n = np.argsort(scores)[-k:][::-1]
-        return top_n.tolist()
+        return np.argsort(scores)[-k:][::-1].tolist()
+
+    def keyword_boost(self, query, candidates_metadata):
+        # Extract potential names (John Doe) or course codes (CS188)
+        keywords = re.findall(r'\b[A-Z][a-z]+ [A-Z][a-z]+\b|\b[A-Z]{2,}\d{2,3}[A-Z]?\b', query)
+        boost_scores = [0.0] * len(candidates_metadata)
+        
+        for i, meta in enumerate(candidates_metadata):
+            for kw in keywords:
+                if kw.lower() in meta['title'].lower() or kw.lower() in meta['url'].lower():
+                    boost_scores[i] += 0.5 # Metadata match boost
+        return boost_scores
 
     def retrieve(self, query, k=10):
-        # Hybrid: use Reciprocal Rank Fusion (RRF)
-        dense_indices = self.retrieve_dense(query, k=20) # Get more candidates for fusion
-        bm25_indices = self.retrieve_bm25(query, k=20)
+        # 1. Broad Hybrid Retrieval
+        dense_indices = self.retrieve_dense(query, k=30)
+        bm25_indices = self.retrieve_bm25(query, k=30)
         
-        # RRF scoring
+        # 2. RRF Fusion
         rrf_scores = {}
-        # Higher k in RRF (60) is standard to avoid over-weighting top ranks
         for rank, idx in enumerate(dense_indices):
             rrf_scores[idx] = rrf_scores.get(idx, 0) + 1.0 / (60 + rank)
-            
         for rank, idx in enumerate(bm25_indices):
             rrf_scores[idx] = rrf_scores.get(idx, 0) + 1.0 / (60 + rank)
             
-        # Sort by RRF score
-        sorted_indices = sorted(rrf_scores.keys(), key=lambda x: rrf_scores[x], reverse=True)
-        final_indices = sorted_indices[:k]
+        # Select top 20 candidates for re-ranking
+        candidate_indices = sorted(rrf_scores.keys(), key=lambda x: rrf_scores[x], reverse=True)[:20]
+        candidate_texts = [self.chunks[idx] for idx in candidate_indices]
+        candidate_meta = [self.metadata[idx] for idx in candidate_indices]
+        
+        # 3. Cross-Encoder Re-ranking (Semantic relevance)
+        pairs = [[query, text] for text in candidate_texts]
+        rerank_scores = self.reranker.predict(pairs)
+        
+        # 4. Keyword Boosting
+        boosts = self.keyword_boost(query, candidate_meta)
+        final_scores = rerank_scores + boosts
+        
+        # 5. Rank and return top k
+        ranked_results = sorted(zip(candidate_indices, final_scores), key=lambda x: x[1], reverse=True)
+        final_indices = [idx for idx, score in ranked_results[:k]]
         
         results = []
         for idx in final_indices:
@@ -68,7 +87,7 @@ if __name__ == "__main__":
     query = "Who is the Dean of the College of Computing, Data Science, and Society?"
     print(f"Query: {query}")
     results = retriever.retrieve(query, k=5)
-    for res in results:
-        print(f"File: {res['metadata']['file']}")
-        print(f"Content: {res['content'][:300]}...")
+    for i, res in enumerate(results):
+        print(f"{i+1}. File: {res['metadata']['file']}")
+        print(f"Content: {res['content'][:200]}...")
         print("-" * 20)
