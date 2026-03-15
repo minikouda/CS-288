@@ -1,0 +1,5 @@
+{
+  "url": "https://www2.eecs.berkeley.edu/Pubs/TechRpts/2024/EECS-2024-118.html",
+  "title": "V-Former: Offline RL with Temporally-Extended Actions | EECS at UC Berkeley",
+  "content": "V-Former: Offline RL with Temporally-Extended Actions | EECS at UC Berkeley V-Former: Offline RL with Temporally-Extended Actions Jeffrey Wu EECS Department, University of California, Berkeley Technical Report No. UCB/EECS-2024-118 May 17, 2024 http://www2.eecs.berkeley.edu/Pubs/TechRpts/2024/EECS-2024-118.pdf Advisors: Sergey Levine BibTeX citation: @mastersthesis{Wu:EECS-2024-118, Author= {Wu, Jeffrey}, Title= {V-Former: Offline RL with Temporally-Extended Actions}, School= {EECS Department, University of California, Berkeley}, Year= {2024}, Month= {May}, Url= {http://www2.eecs.berkeley.edu/Pubs/TechRpts/2024/EECS-2024-118.html}, Number= {UCB/EECS-2024-118}, } EndNote citation: %0 Thesis %A Wu, Jeffrey %T V-Former: Offline RL with Temporally-Extended Actions %I EECS Department, University of California, Berkeley %D 2024 %8 May 17 %@ UCB/EECS-2024-118 %U http://www2.eecs.berkeley.edu/Pubs/TechRpts/2024/EECS-2024-118.html %F Wu:EECS-2024-118"
+}

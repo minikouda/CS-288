@@ -1,0 +1,5 @@
+{
+  "url": "https://www2.eecs.berkeley.edu/Pubs/TechRpts/2019/EECS-2019-91.html",
+  "title": "A Secure Message Broker in an Untrusted Environment | EECS at UC Berkeley",
+  "content": "A Secure Message Broker in an Untrusted Environment | EECS at UC Berkeley A Secure Message Broker in an Untrusted Environment Dylan Dreyer EECS Department, University of California, Berkeley Technical Report No. UCB/EECS-2019-91 May 21, 2019 http://www2.eecs.berkeley.edu/Pubs/TechRpts/2019/EECS-2019-91.pdf Advisors: David E. Culler BibTeX citation: @mastersthesis{Dreyer:EECS-2019-91, Author= {Dreyer, Dylan}, Title= {A Secure Message Broker in an Untrusted Environment}, School= {EECS Department, University of California, Berkeley}, Year= {2019}, Month= {May}, Url= {http://www2.eecs.berkeley.edu/Pubs/TechRpts/2019/EECS-2019-91.html}, Number= {UCB/EECS-2019-91}, } EndNote citation: %0 Thesis %A Dreyer, Dylan %T A Secure Message Broker in an Untrusted Environment %I EECS Department, University of California, Berkeley %D 2019 %8 May 21 %@ UCB/EECS-2019-91 %U http://www2.eecs.berkeley.edu/Pubs/TechRpts/2019/EECS-2019-91.html %F Dreyer:EECS-2019-91"
+}

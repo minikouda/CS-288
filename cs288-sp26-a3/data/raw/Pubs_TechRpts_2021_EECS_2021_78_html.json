@@ -1,0 +1,5 @@
+{
+  "url": "https://www2.eecs.berkeley.edu/Pubs/TechRpts/2021/EECS-2021-78.html",
+  "title": "Geometric Properties of Backdoored Neural Networks | EECS at UC Berkeley",
+  "content": "Geometric Properties of Backdoored Neural Networks | EECS at UC Berkeley Geometric Properties of Backdoored Neural Networks Dominic Carrano EECS Department, University of California, Berkeley Technical Report No. UCB/EECS-2021-78 May 14, 2021 http://www2.eecs.berkeley.edu/Pubs/TechRpts/2021/EECS-2021-78.pdf Advisors: Kannan Ramchandran BibTeX citation: @mastersthesis{Carrano:EECS-2021-78, Author= {Carrano, Dominic}, Title= {Geometric Properties of Backdoored Neural Networks}, School= {EECS Department, University of California, Berkeley}, Year= {2021}, Month= {May}, Url= {http://www2.eecs.berkeley.edu/Pubs/TechRpts/2021/EECS-2021-78.html}, Number= {UCB/EECS-2021-78}, } EndNote citation: %0 Thesis %A Carrano, Dominic %T Geometric Properties of Backdoored Neural Networks %I EECS Department, University of California, Berkeley %D 2021 %8 May 14 %@ UCB/EECS-2021-78 %U http://www2.eecs.berkeley.edu/Pubs/TechRpts/2021/EECS-2021-78.html %F Carrano:EECS-2021-78"
+}
