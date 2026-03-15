@@ -1,0 +1,866 @@
+{
+  "meta-llama_llama-3.1-8b-instruct_k3": [
+    {
+      "question": "What is the course number for the undergrad-level class that covers computer security topics such as cryptography, operating system security, network security, and software security?",
+      "ground_truths": [
+        "CS 161"
+      ],
+      "prediction": "CS 161.",
+      "em": true,
+      "f1": 1.0
+    },
+    {
+      "question": "Who is the CS student advisor?",
+      "ground_truths": [
+        "Gina Garcia",
+        "Floriberto Garcia",
+        "Grayson Johnston",
+        "Carol Marshall"
+      ],
+      "prediction": "Charlene Duncan.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Which EECS graduate student was awarded a 2025 Paul & Daisy Soros Fellowship for New Americans?",
+      "ground_truths": [
+        "Syed Tahmid Mahbub"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Who was the earliest-born professor at UC Berkeley?",
+      "ground_truths": [
+        "Lester Edwin Reukema"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Who is the advisor of the student whose 2024 thesis is about protein evolution?",
+      "ground_truths": [
+        "Moritz Hardt",
+        "Jennifer Listgarten"
+      ],
+      "prediction": "Richard M. Karp.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "When is the deadline for the nomination of the outstanding TA awards?",
+      "ground_truths": [
+        "2/18/26"
+      ],
+      "prediction": "2/18/26.",
+      "em": true,
+      "f1": 1.0
+    },
+    {
+      "question": "Which university did Pieter Abbeel do his masters degree from?",
+      "ground_truths": [
+        "KU Leuven"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Where did Dan Klein get his PhD?",
+      "ground_truths": [
+        "Stanford University"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "How many EE courses is Kristofer Pister teaching in Spring 2027?",
+      "ground_truths": [
+        "6"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "How many minor credits do PhD students have to take?",
+      "ground_truths": [
+        "6+"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0.0
+    }
+  ],
+  "meta-llama_llama-3.1-8b-instruct_k5": [
+    {
+      "question": "What is the course number for the undergrad-level class that covers computer security topics such as cryptography, operating system security, network security, and software security?",
+      "ground_truths": [
+        "CS 161"
+      ],
+      "prediction": "CS 161.",
+      "em": true,
+      "f1": 1.0
+    },
+    {
+      "question": "Who is the CS student advisor?",
+      "ground_truths": [
+        "Gina Garcia",
+        "Floriberto Garcia",
+        "Grayson Johnston",
+        "Carol Marshall"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Which EECS graduate student was awarded a 2025 Paul & Daisy Soros Fellowship for New Americans?",
+      "ground_truths": [
+        "Syed Tahmid Mahbub"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Who was the earliest-born professor at UC Berkeley?",
+      "ground_truths": [
+        "Lester Edwin Reukema"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Who is the advisor of the student whose 2024 thesis is about protein evolution?",
+      "ground_truths": [
+        "Moritz Hardt",
+        "Jennifer Listgarten"
+      ],
+      "prediction": "Richard M. Karp.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "When is the deadline for the nomination of the outstanding TA awards?",
+      "ground_truths": [
+        "2/18/26"
+      ],
+      "prediction": "2/18/26.",
+      "em": true,
+      "f1": 1.0
+    },
+    {
+      "question": "Which university did Pieter Abbeel do his masters degree from?",
+      "ground_truths": [
+        "KU Leuven"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Where did Dan Klein get his PhD?",
+      "ground_truths": [
+        "Stanford University"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "How many EE courses is Kristofer Pister teaching in Spring 2027?",
+      "ground_truths": [
+        "6"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "How many minor credits do PhD students have to take?",
+      "ground_truths": [
+        "6+"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0.0
+    }
+  ],
+  "meta-llama_llama-3.1-8b-instruct_k10": [
+    {
+      "question": "What is the course number for the undergrad-level class that covers computer security topics such as cryptography, operating system security, network security, and software security?",
+      "ground_truths": [
+        "CS 161"
+      ],
+      "prediction": "CS 161.",
+      "em": true,
+      "f1": 1.0
+    },
+    {
+      "question": "Who is the CS student advisor?",
+      "ground_truths": [
+        "Gina Garcia",
+        "Floriberto Garcia",
+        "Grayson Johnston",
+        "Carol Marshall"
+      ],
+      "prediction": "cs-advising@eecs.berkeley.edu",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Which EECS graduate student was awarded a 2025 Paul & Daisy Soros Fellowship for New Americans?",
+      "ground_truths": [
+        "Syed Tahmid Mahbub"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Who was the earliest-born professor at UC Berkeley?",
+      "ground_truths": [
+        "Lester Edwin Reukema"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Who is the advisor of the student whose 2024 thesis is about protein evolution?",
+      "ground_truths": [
+        "Moritz Hardt",
+        "Jennifer Listgarten"
+      ],
+      "prediction": "John D. Kubiatowicz.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "When is the deadline for the nomination of the outstanding TA awards?",
+      "ground_truths": [
+        "2/18/26"
+      ],
+      "prediction": "2/18/26.",
+      "em": true,
+      "f1": 1.0
+    },
+    {
+      "question": "Which university did Pieter Abbeel do his masters degree from?",
+      "ground_truths": [
+        "KU Leuven"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Where did Dan Klein get his PhD?",
+      "ground_truths": [
+        "Stanford University"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "How many EE courses is Kristofer Pister teaching in Spring 2027?",
+      "ground_truths": [
+        "6"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "How many minor credits do PhD students have to take?",
+      "ground_truths": [
+        "6+"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0.0
+    }
+  ],
+  "qwen_qwen-2.5-7b-instruct_k3": [
+    {
+      "question": "What is the course number for the undergrad-level class that covers computer security topics such as cryptography, operating system security, network security, and software security?",
+      "ground_truths": [
+        "CS 161"
+      ],
+      "prediction": "CS 161",
+      "em": true,
+      "f1": 1.0
+    },
+    {
+      "question": "Who is the CS student advisor?",
+      "ground_truths": [
+        "Gina Garcia",
+        "Floriberto Garcia",
+        "Grayson Johnston",
+        "Carol Marshall"
+      ],
+      "prediction": "Charlene Duncan",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Which EECS graduate student was awarded a 2025 Paul & Daisy Soros Fellowship for New Americans?",
+      "ground_truths": [
+        "Syed Tahmid Mahbub"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Who was the earliest-born professor at UC Berkeley?",
+      "ground_truths": [
+        "Lester Edwin Reukema"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Who is the advisor of the student whose 2024 thesis is about protein evolution?",
+      "ground_truths": [
+        "Moritz Hardt",
+        "Jennifer Listgarten"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "When is the deadline for the nomination of the outstanding TA awards?",
+      "ground_truths": [
+        "2/18/26"
+      ],
+      "prediction": "3/5/26",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Which university did Pieter Abbeel do his masters degree from?",
+      "ground_truths": [
+        "KU Leuven"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Where did Dan Klein get his PhD?",
+      "ground_truths": [
+        "Stanford University"
+      ],
+      "prediction": "University of California, San Diego",
+      "em": false,
+      "f1": 0.28571428571428575
+    },
+    {
+      "question": "How many EE courses is Kristofer Pister teaching in Spring 2027?",
+      "ground_truths": [
+        "6"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "How many minor credits do PhD students have to take?",
+      "ground_truths": [
+        "6+"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0.0
+    }
+  ],
+  "qwen_qwen-2.5-7b-instruct_k5": [
+    {
+      "question": "What is the course number for the undergrad-level class that covers computer security topics such as cryptography, operating system security, network security, and software security?",
+      "ground_truths": [
+        "CS 161"
+      ],
+      "prediction": "CS 161",
+      "em": true,
+      "f1": 1.0
+    },
+    {
+      "question": "Who is the CS student advisor?",
+      "ground_truths": [
+        "Gina Garcia",
+        "Floriberto Garcia",
+        "Grayson Johnston",
+        "Carol Marshall"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Which EECS graduate student was awarded a 2025 Paul & Daisy Soros Fellowship for New Americans?",
+      "ground_truths": [
+        "Syed Tahmid Mahbub"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Who was the earliest-born professor at UC Berkeley?",
+      "ground_truths": [
+        "Lester Edwin Reukema"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Who is the advisor of the student whose 2024 thesis is about protein evolution?",
+      "ground_truths": [
+        "Moritz Hardt",
+        "Jennifer Listgarten"
+      ],
+      "prediction": "Richard M. Karp",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "When is the deadline for the nomination of the outstanding TA awards?",
+      "ground_truths": [
+        "2/18/26"
+      ],
+      "prediction": "2/18/26",
+      "em": true,
+      "f1": 1.0
+    },
+    {
+      "question": "Which university did Pieter Abbeel do his masters degree from?",
+      "ground_truths": [
+        "KU Leuven"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Where did Dan Klein get his PhD?",
+      "ground_truths": [
+        "Stanford University"
+      ],
+      "prediction": "University of California, San Diego",
+      "em": false,
+      "f1": 0.28571428571428575
+    },
+    {
+      "question": "How many EE courses is Kristofer Pister teaching in Spring 2027?",
+      "ground_truths": [
+        "6"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "How many minor credits do PhD students have to take?",
+      "ground_truths": [
+        "6+"
+      ],
+      "prediction": "Based on the information provided in the context, there is no specific mention of the number of minor credits that PhD students have to take. The context seems to focus more on undergraduate and graduate admissions, research expectations, and other related programs rather than the specific requirements for PhD students' minor credits. Therefore, the answer to the question \"How many minor credits do PhD students have to take?\" cannot be determined from the given sources.",
+      "em": false,
+      "f1": 0.0
+    }
+  ],
+  "qwen_qwen-2.5-7b-instruct_k10": [
+    {
+      "question": "What is the course number for the undergrad-level class that covers computer security topics such as cryptography, operating system security, network security, and software security?",
+      "ground_truths": [
+        "CS 161"
+      ],
+      "prediction": "CS 161",
+      "em": true,
+      "f1": 1.0
+    },
+    {
+      "question": "Who is the CS student advisor?",
+      "ground_truths": [
+        "Gina Garcia",
+        "Floriberto Garcia",
+        "Grayson Johnston",
+        "Carol Marshall"
+      ],
+      "prediction": "Based on the information provided in the context, there is no explicit mention of a specific CS student advisor. However, Charlene Duncan is referred to as the CS Scholars program director, which suggests she plays a significant role in advising and supporting CS students, particularly those from under-resourced and low opportunity communities. For general EECS and CS advising, including undergraduate and graduate students, the emails provided in Source 5 and Source 7 give contact information for various advising services:\n\n- `eecs-advising@eecs.berkeley.edu` for EECS/EE undergraduate student advising/assistance.\n- `cs-advising@",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Which EECS graduate student was awarded a 2025 Paul & Daisy Soros Fellowship for New Americans?",
+      "ground_truths": [
+        "Syed Tahmid Mahbub"
+      ],
+      "prediction": "The information provided does not include a direct mention of which EECS graduate student was awarded a 2025 Paul & Daisy Soros Fellowship for New Americans. However, Tyler Hou is mentioned as a finalist for the 2026 Hertz Fellowship in both Source 4 and Source 8, and there is a reference to the Paul and Daisy Soros Fellowships for New Americans in Source 1. Without specific details in the given sources about the 2025 Soros Fellowship recipients, we cannot definitively state which EECS graduate student was awarded the 2025 Paul & Daisy Soros Fellowship for New Americans.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Who was the earliest-born professor at UC Berkeley?",
+      "ground_truths": [
+        "Lester Edwin Reukema"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Who is the advisor of the student whose 2024 thesis is about protein evolution?",
+      "ground_truths": [
+        "Moritz Hardt",
+        "Jennifer Listgarten"
+      ],
+      "prediction": "The advisor of the student whose 2024 thesis is about protein evolution is Chen. The title of the thesis is \"Novel Protein Evolution Models for Ancestral Sequence Reconstruction (EECS-2024-190)\" and it is listed under Source 9, indicating that Chen was the advisor for this work.",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "When is the deadline for the nomination of the outstanding TA awards?",
+      "ground_truths": [
+        "2/18/26"
+      ],
+      "prediction": "2/18/26",
+      "em": true,
+      "f1": 1.0
+    },
+    {
+      "question": "Which university did Pieter Abbeel do his masters degree from?",
+      "ground_truths": [
+        "KU Leuven"
+      ],
+      "prediction": "UC Berkeley",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Where did Dan Klein get his PhD?",
+      "ground_truths": [
+        "Stanford University"
+      ],
+      "prediction": "University of California, San Diego",
+      "em": false,
+      "f1": 0.28571428571428575
+    },
+    {
+      "question": "How many EE courses is Kristofer Pister teaching in Spring 2027?",
+      "ground_truths": [
+        "6"
+      ],
+      "prediction": "Based on the information provided in Source 6, Kristofer Pister is teaching two EE courses in Spring 2027:\n\n- EE C106A\n- EE C194-18 Special Topics\n\nSo, Kristofer Pister is teaching 2 EE courses in Spring 2027.",
+      "em": false,
+      "f1": 0.05714285714285715
+    },
+    {
+      "question": "How many minor credits do PhD students have to take?",
+      "ground_truths": [
+        "6+"
+      ],
+      "prediction": "According to the information provided in Source 7 and Source 8, PhD students in the EECS Department at UC Berkeley are required to have two minor fields. While Source 6 mentions differences in requirements for the MS and PhD programs, and Source 9 focuses on transferring credit, the specific mention of minors for PhD students is in Source 7 and Source 8. Therefore, PhD students have to take credits for two minor fields as part of their degree requirements.",
+      "em": false,
+      "f1": 0.02631578947368421
+    }
+  ],
+  "mistralai_mistral-7b-instruct_k3": [
+    {
+      "question": "What is the course number for the undergrad-level class that covers computer security topics such as cryptography, operating system security, network security, and software security?",
+      "ground_truths": [
+        "CS 161"
+      ],
+      "prediction": "I don't know",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Who is the CS student advisor?",
+      "ground_truths": [
+        "Gina Garcia",
+        "Floriberto Garcia",
+        "Grayson Johnston",
+        "Carol Marshall"
+      ],
+      "prediction": "I don't know",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Which EECS graduate student was awarded a 2025 Paul & Daisy Soros Fellowship for New Americans?",
+      "ground_truths": [
+        "Syed Tahmid Mahbub"
+      ],
+      "prediction": "I don't know",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Who was the earliest-born professor at UC Berkeley?",
+      "ground_truths": [
+        "Lester Edwin Reukema"
+      ],
+      "prediction": "I don't know",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Who is the advisor of the student whose 2024 thesis is about protein evolution?",
+      "ground_truths": [
+        "Moritz Hardt",
+        "Jennifer Listgarten"
+      ],
+      "prediction": "I don't know",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "When is the deadline for the nomination of the outstanding TA awards?",
+      "ground_truths": [
+        "2/18/26"
+      ],
+      "prediction": "I don't know",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Which university did Pieter Abbeel do his masters degree from?",
+      "ground_truths": [
+        "KU Leuven"
+      ],
+      "prediction": "I don't know",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Where did Dan Klein get his PhD?",
+      "ground_truths": [
+        "Stanford University"
+      ],
+      "prediction": "I don't know",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "How many EE courses is Kristofer Pister teaching in Spring 2027?",
+      "ground_truths": [
+        "6"
+      ],
+      "prediction": "I don't know",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "How many minor credits do PhD students have to take?",
+      "ground_truths": [
+        "6+"
+      ],
+      "prediction": "I don't know",
+      "em": false,
+      "f1": 0.0
+    }
+  ],
+  "mistralai_mistral-7b-instruct_k5": [
+    {
+      "question": "What is the course number for the undergrad-level class that covers computer security topics such as cryptography, operating system security, network security, and software security?",
+      "ground_truths": [
+        "CS 161"
+      ],
+      "prediction": "I don't know",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Who is the CS student advisor?",
+      "ground_truths": [
+        "Gina Garcia",
+        "Floriberto Garcia",
+        "Grayson Johnston",
+        "Carol Marshall"
+      ],
+      "prediction": "I don't know",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Which EECS graduate student was awarded a 2025 Paul & Daisy Soros Fellowship for New Americans?",
+      "ground_truths": [
+        "Syed Tahmid Mahbub"
+      ],
+      "prediction": "I don't know",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Who was the earliest-born professor at UC Berkeley?",
+      "ground_truths": [
+        "Lester Edwin Reukema"
+      ],
+      "prediction": "I don't know",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Who is the advisor of the student whose 2024 thesis is about protein evolution?",
+      "ground_truths": [
+        "Moritz Hardt",
+        "Jennifer Listgarten"
+      ],
+      "prediction": "I don't know",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "When is the deadline for the nomination of the outstanding TA awards?",
+      "ground_truths": [
+        "2/18/26"
+      ],
+      "prediction": "I don't know",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Which university did Pieter Abbeel do his masters degree from?",
+      "ground_truths": [
+        "KU Leuven"
+      ],
+      "prediction": "I don't know",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Where did Dan Klein get his PhD?",
+      "ground_truths": [
+        "Stanford University"
+      ],
+      "prediction": "I don't know",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "How many EE courses is Kristofer Pister teaching in Spring 2027?",
+      "ground_truths": [
+        "6"
+      ],
+      "prediction": "I don't know",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "How many minor credits do PhD students have to take?",
+      "ground_truths": [
+        "6+"
+      ],
+      "prediction": "I don't know",
+      "em": false,
+      "f1": 0.0
+    }
+  ],
+  "mistralai_mistral-7b-instruct_k10": [
+    {
+      "question": "What is the course number for the undergrad-level class that covers computer security topics such as cryptography, operating system security, network security, and software security?",
+      "ground_truths": [
+        "CS 161"
+      ],
+      "prediction": "I don't know",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Who is the CS student advisor?",
+      "ground_truths": [
+        "Gina Garcia",
+        "Floriberto Garcia",
+        "Grayson Johnston",
+        "Carol Marshall"
+      ],
+      "prediction": "I don't know",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Which EECS graduate student was awarded a 2025 Paul & Daisy Soros Fellowship for New Americans?",
+      "ground_truths": [
+        "Syed Tahmid Mahbub"
+      ],
+      "prediction": "I don't know",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Who was the earliest-born professor at UC Berkeley?",
+      "ground_truths": [
+        "Lester Edwin Reukema"
+      ],
+      "prediction": "I don't know",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Who is the advisor of the student whose 2024 thesis is about protein evolution?",
+      "ground_truths": [
+        "Moritz Hardt",
+        "Jennifer Listgarten"
+      ],
+      "prediction": "I don't know",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "When is the deadline for the nomination of the outstanding TA awards?",
+      "ground_truths": [
+        "2/18/26"
+      ],
+      "prediction": "I don't know",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Which university did Pieter Abbeel do his masters degree from?",
+      "ground_truths": [
+        "KU Leuven"
+      ],
+      "prediction": "I don't know",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "Where did Dan Klein get his PhD?",
+      "ground_truths": [
+        "Stanford University"
+      ],
+      "prediction": "I don't know",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "How many EE courses is Kristofer Pister teaching in Spring 2027?",
+      "ground_truths": [
+        "6"
+      ],
+      "prediction": "I don't know",
+      "em": false,
+      "f1": 0.0
+    },
+    {
+      "question": "How many minor credits do PhD students have to take?",
+      "ground_truths": [
+        "6+"
+      ],
+      "prediction": "I don't know",
+      "em": false,
+      "f1": 0.0
+    }
+  ]
+}

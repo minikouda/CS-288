@@ -1,19 +1,27 @@
 {
-  "overall_em": 0.3,
-  "overall_f1": 0.38,
+  "overall_em": 0.4,
+  "overall_f1": 0.48,
   "details": [
     {
       "question": "What is the course number for the undergrad-level class that covers computer security topics such as cryptography, operating system security, network security, and software security?",
       "ground_truths": [
         "CS 161"
       ],
-      "prediction": "CS 161",
+      "prediction": "CS 161.",
       "em": true,
       "f1": 1.0,
+      "retrieval_recall": true,
       "retrieved_files": [
+        "page_0377.json",
+        "page_0107.json",
         "page_0312.json",
+        "page_0186.json",
+        "page_0377.json",
+        "page_0522.json",
+        "page_0521.json",
+        "page_0399.json",
         "page_0248.json",
-        "page_0278.json"
+        "page_0609.json"
       ]
     },
     {
@@ -24,13 +32,21 @@
         "Grayson Johnston",
         "Carol Marshall"
       ],
-      "prediction": "Gina Garcia.",
+      "prediction": "Gina Garcia",
       "em": true,
       "f1": 1.0,
+      "retrieval_recall": true,
       "retrieved_files": [
-        "page_0576.json",
         "page_0052.json",
-        "page_0299.json"
+        "page_0299.json",
+        "page_0608.json",
+        "page_0437.json",
+        "page_0576.json",
+        "page_0169.json",
+        "page_0127.json",
+        "page_0138.json",
+        "page_0477.json",
+        "page_0046.json"
       ]
     },
     {
@@ -38,13 +54,21 @@
       "ground_truths": [
         "Syed Tahmid Mahbub"
       ],
-      "prediction": "I don't know",
+      "prediction": "I don't know.",
       "em": false,
       "f1": 0,
+      "retrieval_recall": false,
       "retrieved_files": [
-        "page_0528.json",
+        "page_0656.json",
+        "page_0401.json",
+        "page_0511.json",
+        "page_0536.json",
         "page_0510.json",
-        "page_0656.json"
+        "page_0340.json",
+        "page_0535.json",
+        "page_0450.json",
+        "page_0350.json",
+        "page_0016.json"
       ]
     },
     {
@@ -52,13 +76,21 @@
       "ground_truths": [
         "Lester Edwin Reukema"
       ],
-      "prediction": "Agnes Fay Morgan",
+      "prediction": "I don't know",
       "em": false,
       "f1": 0,
+      "retrieval_recall": false,
       "retrieved_files": [
-        "page_0207.json",
+        "page_0056.json",
         "page_0498.json",
-        "page_0315.json"
+        "page_0207.json",
+        "page_0169.json",
+        "page_0304.json",
+        "page_0628.json",
+        "page_0315.json",
+        "page_0029.json",
+        "page_0198.json",
+        "page_0409.json"
       ]
     },
     {
@@ -67,13 +99,21 @@
         "Moritz Hardt",
         "Jennifer Listgarten"
       ],
-      "prediction": "Richard M. Karp",
+      "prediction": "I don't know.",
       "em": false,
       "f1": 0,
+      "retrieval_recall": false,
       "retrieved_files": [
-        "page_0454.json",
+        "page_0169.json",
+        "page_0052.json",
+        "page_0535.json",
+        "page_0503.json",
+        "page_0259.json",
+        "page_0540.json",
         "page_0198.json",
-        "page_0092.json"
+        "page_0454.json",
+        "page_0608.json",
+        "page_0299.json"
       ]
     },
     {
@@ -81,13 +121,21 @@
       "ground_truths": [
         "2/18/26"
       ],
-      "prediction": "Monday, 2/9/26.",
-      "em": false,
-      "f1": 0,
+      "prediction": "2/18/26",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
       "retrieved_files": [
         "page_0195.json",
         "page_0118.json",
-        "page_0270.json"
+        "page_0483.json",
+        "page_0354.json",
+        "page_0270.json",
+        "page_0118.json",
+        "page_0096.json",
+        "page_0286.json",
+        "page_0195.json",
+        "page_0355.json"
       ]
     },
     {
@@ -98,10 +146,18 @@
       "prediction": "KU Leuven, Belgium",
       "em": false,
       "f1": 0.8,
+      "retrieval_recall": true,
       "retrieved_files": [
         "page_0341.json",
+        "page_0341.json",
         "page_0068.json",
-        "page_0115.json"
+        "page_0115.json",
+        "page_0315.json",
+        "page_0293.json",
+        "page_0075.json",
+        "page_0498.json",
+        "page_0207.json",
+        "page_0334.json"
       ]
     },
     {
@@ -109,13 +165,21 @@
       "ground_truths": [
         "Stanford University"
       ],
-      "prediction": "Stanford University.",
+      "prediction": "Stanford University",
       "em": true,
       "f1": 1.0,
+      "retrieval_recall": true,
       "retrieved_files": [
-        "page_0088.json",
+        "page_0665.json",
+        "page_0665.json",
+        "page_0054.json",
         "page_0367.json",
-        "page_0665.json"
+        "page_0088.json",
+        "page_0499.json",
+        "page_0315.json",
+        "page_0334.json",
+        "page_0367.json",
+        "page_0088.json"
       ]
     },
     {
@@ -123,13 +187,21 @@
       "ground_truths": [
         "6"
       ],
-      "prediction": "I don't know",
+      "prediction": "2",
       "em": false,
       "f1": 0,
+      "retrieval_recall": true,
       "retrieved_files": [
+        "page_0355.json",
         "page_0089.json",
         "page_0400.json",
-        "page_0045.json"
+        "page_0089.json",
+        "page_0155.json",
+        "page_0298.json",
+        "page_0045.json",
+        "page_0587.json",
+        "page_0609.json",
+        "page_0267.json"
       ]
     },
     {
@@ -140,10 +212,18 @@
       "prediction": "I don't know.",
       "em": false,
       "f1": 0,
+      "retrieval_recall": true,
       "retrieved_files": [
         "page_0613.json",
+        "page_0237.json",
         "page_0075.json",
-        "page_0263.json"
+        "page_0418.json",
+        "page_0263.json",
+        "page_0334.json",
+        "page_0455.json",
+        "page_0430.json",
+        "page_0465.json",
+        "page_0477.json"
       ]
     }
   ]

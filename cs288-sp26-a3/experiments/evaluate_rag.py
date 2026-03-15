@@ -52,54 +52,78 @@ def metric_max_over_ground_truths(metric_fn, prediction, ground_truths):
         scores_for_ground_truths.append(score)
     return max(scores_for_ground_truths)
 
-def run_evaluation(reference_path, k=3):
+def run_evaluation(reference_path, k=10):
     retriever = Retriever("models/retrieval")
     generator = Generator(model="meta-llama/llama-3.1-8b-instruct")
-    
+
     with open(reference_path, 'r', encoding='utf-8') as f:
         references = [json.loads(line) for line in f]
-    
+
     em_scores = []
     f1_scores = []
-    
+    retrieval_recalls = []
+
     results = []
-    
+
     print(f"Evaluating {len(references)} samples...")
     for ref in tqdm(references):
         query = ref['question']
         ground_truths = [gt.strip() for gt in ref['answer'].split('|')]
-        
+        gt_url = ref.get('url', None)
+
         # Retrieve
         context_chunks = retriever.retrieve(query, k=k)
-        
+
+        # Calculate Retrieval Recall
+        # 1. Check if GT URL is in any retrieved chunk metadata
+        # 2. Check if any GT answer string is inside any retrieved chunk content
+        found_in_retrieval = False
+        for chunk in context_chunks:
+            # URL check
+            if gt_url and gt_url.strip() == chunk['metadata'].get('url', '').strip():
+                found_in_retrieval = True
+                break
+            # Content check
+            for gt in ground_truths:
+                if normalize_answer(gt) in normalize_answer(chunk['content']):
+                    found_in_retrieval = True
+                    break
+            if found_in_retrieval:
+                break
+
+        retrieval_recalls.append(1.0 if found_in_retrieval else 0.0)
+
         # Generate
         try:
             prediction = generator.generate(query, context_chunks)
         except Exception as e:
             print(f"Error for '{query}': {e}")
             prediction = "I don't know"
-            
+
         # Calculate Metrics
         em = metric_max_over_ground_truths(exact_match_score, prediction, ground_truths)
         f1 = metric_max_over_ground_truths(f1_score, prediction, ground_truths)
-        
+
         em_scores.append(em)
         f1_scores.append(f1)
-        
+
         results.append({
             "question": query,
             "ground_truths": ground_truths,
             "prediction": prediction,
             "em": em,
             "f1": f1,
+            "retrieval_recall": found_in_retrieval,
             "retrieved_files": [c['metadata']['file'] for c in context_chunks]
         })
-    
+
     print("\n" + "="*30)
     print(f"RAG Performance (k={k}):")
-    print(f"Exact Match: {np.mean(em_scores)*100:.2f}%")
-    print(f"F1 Score:    {np.mean(f1_scores)*100:.2f}%")
+    print(f"Exact Match:      {np.mean(em_scores)*100:.2f}%")
+    print(f"F1 Score:         {np.mean(f1_scores)*100:.2f}%")
+    print(f"Retrieval Recall: {np.mean(retrieval_recalls)*100:.2f}%")
     print("="*30)
+
     
     # Save detailed results
     with open("experiments/last_eval_results.json", 'w', encoding='utf-8') as f:
