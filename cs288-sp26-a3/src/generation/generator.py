@@ -10,8 +10,10 @@ class Generator:
         system_prompt = (
             "You are a Berkeley EECS assistant. Answer based ONLY on context. "
             "Keep answers extremely short (1-5 words). "
+            "If the question asks for a date, answer in original context format. "
             "If not in context, say 'I don't know'."
         )
+
 
         prompt = (
             f"Context:\n{context_text}\n\n"
