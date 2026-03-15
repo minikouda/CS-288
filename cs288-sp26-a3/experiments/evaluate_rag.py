@@ -1,0 +1,113 @@
+import json
+import os
+import sys
+import re
+import string
+import numpy as np
+
+# Ensure project root is in path
+sys.path.append(os.getcwd())
+
+from src.retrieval.retrieve import Retriever
+from src.generation.generator import Generator
+from tqdm import tqdm
+from collections import Counter
+
+def normalize_answer(s):
+    """Lowercases, removes punctuation and articles."""
+    def remove_articles(text):
+        return re.sub(r'\b(a|an|the)\b', ' ', text)
+
+    def white_space_fix(text):
+        return ' '.join(text.split())
+
+    def remove_punc(text):
+        exclude = set(string.punctuation)
+        return ''.join(ch for ch in text if ch not in exclude)
+
+    def lower(text):
+        return text.lower()
+
+    return white_space_fix(remove_articles(remove_punc(lower(s))))
+
+def f1_score(prediction, ground_truth):
+    prediction_tokens = normalize_answer(prediction).split()
+    ground_truth_tokens = normalize_answer(ground_truth).split()
+    common = Counter(prediction_tokens) & Counter(ground_truth_tokens)
+    num_same = sum(common.values())
+    if num_same == 0:
+        return 0
+    precision = 1.0 * num_same / len(prediction_tokens)
+    recall = 1.0 * num_same / len(ground_truth_tokens)
+    f1 = (2 * precision * recall) / (precision + recall)
+    return f1
+
+def exact_match_score(prediction, ground_truth):
+    return (normalize_answer(prediction) == normalize_answer(ground_truth))
+
+def metric_max_over_ground_truths(metric_fn, prediction, ground_truths):
+    scores_for_ground_truths = []
+    for ground_truth in ground_truths:
+        score = metric_fn(prediction, ground_truth)
+        scores_for_ground_truths.append(score)
+    return max(scores_for_ground_truths)
+
+def run_evaluation(reference_path, k=3):
+    retriever = Retriever("models/retrieval")
+    generator = Generator(model="meta-llama/llama-3.1-8b-instruct")
+    
+    with open(reference_path, 'r', encoding='utf-8') as f:
+        references = [json.loads(line) for line in f]
+    
+    em_scores = []
+    f1_scores = []
+    
+    results = []
+    
+    print(f"Evaluating {len(references)} samples...")
+    for ref in tqdm(references):
+        query = ref['question']
+        ground_truths = [gt.strip() for gt in ref['answer'].split('|')]
+        
+        # Retrieve
+        context_chunks = retriever.retrieve(query, k=k)
+        
+        # Generate
+        try:
+            prediction = generator.generate(query, context_chunks)
+        except Exception as e:
+            print(f"Error for '{query}': {e}")
+            prediction = "I don't know"
+            
+        # Calculate Metrics
+        em = metric_max_over_ground_truths(exact_match_score, prediction, ground_truths)
+        f1 = metric_max_over_ground_truths(f1_score, prediction, ground_truths)
+        
+        em_scores.append(em)
+        f1_scores.append(f1)
+        
+        results.append({
+            "question": query,
+            "ground_truths": ground_truths,
+            "prediction": prediction,
+            "em": em,
+            "f1": f1,
+            "retrieved_files": [c['metadata']['file'] for c in context_chunks]
+        })
+    
+    print("\n" + "="*30)
+    print(f"RAG Performance (k={k}):")
+    print(f"Exact Match: {np.mean(em_scores)*100:.2f}%")
+    print(f"F1 Score:    {np.mean(f1_scores)*100:.2f}%")
+    print("="*30)
+    
+    # Save detailed results
+    with open("experiments/last_eval_results.json", 'w', encoding='utf-8') as f:
+        json.dump({
+            "overall_em": float(np.mean(em_scores)),
+            "overall_f1": float(np.mean(f1_scores)),
+            "details": results
+        }, f, indent=2)
+
+if __name__ == "__main__":
+    run_evaluation("data/reference.jsonl")
