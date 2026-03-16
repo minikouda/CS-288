@@ -40,3 +40,5 @@ Many archive entries end with `\u2026` (ellipsis).
 
 ---
 **Next Step**: Implement a `cleaner.py` that handles deduplication (by URL) and boilerplate removal using the patterns identified above.
+
+There is a category in the text, maybe we can use it to filter out some of the noise. For example, if the category is "news", we can prioritize the full news article over the archive summary.

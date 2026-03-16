@@ -2,129 +2,144 @@ import os
 import json
 import re
 import hashlib
+import asyncio
 import logging
+import argparse
+from datetime import datetime
+from concurrent.futures import ProcessPoolExecutor
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
 
-RAW_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "data", "raw", "corpus_raw.jsonl")
-PROCESSED_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "data", "processed")
-PROCESSED_FILE = os.path.join(PROCESSED_DIR, "corpus_clean.jsonl")
+RAW_DIR = "data/raw"
+CLEANED_DIR = "data/cleaned"
 
-def setup_directories():
-    if not os.path.exists(PROCESSED_DIR):
-        os.makedirs(PROCESSED_DIR)
-    # Clear old processed file if it exists
-    if os.path.exists(PROCESSED_FILE):
-        os.remove(PROCESSED_FILE)
+# Regex for common boilerplate
+BOILERPLATE_PATTERNS = [
+    r"View Open Faculty Positions$",
+    r"1 2 Next Page \u00bb",
+    r"Faculty Archives - EECS at Berkeley Faculty",
+    r"Subscribe to our newsletter",
+    r"Follow us on Twitter",
+    r"EECS at UC Berkeley",
+    r"Contact us"
+]
 
-def clean_text(text):
-    """Normalize and strip boilerplate."""
-    # 1. Normalize whitespace
-    text = re.sub(r'\s+', ' ', text).strip()
-
-    # 2. Remove known boilerplate suffixes (Iterative cleaning)
-    suffixes_to_remove = [
-        "View Open Faculty Positions",
-        "Staff Positions Available",
-        "Faculty Positions Available",
-        "Joseph Gier Memorial Project",
-        "Our Leadership",
-        "Student Affairs Staff",
-        "Course Support Staff",
-        "Human Resources Staff",
-        "Apple NSI Fellowship and Scholarship Recipients",
-        "Apple NSI Course Flow Map",
-        "Pursue Your Research Interests",
-        "Community College Day",
-        "Attend Community College Day (Fall Only)",
-        "Attend Cal Day (Spring Only) Cal Day",
-        "Archive of Special Events",
-    ]
-
-    changed = True
-    while changed:
-        old_len = len(text)
-        for suffix in suffixes_to_remove:
-            if text.endswith(suffix):
-                text = text[:-len(suffix)].strip()
-
-        # Remove pagination patterns
-        text = re.sub(r'\d+ \d+ (?:3|4|5|6|7|8|9|…) .* Next Page »$', '', text).strip()
-        text = re.sub(r'1 2 Next Page »$', '', text).strip()
-
-        changed = len(text) < old_len
-
-    # 3. Unicode normalization
-    text = text.replace('\u201c', '"').replace('\u201d', '"')
-    text = text.replace('\u2018', "'").replace('\u2019', "'")
-    text = text.replace('\u2013', '-').replace('\u2014', '--')
-    text = text.replace('\u00bb', '>>')
-
-    return text
-
-def run_cleaner():
-    setup_directories()
+def clean_content(text):
+    """Surgical cleaning of content to remove boilerplate but preserve facts."""
+    if not text:
+        return ""
     
-    if not os.path.exists(RAW_FILE):
-        logging.error(f"Raw file not found at {RAW_FILE}. Run the scraper first!")
-        return
+    # 1. Strip redundant whitespace
+    text = re.sub(r'\s+', ' ', text).strip()
+    
+    # 2. Remove known boilerplate patterns
+    for pattern in BOILERPLATE_PATTERNS:
+        text = re.sub(pattern, "", text, flags=re.IGNORECASE)
+    
+    # 3. Basic unicode normalization
+    text = text.encode('ascii', 'ignore').decode('ascii')
+    
+    return text.strip()
 
-    seen_urls = set()
-    seen_hashes = set()
-    processed_count = 0
-    skipped_count = 0
+def process_file_sync(file_path):
+    """Synchronous file reading and processing."""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            item = json.load(f)
+            
+            if "content" not in item:
+                return None
+            
+            clean_text = clean_content(item["content"])
+            
+            # Skip if too short after cleaning
+            if len(clean_text) < 100:
+                return None
+            
+            item["content"] = clean_text
+            
+            # Generate a unique hash for deduplication
+            content_hash = hashlib.md5(clean_text.encode()).hexdigest()
+            item["content_hash"] = content_hash
+            
+            return item
+    except Exception as e:
+        logging.error(f"Error processing {file_path}: {e}")
+        return None
 
-    logging.info("Starting data cleaning and deduplication...")
-
-    with open(RAW_FILE, 'r', encoding='utf-8') as infile, \
-         open(PROCESSED_FILE, 'w', encoding='utf-8') as outfile:
+def process_line_sync(line):
+    """Synchronous line processing for JSONL."""
+    try:
+        item = json.loads(line)
+        if "content" not in item:
+            return None
         
-        for line in infile:
-            try:
-                item = json.loads(line)
-                url = item.get('url', '')
-                raw_content = item.get('content', '')
+        clean_text = clean_content(item["content"])
+        if len(clean_text) < 100:
+            return None
+            
+        item["content"] = clean_text
+        content_hash = hashlib.md5(clean_text.encode()).hexdigest()
+        item["content_hash"] = content_hash
+        return item
+    except Exception:
+        return None
 
-                # Skip if we've already seen this exact URL
-                if url in seen_urls:
-                    skipped_count += 1
-                    continue
+async def run_async_cleaner(input_source, output_file, is_directory=True):
+    """Main entry point to clean and deduplicate data using multiprocessing."""
+    logging.info(f"Starting async data cleaning from {input_source}...")
+    
+    processed_data = []
+    seen_hashes = set()
+    
+    loop = asyncio.get_running_loop()
+    with ProcessPoolExecutor() as executor:
+        if is_directory:
+            # Process individual JSON files
+            json_files = [os.path.join(input_source, f) for f in os.listdir(input_source) if f.endswith('.json')]
+            logging.info(f"Found {len(json_files)} JSON files to process.")
+            
+            # Run in process pool
+            tasks = [loop.run_in_executor(executor, process_file_sync, f) for f in json_files]
+            results = await asyncio.gather(*tasks)
+            
+            for item in results:
+                if item and item["content_hash"] not in seen_hashes:
+                    seen_hashes.add(item["content_hash"])
+                    processed_data.append(item)
+        else:
+            # Process JSONL file
+            with open(input_source, 'r', encoding='utf-8') as f:
+                lines = f.readlines()
+                logging.info(f"Read {len(lines)} lines from JSONL.")
                 
-                # Clean the content
-                cleaned_content = clean_text(raw_content)
+                tasks = [loop.run_in_executor(executor, process_line_sync, line) for line in lines]
+                results = await asyncio.gather(*tasks)
                 
-                # Skip if too short after cleaning (less than 15 words)
-                if len(cleaned_content.split()) < 15:
-                    skipped_count += 1
-                    continue
+                for item in results:
+                    if item and item["content_hash"] not in seen_hashes:
+                        seen_hashes.add(item["content_hash"])
+                        processed_data.append(item)
 
-                # Deduplicate based on content hash to catch identical pages at different URLs
-                content_hash = hashlib.md5(cleaned_content.encode('utf-8')).hexdigest()
-                if content_hash in seen_hashes:
-                    skipped_count += 1
-                    continue
-
-                # Record as seen
-                seen_urls.add(url)
-                seen_hashes.add(content_hash)
-
-                # Save the cleaned item
-                clean_item = {
-                    "url": url,
-                    "title": item.get('title', ''),
-                    "content": cleaned_content
-                }
-                outfile.write(json.dumps(clean_item) + "\n")
-                
-                processed_count += 1
-                if processed_count % 1000 == 0:
-                    logging.info(f"Cleaned {processed_count} unique pages...")
-
-            except json.JSONDecodeError:
-                continue
-
-    logging.info(f"Cleaning Complete! Saved {processed_count} clean pages. Skipped {skipped_count} duplicates/short pages.")
+    # Write output JSONL
+    os.makedirs(os.path.dirname(output_file), exist_ok=True)
+    with open(output_file, 'w', encoding='utf-8') as f:
+        for item in processed_data:
+            f.write(json.dumps(item) + '\n')
+            
+    logging.info(f"Cleaning Complete! Saved {len(processed_data)} clean pages to {output_file}.")
 
 if __name__ == "__main__":
-    run_cleaner()
+    parser = argparse.ArgumentParser(description="Clean and deduplicate scraped data.")
+    parser.add_argument("--input", default=RAW_DIR, help="Path to raw JSON files or JSONL")
+    parser.add_argument("--output", default=None, help="Output JSONL path")
+    
+    args = parser.parse_args()
+    
+    if not args.output:
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        args.output = os.path.join(CLEANED_DIR, f"corpus_clean_{timestamp}.jsonl")
+    
+    is_dir = os.path.isdir(args.input)
+    asyncio.run(run_async_cleaner(args.input, args.output, is_directory=is_dir))
