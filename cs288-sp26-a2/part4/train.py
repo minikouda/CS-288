@@ -346,8 +346,8 @@ def pretrain_lm(tokenizer, config: dict, device: str, checkpoint_path=None) -> T
         return model
 
     # torch.compile for ~20-40% extra throughput (PyTorch 2+)
-    if hasattr(torch, "compile"):
-        print("Compiling model with torch.compile ...")
+    if hasattr(torch, "compile") and not config.get("no_compile"):
+        print("Compiling model with torch.compile (takes 2-5 min, then GPU util jumps) ...")
         model = torch.compile(model)
 
     dataloader = create_pretraining_dataloader(
@@ -423,7 +423,7 @@ def finetune_qa(
         qa_model.load_state_dict(torch.load(checkpoint_path, map_location=device))
         return qa_model
 
-    if hasattr(torch, "compile"):
+    if hasattr(torch, "compile") and not config.get("no_compile"):
         print("Compiling QA model with torch.compile ...")
         qa_model = torch.compile(qa_model)
 
@@ -653,6 +653,7 @@ def main():
     parser.add_argument("--device", default=None)
     parser.add_argument("--skip-pretrain", action="store_true", help="Load pretrain checkpoint")
     parser.add_argument("--skip-finetune", action="store_true", help="Load finetune checkpoint")
+    parser.add_argument("--no-compile", action="store_true", help="Disable torch.compile (faster startup, slower training)")
     parser.add_argument("--no-download", action="store_true", help="Skip dataset download")
     args = parser.parse_args()
 
@@ -674,6 +675,7 @@ def main():
     # Use bpe_data if specified (smaller subset = much faster BPE training)
     bpe_data = config.get("bpe_data", config["pretrain_data"])
     tokenizer, _, _ = train_tokenizer(bpe_data, config["vocab_size"])
+    config["no_compile"] = args.no_compile
 
     # ── 2. Pretrain ───────────────────────────────────────────────────────────
     pretrain_ckpt = OUTPUTS / f"pretrain_{args.config}.pt"

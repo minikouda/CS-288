@@ -18,20 +18,23 @@ def main():
     
     # Read questions
     with open(questions_path, 'r', encoding='utf-8') as f:
-        questions = [line.strip() for line in f if line.strip()]
+        questions = [line.strip() for line in f]
     
     predictions = []
     
     print(f"Processing {len(questions)} questions...")
     for query in tqdm(questions):
+        if not query:
+            predictions.append("I don't know")
+            continue
+            
         # Retrieve
-        context_chunks = retriever.retrieve(query, k=5)
-        
-        # Generate
         try:
+            context_chunks = retriever.retrieve(query, k=5)
+            # Generate
             prediction = generator.generate(query, context_chunks)
         except Exception as e:
-            print(f"Error generating response for query '{query}': {e}")
+            print(f"Error processing query '{query}': {e}")
             prediction = "I don't know" # Fallback
             
         # Ensure no newlines in prediction
