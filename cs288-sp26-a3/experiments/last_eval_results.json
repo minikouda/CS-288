@@ -1,19 +1,33 @@
 {
-  "overall_em": 0.3,
-  "overall_f1": 0.38,
+  "overall_em": 0.5862068965517241,
+  "overall_f1": 0.7469113037064357,
   "details": [
     {
       "question": "What is the course number for the undergrad-level class that covers computer security topics such as cryptography, operating system security, network security, and software security?",
       "ground_truths": [
         "CS 161"
       ],
-      "prediction": "CS 161",
+      "prediction": "CS 161.",
       "em": true,
       "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L240",
+        "corpus_clean_v4.jsonl:L96",
+        "corpus_clean_v4.jsonl:L242"
+      ],
       "retrieved_files": [
-        "page_0312.json",
-        "page_0248.json",
-        "page_0278.json"
+        "corpus_clean_v4.jsonl:L469",
+        "corpus_clean_v4.jsonl:L240",
+        "corpus_clean_v4.jsonl:L536",
+        "corpus_clean_v4.jsonl:L214",
+        "corpus_clean_v4.jsonl:L572",
+        "corpus_clean_v4.jsonl:L433",
+        "corpus_clean_v4.jsonl:L96",
+        "corpus_clean_v4.jsonl:L334",
+        "corpus_clean_v4.jsonl:L242",
+        "corpus_clean_v4.jsonl:L571"
       ]
     },
     {
@@ -24,13 +38,26 @@
         "Grayson Johnston",
         "Carol Marshall"
       ],
-      "prediction": "Gina Garcia.",
+      "prediction": "Gina Garcia",
       "em": true,
       "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L573",
+        "corpus_clean_v4.jsonl:L542"
+      ],
       "retrieved_files": [
-        "page_0576.json",
-        "page_0052.json",
-        "page_0299.json"
+        "corpus_clean_v4.jsonl:L707",
+        "corpus_clean_v4.jsonl:L1546",
+        "corpus_clean_v4.jsonl:L1861",
+        "corpus_clean_v4.jsonl:L573",
+        "corpus_clean_v4.jsonl:L573",
+        "corpus_clean_v4.jsonl:L658",
+        "corpus_clean_v4.jsonl:L542",
+        "corpus_clean_v4.jsonl:L631",
+        "corpus_clean_v4.jsonl:L545",
+        "corpus_clean_v4.jsonl:L728"
       ]
     },
     {
@@ -38,13 +65,25 @@
       "ground_truths": [
         "Syed Tahmid Mahbub"
       ],
-      "prediction": "I don't know",
-      "em": false,
-      "f1": 0,
+      "prediction": "Syed Tahmid Mahbub.",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L1581"
+      ],
       "retrieved_files": [
-        "page_0528.json",
-        "page_0510.json",
-        "page_0656.json"
+        "corpus_clean_v4.jsonl:L1581",
+        "corpus_clean_v4.jsonl:L1726",
+        "corpus_clean_v4.jsonl:L2690",
+        "corpus_clean_v4.jsonl:L2415",
+        "corpus_clean_v4.jsonl:L2107",
+        "corpus_clean_v4.jsonl:L1465",
+        "corpus_clean_v4.jsonl:L1581",
+        "corpus_clean_v4.jsonl:L2827",
+        "corpus_clean_v4.jsonl:L3378",
+        "corpus_clean_v4.jsonl:L2415"
       ]
     },
     {
@@ -52,13 +91,23 @@
       "ground_truths": [
         "Lester Edwin Reukema"
       ],
-      "prediction": "Agnes Fay Morgan",
+      "prediction": "Joseph Gier (1910)",
       "em": false,
       "f1": 0,
+      "retrieval_recall": false,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [],
       "retrieved_files": [
-        "page_0207.json",
-        "page_0498.json",
-        "page_0315.json"
+        "corpus_clean_v4.jsonl:L133",
+        "corpus_clean_v4.jsonl:L687",
+        "corpus_clean_v4.jsonl:L1547",
+        "corpus_clean_v4.jsonl:L1596",
+        "corpus_clean_v4.jsonl:L3451",
+        "corpus_clean_v4.jsonl:L1475",
+        "corpus_clean_v4.jsonl:L1445",
+        "corpus_clean_v4.jsonl:L2996",
+        "corpus_clean_v4.jsonl:L1261",
+        "corpus_clean_v4.jsonl:L157"
       ]
     },
     {
@@ -67,13 +116,23 @@
         "Moritz Hardt",
         "Jennifer Listgarten"
       ],
-      "prediction": "Richard M. Karp",
+      "prediction": "I don't know",
       "em": false,
       "f1": 0,
+      "retrieval_recall": false,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [],
       "retrieved_files": [
-        "page_0454.json",
-        "page_0198.json",
-        "page_0092.json"
+        "corpus_clean_v4.jsonl:L1673",
+        "corpus_clean_v4.jsonl:L1468",
+        "corpus_clean_v4.jsonl:L1514",
+        "corpus_clean_v4.jsonl:L1546",
+        "corpus_clean_v4.jsonl:L707",
+        "corpus_clean_v4.jsonl:L1587",
+        "corpus_clean_v4.jsonl:L687",
+        "corpus_clean_v4.jsonl:L1446",
+        "corpus_clean_v4.jsonl:L698",
+        "corpus_clean_v4.jsonl:L700"
       ]
     },
     {
@@ -81,13 +140,25 @@
       "ground_truths": [
         "2/18/26"
       ],
-      "prediction": "Monday, 2/9/26.",
-      "em": false,
-      "f1": 0,
+      "prediction": "2/18/26",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L60"
+      ],
       "retrieved_files": [
-        "page_0195.json",
-        "page_0118.json",
-        "page_0270.json"
+        "corpus_clean_v4.jsonl:L60",
+        "corpus_clean_v4.jsonl:L1667",
+        "corpus_clean_v4.jsonl:L20",
+        "corpus_clean_v4.jsonl:L523",
+        "corpus_clean_v4.jsonl:L1416",
+        "corpus_clean_v4.jsonl:L1546",
+        "corpus_clean_v4.jsonl:L579",
+        "corpus_clean_v4.jsonl:L1751",
+        "corpus_clean_v4.jsonl:L2800",
+        "corpus_clean_v4.jsonl:L1814"
       ]
     },
     {
@@ -98,10 +169,22 @@
       "prediction": "KU Leuven, Belgium",
       "em": false,
       "f1": 0.8,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": "corpus_clean_v4.jsonl:L182",
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L182"
+      ],
       "retrieved_files": [
-        "page_0341.json",
-        "page_0068.json",
-        "page_0115.json"
+        "corpus_clean_v4.jsonl:L182",
+        "corpus_clean_v4.jsonl:L1868",
+        "corpus_clean_v4.jsonl:L182",
+        "corpus_clean_v4.jsonl:L2776",
+        "corpus_clean_v4.jsonl:L2519",
+        "corpus_clean_v4.jsonl:L2541",
+        "corpus_clean_v4.jsonl:L3062",
+        "corpus_clean_v4.jsonl:L1876",
+        "corpus_clean_v4.jsonl:L1389",
+        "corpus_clean_v4.jsonl:L2785"
       ]
     },
     {
@@ -109,13 +192,25 @@
       "ground_truths": [
         "Stanford University"
       ],
-      "prediction": "Stanford University.",
-      "em": true,
-      "f1": 1.0,
+      "prediction": "Stanford University (1999-2004)",
+      "em": false,
+      "f1": 0.8,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L331"
+      ],
       "retrieved_files": [
-        "page_0088.json",
-        "page_0367.json",
-        "page_0665.json"
+        "corpus_clean_v4.jsonl:L331",
+        "corpus_clean_v4.jsonl:L331",
+        "corpus_clean_v4.jsonl:L2628",
+        "corpus_clean_v4.jsonl:L2628",
+        "corpus_clean_v4.jsonl:L2617",
+        "corpus_clean_v4.jsonl:L2667",
+        "corpus_clean_v4.jsonl:L1677",
+        "corpus_clean_v4.jsonl:L2264",
+        "corpus_clean_v4.jsonl:L2600",
+        "corpus_clean_v4.jsonl:L274"
       ]
     },
     {
@@ -123,13 +218,30 @@
       "ground_truths": [
         "6"
       ],
-      "prediction": "I don't know",
+      "prediction": "I don't know.",
       "em": false,
       "f1": 0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L307",
+        "corpus_clean_v4.jsonl:L354",
+        "corpus_clean_v4.jsonl:L1518",
+        "corpus_clean_v4.jsonl:L42",
+        "corpus_clean_v4.jsonl:L401",
+        "corpus_clean_v4.jsonl:L114"
+      ],
       "retrieved_files": [
-        "page_0089.json",
-        "page_0400.json",
-        "page_0045.json"
+        "corpus_clean_v4.jsonl:L307",
+        "corpus_clean_v4.jsonl:L354",
+        "corpus_clean_v4.jsonl:L1834",
+        "corpus_clean_v4.jsonl:L1518",
+        "corpus_clean_v4.jsonl:L42",
+        "corpus_clean_v4.jsonl:L401",
+        "corpus_clean_v4.jsonl:L401",
+        "corpus_clean_v4.jsonl:L2742",
+        "corpus_clean_v4.jsonl:L114",
+        "corpus_clean_v4.jsonl:L1232"
       ]
     },
     {
@@ -140,10 +252,567 @@
       "prediction": "I don't know.",
       "em": false,
       "f1": 0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L579",
+        "corpus_clean_v4.jsonl:L572",
+        "corpus_clean_v4.jsonl:L571",
+        "corpus_clean_v4.jsonl:L1304",
+        "corpus_clean_v4.jsonl:L719",
+        "corpus_clean_v4.jsonl:L1299",
+        "corpus_clean_v4.jsonl:L1420",
+        "corpus_clean_v4.jsonl:L36"
+      ],
       "retrieved_files": [
-        "page_0613.json",
-        "page_0075.json",
-        "page_0263.json"
+        "corpus_clean_v4.jsonl:L579",
+        "corpus_clean_v4.jsonl:L572",
+        "corpus_clean_v4.jsonl:L571",
+        "corpus_clean_v4.jsonl:L1304",
+        "corpus_clean_v4.jsonl:L652",
+        "corpus_clean_v4.jsonl:L719",
+        "corpus_clean_v4.jsonl:L1299",
+        "corpus_clean_v4.jsonl:L1420",
+        "corpus_clean_v4.jsonl:L2010",
+        "corpus_clean_v4.jsonl:L36"
+      ]
+    },
+    {
+      "question": "What room hosts the Accel Scholars Info-Session on March 16, 2026?",
+      "ground_truths": [
+        "Wozniak Lounge"
+      ],
+      "prediction": "Wozniak Lounge",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L9"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L9",
+        "corpus_clean_v4.jsonl:L651",
+        "corpus_clean_v4.jsonl:L651",
+        "corpus_clean_v4.jsonl:L2282",
+        "corpus_clean_v4.jsonl:L3273",
+        "corpus_clean_v4.jsonl:L1973",
+        "corpus_clean_v4.jsonl:L1893",
+        "corpus_clean_v4.jsonl:L2716",
+        "corpus_clean_v4.jsonl:L1973",
+        "corpus_clean_v4.jsonl:L2439"
+      ]
+    },
+    {
+      "question": "On what day of the week is the Dissertation Talk: Understanding Misalignment in AI Agents scheduled?",
+      "ground_truths": [
+        "Wednesday"
+      ],
+      "prediction": "Wednesday",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L9",
+        "corpus_clean_v4.jsonl:L1317",
+        "corpus_clean_v4.jsonl:L618"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L9",
+        "corpus_clean_v4.jsonl:L1317",
+        "corpus_clean_v4.jsonl:L618",
+        "corpus_clean_v4.jsonl:L3294",
+        "corpus_clean_v4.jsonl:L1839",
+        "corpus_clean_v4.jsonl:L3061",
+        "corpus_clean_v4.jsonl:L258",
+        "corpus_clean_v4.jsonl:L1303",
+        "corpus_clean_v4.jsonl:L1673",
+        "corpus_clean_v4.jsonl:L1295"
+      ]
+    },
+    {
+      "question": "What is the maximum number of semester units that can be transferred from a Master's degree for Ph.D. coursework petitions?",
+      "ground_truths": [
+        "12"
+      ],
+      "prediction": "12 semester units maximum",
+      "em": false,
+      "f1": 0.4,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L640",
+        "corpus_clean_v4.jsonl:L1304",
+        "corpus_clean_v4.jsonl:L642",
+        "corpus_clean_v4.jsonl:L719"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L640",
+        "corpus_clean_v4.jsonl:L1420",
+        "corpus_clean_v4.jsonl:L1304",
+        "corpus_clean_v4.jsonl:L642",
+        "corpus_clean_v4.jsonl:L1419",
+        "corpus_clean_v4.jsonl:L719",
+        "corpus_clean_v4.jsonl:L570",
+        "corpus_clean_v4.jsonl:L1299",
+        "corpus_clean_v4.jsonl:L39",
+        "corpus_clean_v4.jsonl:L1301"
+      ]
+    },
+    {
+      "question": "What is the CS staff advisor email for Ph.D. petitions?",
+      "ground_truths": [
+        "grads-cs@berkeley.edu"
+      ],
+      "prediction": "grads-cs@berkeley.edu",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L640",
+        "corpus_clean_v4.jsonl:L641",
+        "corpus_clean_v4.jsonl:L658",
+        "corpus_clean_v4.jsonl:L668",
+        "corpus_clean_v4.jsonl:L175"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L640",
+        "corpus_clean_v4.jsonl:L641",
+        "corpus_clean_v4.jsonl:L658",
+        "corpus_clean_v4.jsonl:L668",
+        "corpus_clean_v4.jsonl:L640",
+        "corpus_clean_v4.jsonl:L716",
+        "corpus_clean_v4.jsonl:L573",
+        "corpus_clean_v4.jsonl:L642",
+        "corpus_clean_v4.jsonl:L1425",
+        "corpus_clean_v4.jsonl:L175"
+      ]
+    },
+    {
+      "question": "What minimum grade is required for EE breadth courses?",
+      "ground_truths": [
+        "A-"
+      ],
+      "prediction": "A- or better",
+      "em": false,
+      "f1": 0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L1304",
+        "corpus_clean_v4.jsonl:L1299",
+        "corpus_clean_v4.jsonl:L721",
+        "corpus_clean_v4.jsonl:L571",
+        "corpus_clean_v4.jsonl:L652",
+        "corpus_clean_v4.jsonl:L547",
+        "corpus_clean_v4.jsonl:L572",
+        "corpus_clean_v4.jsonl:L43",
+        "corpus_clean_v4.jsonl:L535",
+        "corpus_clean_v4.jsonl:L580"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L1304",
+        "corpus_clean_v4.jsonl:L1299",
+        "corpus_clean_v4.jsonl:L721",
+        "corpus_clean_v4.jsonl:L571",
+        "corpus_clean_v4.jsonl:L652",
+        "corpus_clean_v4.jsonl:L547",
+        "corpus_clean_v4.jsonl:L572",
+        "corpus_clean_v4.jsonl:L43",
+        "corpus_clean_v4.jsonl:L535",
+        "corpus_clean_v4.jsonl:L580"
+      ]
+    },
+    {
+      "question": "What minimum grade is required for CS breadth courses?",
+      "ground_truths": [
+        "B+"
+      ],
+      "prediction": "B+ or better.",
+      "em": false,
+      "f1": 0.5,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L1304",
+        "corpus_clean_v4.jsonl:L1299",
+        "corpus_clean_v4.jsonl:L535",
+        "corpus_clean_v4.jsonl:L725",
+        "corpus_clean_v4.jsonl:L572",
+        "corpus_clean_v4.jsonl:L652",
+        "corpus_clean_v4.jsonl:L43",
+        "corpus_clean_v4.jsonl:L724",
+        "corpus_clean_v4.jsonl:L575",
+        "corpus_clean_v4.jsonl:L571"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L1304",
+        "corpus_clean_v4.jsonl:L1299",
+        "corpus_clean_v4.jsonl:L535",
+        "corpus_clean_v4.jsonl:L725",
+        "corpus_clean_v4.jsonl:L572",
+        "corpus_clean_v4.jsonl:L652",
+        "corpus_clean_v4.jsonl:L43",
+        "corpus_clean_v4.jsonl:L724",
+        "corpus_clean_v4.jsonl:L575",
+        "corpus_clean_v4.jsonl:L571"
+      ]
+    },
+    {
+      "question": "When is the Fall Prelim Exam application released?",
+      "ground_truths": [
+        "mid-March"
+      ],
+      "prediction": "mid-March",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L671"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L671",
+        "corpus_clean_v4.jsonl:L1297",
+        "corpus_clean_v4.jsonl:L1427",
+        "corpus_clean_v4.jsonl:L1985",
+        "corpus_clean_v4.jsonl:L671",
+        "corpus_clean_v4.jsonl:L580",
+        "corpus_clean_v4.jsonl:L1427",
+        "corpus_clean_v4.jsonl:L725",
+        "corpus_clean_v4.jsonl:L640",
+        "corpus_clean_v4.jsonl:L668"
+      ]
+    },
+    {
+      "question": "What is the minimum GPA required to take the EECS preliminary oral exam?",
+      "ground_truths": [
+        "3.5"
+      ],
+      "prediction": "3.5",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L671",
+        "corpus_clean_v4.jsonl:L1304",
+        "corpus_clean_v4.jsonl:L1299",
+        "corpus_clean_v4.jsonl:L580",
+        "corpus_clean_v4.jsonl:L1257",
+        "corpus_clean_v4.jsonl:L642"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L671",
+        "corpus_clean_v4.jsonl:L1304",
+        "corpus_clean_v4.jsonl:L1299",
+        "corpus_clean_v4.jsonl:L725",
+        "corpus_clean_v4.jsonl:L721",
+        "corpus_clean_v4.jsonl:L580",
+        "corpus_clean_v4.jsonl:L572",
+        "corpus_clean_v4.jsonl:L1257",
+        "corpus_clean_v4.jsonl:L43",
+        "corpus_clean_v4.jsonl:L642"
+      ]
+    },
+    {
+      "question": "What score out of 10 is required to pass the EECS preliminary oral exam?",
+      "ground_truths": [
+        "6.0"
+      ],
+      "prediction": "6.0",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L671"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L671",
+        "corpus_clean_v4.jsonl:L2520",
+        "corpus_clean_v4.jsonl:L659",
+        "corpus_clean_v4.jsonl:L580",
+        "corpus_clean_v4.jsonl:L719",
+        "corpus_clean_v4.jsonl:L1302",
+        "corpus_clean_v4.jsonl:L547",
+        "corpus_clean_v4.jsonl:L1302",
+        "corpus_clean_v4.jsonl:L1265",
+        "corpus_clean_v4.jsonl:L317"
+      ]
+    },
+    {
+      "question": "Under which CalCentral tab and section can new graduate students view their enrollment appointment?",
+      "ground_truths": [
+        "My Academics and Class Enrollment"
+      ],
+      "prediction": "My Academics tab and Class Enrollment.",
+      "em": false,
+      "f1": 0.9090909090909091,
+      "retrieval_recall": false,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L714",
+        "corpus_clean_v4.jsonl:L713",
+        "corpus_clean_v4.jsonl:L584",
+        "corpus_clean_v4.jsonl:L585",
+        "corpus_clean_v4.jsonl:L1303",
+        "corpus_clean_v4.jsonl:L731",
+        "corpus_clean_v4.jsonl:L710",
+        "corpus_clean_v4.jsonl:L639",
+        "corpus_clean_v4.jsonl:L38",
+        "corpus_clean_v4.jsonl:L639"
+      ]
+    },
+    {
+      "question": "What two conditions must be met for a student to be officially registered for the semester?",
+      "ground_truths": [
+        "enrolled in classes and fees paid"
+      ],
+      "prediction": "enrolled in classes and paid their first installment or full fees.",
+      "em": false,
+      "f1": 0.7058823529411764,
+      "retrieval_recall": false,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L1303",
+        "corpus_clean_v4.jsonl:L714",
+        "corpus_clean_v4.jsonl:L1423",
+        "corpus_clean_v4.jsonl:L1418",
+        "corpus_clean_v4.jsonl:L719",
+        "corpus_clean_v4.jsonl:L643",
+        "corpus_clean_v4.jsonl:L1304",
+        "corpus_clean_v4.jsonl:L711",
+        "corpus_clean_v4.jsonl:L646",
+        "corpus_clean_v4.jsonl:L639"
+      ]
+    },
+    {
+      "question": "During which hours is the Center for Student Affairs in Cory Hall open, including the midday closure?",
+      "ground_truths": [
+        "9 am - 12 pm and 1 pm - 4 pm"
+      ],
+      "prediction": "9 am  12 pm and 1 pm  4 pm.",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L716"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L716",
+        "corpus_clean_v4.jsonl:L167",
+        "corpus_clean_v4.jsonl:L101",
+        "corpus_clean_v4.jsonl:L1256",
+        "corpus_clean_v4.jsonl:L665",
+        "corpus_clean_v4.jsonl:L2122",
+        "corpus_clean_v4.jsonl:L637",
+        "corpus_clean_v4.jsonl:L521",
+        "corpus_clean_v4.jsonl:L116",
+        "corpus_clean_v4.jsonl:L107"
+      ]
+    },
+    {
+      "question": "If a graduate student's Cal 1 Card stops working, which specific Soda Hall location should they visit for help?",
+      "ground_truths": [
+        "387 Soda Hall"
+      ],
+      "prediction": "387 Soda Hall",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L716",
+        "corpus_clean_v4.jsonl:L107",
+        "corpus_clean_v4.jsonl:L167"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L716",
+        "corpus_clean_v4.jsonl:L712",
+        "corpus_clean_v4.jsonl:L638",
+        "corpus_clean_v4.jsonl:L101",
+        "corpus_clean_v4.jsonl:L526",
+        "corpus_clean_v4.jsonl:L107",
+        "corpus_clean_v4.jsonl:L538",
+        "corpus_clean_v4.jsonl:L1256",
+        "corpus_clean_v4.jsonl:L710",
+        "corpus_clean_v4.jsonl:L167"
+      ]
+    },
+    {
+      "question": "Which advisor should a current Computer Science PhD student contact for advising and policy or procedure interpretation related to graduate student matters?",
+      "ground_truths": [
+        "Carissa Caloud"
+      ],
+      "prediction": "Carissa Caloud",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L62"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L62",
+        "corpus_clean_v4.jsonl:L647",
+        "corpus_clean_v4.jsonl:L521",
+        "corpus_clean_v4.jsonl:L658",
+        "corpus_clean_v4.jsonl:L641",
+        "corpus_clean_v4.jsonl:L1254",
+        "corpus_clean_v4.jsonl:L1256",
+        "corpus_clean_v4.jsonl:L726",
+        "corpus_clean_v4.jsonl:L573",
+        "corpus_clean_v4.jsonl:L733"
+      ]
+    },
+    {
+      "question": "What is the office location of the advisor responsible for graduate student matters for students in the 5th Year MS, MS-Only, and MEng programs named Michael Sun?",
+      "ground_truths": [
+        "215 Cory"
+      ],
+      "prediction": "215 Cory",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L103",
+        "corpus_clean_v4.jsonl:L62",
+        "corpus_clean_v4.jsonl:L644"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L103",
+        "corpus_clean_v4.jsonl:L62",
+        "corpus_clean_v4.jsonl:L658",
+        "corpus_clean_v4.jsonl:L1299",
+        "corpus_clean_v4.jsonl:L1301",
+        "corpus_clean_v4.jsonl:L643",
+        "corpus_clean_v4.jsonl:L654",
+        "corpus_clean_v4.jsonl:L658",
+        "corpus_clean_v4.jsonl:L116",
+        "corpus_clean_v4.jsonl:L644"
+      ]
+    },
+    {
+      "question": "Who received the Chancellor's Distinguished Service Award in 2012 on the EECS Staff Awards page?",
+      "ground_truths": [
+        "Kate Riley"
+      ],
+      "prediction": "Kate Riley",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L627"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L627",
+        "corpus_clean_v4.jsonl:L1243",
+        "corpus_clean_v4.jsonl:L1598",
+        "corpus_clean_v4.jsonl:L2647",
+        "corpus_clean_v4.jsonl:L1858",
+        "corpus_clean_v4.jsonl:L69",
+        "corpus_clean_v4.jsonl:L3133",
+        "corpus_clean_v4.jsonl:L704",
+        "corpus_clean_v4.jsonl:L1987",
+        "corpus_clean_v4.jsonl:L2085"
+      ]
+    },
+    {
+      "question": "Which award on the EECS Staff Awards page recognizes exceptional performance and innovation in advising and student support?",
+      "ground_truths": [
+        "Berkeley Excellence in Advising Awards"
+      ],
+      "prediction": "Berkeley Excellence in Advising Awards",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L627"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L2744",
+        "corpus_clean_v4.jsonl:L627",
+        "corpus_clean_v4.jsonl:L1861",
+        "corpus_clean_v4.jsonl:L1546",
+        "corpus_clean_v4.jsonl:L1446",
+        "corpus_clean_v4.jsonl:L1861",
+        "corpus_clean_v4.jsonl:L1587",
+        "corpus_clean_v4.jsonl:L60",
+        "corpus_clean_v4.jsonl:L1416",
+        "corpus_clean_v4.jsonl:L2742"
+      ]
+    },
+    {
+      "question": "Which UC Berkeley professor of Electrical Engineering and Computer Sciences was elected to the ACM CHI Academy?",
+      "ground_truths": [
+        "Eric Paulos"
+      ],
+      "prediction": "Eric Paulos.",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L511",
+        "corpus_clean_v4.jsonl:L673",
+        "corpus_clean_v4.jsonl:L118",
+        "corpus_clean_v4.jsonl:L10",
+        "corpus_clean_v4.jsonl:L675",
+        "corpus_clean_v4.jsonl:L672",
+        "corpus_clean_v4.jsonl:L3"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L511",
+        "corpus_clean_v4.jsonl:L673",
+        "corpus_clean_v4.jsonl:L118",
+        "corpus_clean_v4.jsonl:L10",
+        "corpus_clean_v4.jsonl:L675",
+        "corpus_clean_v4.jsonl:L672",
+        "corpus_clean_v4.jsonl:L118",
+        "corpus_clean_v4.jsonl:L3",
+        "corpus_clean_v4.jsonl:L1664",
+        "corpus_clean_v4.jsonl:L3287"
+      ]
+    },
+    {
+      "question": "Which three early-career UC Berkeley EECS faculty were named 2026 Sloan Research Fellows according to the February 17, 2026 news entry?",
+      "ground_truths": [
+        "Yuan Cao",
+        "Sarah E. Chasins",
+        "John Wright"
+      ],
+      "prediction": "Yuan Cao, Sarah E. Chasins, and John Wright.",
+      "em": false,
+      "f1": 0.5454545454545454,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L511",
+        "corpus_clean_v4.jsonl:L10",
+        "corpus_clean_v4.jsonl:L675",
+        "corpus_clean_v4.jsonl:L673",
+        "corpus_clean_v4.jsonl:L672"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L2411",
+        "corpus_clean_v4.jsonl:L2368",
+        "corpus_clean_v4.jsonl:L511",
+        "corpus_clean_v4.jsonl:L10",
+        "corpus_clean_v4.jsonl:L675",
+        "corpus_clean_v4.jsonl:L673",
+        "corpus_clean_v4.jsonl:L672",
+        "corpus_clean_v4.jsonl:L111",
+        "corpus_clean_v4.jsonl:L109",
+        "corpus_clean_v4.jsonl:L3"
       ]
     }
   ]
