@@ -11,3 +11,10 @@ seaborn>=0.11.0
 requests
 beautifulsoup4
 lxml
+
+# --- LOCAL DATA PREPARATION DEPENDENCIES ---
+# Note: Do NOT import these in the code you submit for evaluation!
+requests
+beautifulsoup4
+lxml
+aiohttp
