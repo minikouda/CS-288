@@ -78,18 +78,21 @@ def run_evaluation(reference_path, k=10):
         # 1. Check if GT URL is in any retrieved chunk metadata
         # 2. Check if any GT answer string is inside any retrieved chunk content
         found_in_retrieval = False
+        gt_url_chunk_file = None
+        content_match_chunk_files = []
         for chunk in context_chunks:
+            chunk_file = chunk['metadata'].get('file', None)
             # URL check
             if gt_url and gt_url.strip() == chunk['metadata'].get('url', '').strip():
-                found_in_retrieval = True
-                break
+                gt_url_chunk_file = chunk_file
             # Content check
             for gt in ground_truths:
                 if normalize_answer(gt) in normalize_answer(chunk['content']):
-                    found_in_retrieval = True
+                    if chunk_file is not None and chunk_file not in content_match_chunk_files:
+                        content_match_chunk_files.append(chunk_file)
                     break
-            if found_in_retrieval:
-                break
+
+        found_in_retrieval = (gt_url_chunk_file is not None) or (len(content_match_chunk_files) > 0)
 
         retrieval_recalls.append(1.0 if found_in_retrieval else 0.0)
 
@@ -114,6 +117,8 @@ def run_evaluation(reference_path, k=10):
             "em": em,
             "f1": f1,
             "retrieval_recall": found_in_retrieval,
+            "gt_url_chunk_file": gt_url_chunk_file,
+            "content_match_chunk_files": content_match_chunk_files,
             "retrieved_files": [c['metadata']['file'] for c in context_chunks]
         })
 
