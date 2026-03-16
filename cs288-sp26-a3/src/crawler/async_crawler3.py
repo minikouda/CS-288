@@ -17,7 +17,7 @@ IGNORE_EXTENSIONS = {'.pdf', '.jpg', '.jpeg', '.png', '.gif', '.zip', '.gz', '.t
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "data")
 OUTPUT_DIR = os.path.join(DATA_DIR, "raw")
-OUTPUT_FILE = os.path.join(OUTPUT_DIR, "corpus_raw4.jsonl")
+OUTPUT_FILE = os.path.join(OUTPUT_DIR, "corpus_raw5.jsonl")
 
 MAX_CONCURRENT_REQUESTS = 5
 MAX_RETRIES = 5
