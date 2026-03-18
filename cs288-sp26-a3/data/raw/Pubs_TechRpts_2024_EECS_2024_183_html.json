@@ -1,5 +1,0 @@
-{
-  "url": "https://www2.eecs.berkeley.edu/Pubs/TechRpts/2024/EECS-2024-183.html",
-  "title": "Efficient 3D Vision for Autonomous Driving | EECS at UC Berkeley",
-  "content": "Efficient 3D Vision for Autonomous Driving | EECS at UC Berkeley Efficient 3D Vision for Autonomous Driving Philip Jacobson EECS Department, University of California, Berkeley Technical Report No. UCB/EECS-2024-183 August 18, 2024 http://www2.eecs.berkeley.edu/Pubs/TechRpts/2024/EECS-2024-183.pdf Advisors: Ming C. Wu BibTeX citation: @phdthesis{Jacobson:EECS-2024-183, Author= {Jacobson, Philip}, Title= {Efficient 3D Vision for Autonomous Driving}, School= {EECS Department, University of California, Berkeley}, Year= {2024}, Month= {Aug}, Url= {http://www2.eecs.berkeley.edu/Pubs/TechRpts/2024/EECS-2024-183.html}, Number= {UCB/EECS-2024-183}, } EndNote citation: %0 Thesis %A Jacobson, Philip %T Efficient 3D Vision for Autonomous Driving %I EECS Department, University of California, Berkeley %D 2024 %8 August 18 %@ UCB/EECS-2024-183 %U http://www2.eecs.berkeley.edu/Pubs/TechRpts/2024/EECS-2024-183.html %F Jacobson:EECS-2024-183"
-}

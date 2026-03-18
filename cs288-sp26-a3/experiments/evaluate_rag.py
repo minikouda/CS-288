@@ -139,4 +139,4 @@ def run_evaluation(reference_path, k=10):
         }, f, indent=2)
 
 if __name__ == "__main__":
-    run_evaluation("data/reference.jsonl")
+    run_evaluation("data/reference.jsonl", k=3)

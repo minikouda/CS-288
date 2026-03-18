@@ -1,7 +1,257 @@
 {
-  "overall_em": 0.5862068965517241,
-  "overall_f1": 0.7469113037064357,
+  "overall_em": 0.45535714285714285,
+  "overall_f1": 0.6178583816976675,
   "details": [
+    {
+      "question": "How many COMPSCI 198 group courses are offered in the CS Spring 2026 schedule?",
+      "ground_truths": [
+        "5"
+      ],
+      "prediction": "4",
+      "em": false,
+      "f1": 0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L277",
+        "corpus_clean_v4.jsonl:L214"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L277",
+        "corpus_clean_v4.jsonl:L214",
+        "corpus_clean_v4.jsonl:L232"
+      ]
+    },
+    {
+      "question": "How many CS courses are listed as open upper-division classes available to any UC Berkeley or visiting undergraduate students?",
+      "ground_truths": [
+        "2"
+      ],
+      "prediction": "Two.",
+      "em": false,
+      "f1": 0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L724",
+        "corpus_clean_v4.jsonl:L584",
+        "corpus_clean_v4.jsonl:L572"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L724",
+        "corpus_clean_v4.jsonl:L584",
+        "corpus_clean_v4.jsonl:L572"
+      ]
+    },
+    {
+      "question": "How many courses is Dan Garcia scheduled to teach in Spring 2026 according to the EECS teaching faculty page?",
+      "ground_truths": [
+        "4"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L1436",
+        "corpus_clean_v4.jsonl:L274"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L1436",
+        "corpus_clean_v4.jsonl:L274",
+        "corpus_clean_v4.jsonl:L1563"
+      ]
+    },
+    {
+      "question": "How many research centers related to theory are listed on the Berkeley EECS Theory research area page?",
+      "ground_truths": [
+        "4"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L81",
+        "corpus_clean_v4.jsonl:L1679"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L81",
+        "corpus_clean_v4.jsonl:L1679",
+        "corpus_clean_v4.jsonl:L47"
+      ]
+    },
+    {
+      "question": "For transfer students admitted in Fall 2024 onward who did not select computer science on their UC Berkeley application, are they allowed to change their major to computer science or add computer science as a double major?",
+      "ground_truths": [
+        "No"
+      ],
+      "prediction": "No.",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L725",
+        "corpus_clean_v4.jsonl:L576",
+        "corpus_clean_v4.jsonl:L570"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L725",
+        "corpus_clean_v4.jsonl:L576",
+        "corpus_clean_v4.jsonl:L570"
+      ]
+    },
+    {
+      "question": "Can students who already hold another industry-sponsored full fellowship be considered for the Apple Masters Scholarship in Integrated Systems?",
+      "ground_truths": [
+        "No"
+      ],
+      "prediction": "No.",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L37",
+        "corpus_clean_v4.jsonl:L581"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L37",
+        "corpus_clean_v4.jsonl:L581",
+        "corpus_clean_v4.jsonl:L581"
+      ]
+    },
+    {
+      "question": "Are the fellowships listed on the Berkeley EECS Graduate Fellowships page generally intended for U.S. citizens and permanent residents?",
+      "ground_truths": [
+        "Yes"
+      ],
+      "prediction": "Yes.",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": false,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L37",
+        "corpus_clean_v4.jsonl:L37",
+        "corpus_clean_v4.jsonl:L1687"
+      ]
+    },
+    {
+      "question": "Is it allowed to take EECS 299 units with the S/U grading option for the EECS M.S. degree?",
+      "ground_truths": [
+        "Yes"
+      ],
+      "prediction": "Yes.",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L642"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L1299",
+        "corpus_clean_v4.jsonl:L642",
+        "corpus_clean_v4.jsonl:L1304"
+      ]
+    },
+    {
+      "question": "How many fellowships on the Berkeley EECS Graduate Fellowships page are listed as PhD-only programs?",
+      "ground_truths": [
+        "3"
+      ],
+      "prediction": "Three.",
+      "em": false,
+      "f1": 0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L37",
+        "corpus_clean_v4.jsonl:L1687",
+        "corpus_clean_v4.jsonl:L2436"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L37",
+        "corpus_clean_v4.jsonl:L1687",
+        "corpus_clean_v4.jsonl:L2436"
+      ]
+    },
+    {
+      "question": "Is the Symantec Graduate Fellowship Program open to international students?",
+      "ground_truths": [
+        "Yes"
+      ],
+      "prediction": "Yes.",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": false,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L711",
+        "corpus_clean_v4.jsonl:L37",
+        "corpus_clean_v4.jsonl:L662"
+      ]
+    },
+    {
+      "question": "If a student is taking prerequisites concurrently for a CS class that has formally or informally enforced prerequisites, what may happen at the instructor\u2019s request?",
+      "ground_truths": [
+        "They may be dropped"
+      ],
+      "prediction": "Students who have prerequisites in progress at the time of enrollment are allowed to enroll. At the end of phase 2, staff will conduct a prerequisite check. Students who didn't pass will be dropped.",
+      "em": false,
+      "f1": 0.1142857142857143,
+      "retrieval_recall": false,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L725",
+        "corpus_clean_v4.jsonl:L232",
+        "corpus_clean_v4.jsonl:L671"
+      ]
+    },
+    {
+      "question": "For CS majors admitted in Fall 2022 or later, what kinds of courses can be used to fulfill the 4 units of Upper Division Technical Electives requirement?",
+      "ground_truths": [
+        "Non-CS approved technical electives or EE/EECS"
+      ],
+      "prediction": "Non-CS technical elective courses from the approved list.",
+      "em": false,
+      "f1": 0.4615384615384615,
+      "retrieval_recall": false,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L533",
+        "corpus_clean_v4.jsonl:L724",
+        "corpus_clean_v4.jsonl:L535"
+      ]
+    },
+    {
+      "question": "According to the Berkeley EECS In Memoriam faculty page, how many listed faculty members were born in 1934?",
+      "ground_truths": [
+        "2"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L53",
+        "corpus_clean_v4.jsonl:L2010"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L53",
+        "corpus_clean_v4.jsonl:L2010",
+        "corpus_clean_v4.jsonl:L3108"
+      ]
+    },
     {
       "question": "What is the course number for the undergrad-level class that covers computer security topics such as cryptography, operating system security, network security, and software security?",
       "ground_truths": [
@@ -13,21 +263,12 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L240",
-        "corpus_clean_v4.jsonl:L96",
-        "corpus_clean_v4.jsonl:L242"
+        "corpus_clean_v4.jsonl:L240"
       ],
       "retrieved_files": [
         "corpus_clean_v4.jsonl:L469",
         "corpus_clean_v4.jsonl:L240",
-        "corpus_clean_v4.jsonl:L536",
-        "corpus_clean_v4.jsonl:L214",
-        "corpus_clean_v4.jsonl:L572",
-        "corpus_clean_v4.jsonl:L433",
-        "corpus_clean_v4.jsonl:L96",
-        "corpus_clean_v4.jsonl:L334",
-        "corpus_clean_v4.jsonl:L242",
-        "corpus_clean_v4.jsonl:L571"
+        "corpus_clean_v4.jsonl:L536"
       ]
     },
     {
@@ -38,26 +279,16 @@
         "Grayson Johnston",
         "Carol Marshall"
       ],
-      "prediction": "Gina Garcia",
-      "em": true,
-      "f1": 1.0,
-      "retrieval_recall": true,
+      "prediction": "Charlene Duncan.",
+      "em": false,
+      "f1": 0,
+      "retrieval_recall": false,
       "gt_url_chunk_file": null,
-      "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L573",
-        "corpus_clean_v4.jsonl:L542"
-      ],
+      "content_match_chunk_files": [],
       "retrieved_files": [
         "corpus_clean_v4.jsonl:L707",
         "corpus_clean_v4.jsonl:L1546",
-        "corpus_clean_v4.jsonl:L1861",
-        "corpus_clean_v4.jsonl:L573",
-        "corpus_clean_v4.jsonl:L573",
-        "corpus_clean_v4.jsonl:L658",
-        "corpus_clean_v4.jsonl:L542",
-        "corpus_clean_v4.jsonl:L631",
-        "corpus_clean_v4.jsonl:L545",
-        "corpus_clean_v4.jsonl:L728"
+        "corpus_clean_v4.jsonl:L1861"
       ]
     },
     {
@@ -76,45 +307,13 @@
       "retrieved_files": [
         "corpus_clean_v4.jsonl:L1581",
         "corpus_clean_v4.jsonl:L1726",
-        "corpus_clean_v4.jsonl:L2690",
-        "corpus_clean_v4.jsonl:L2415",
-        "corpus_clean_v4.jsonl:L2107",
-        "corpus_clean_v4.jsonl:L1465",
-        "corpus_clean_v4.jsonl:L1581",
-        "corpus_clean_v4.jsonl:L2827",
-        "corpus_clean_v4.jsonl:L3378",
-        "corpus_clean_v4.jsonl:L2415"
+        "corpus_clean_v4.jsonl:L2690"
       ]
     },
     {
       "question": "Who was the earliest-born professor at UC Berkeley?",
       "ground_truths": [
         "Lester Edwin Reukema"
-      ],
-      "prediction": "Joseph Gier (1910)",
-      "em": false,
-      "f1": 0,
-      "retrieval_recall": false,
-      "gt_url_chunk_file": null,
-      "content_match_chunk_files": [],
-      "retrieved_files": [
-        "corpus_clean_v4.jsonl:L133",
-        "corpus_clean_v4.jsonl:L687",
-        "corpus_clean_v4.jsonl:L1547",
-        "corpus_clean_v4.jsonl:L1596",
-        "corpus_clean_v4.jsonl:L3451",
-        "corpus_clean_v4.jsonl:L1475",
-        "corpus_clean_v4.jsonl:L1445",
-        "corpus_clean_v4.jsonl:L2996",
-        "corpus_clean_v4.jsonl:L1261",
-        "corpus_clean_v4.jsonl:L157"
-      ]
-    },
-    {
-      "question": "Who is the advisor of the student whose 2024 thesis is about protein evolution?",
-      "ground_truths": [
-        "Moritz Hardt",
-        "Jennifer Listgarten"
       ],
       "prediction": "I don't know",
       "em": false,
@@ -123,16 +322,27 @@
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [],
       "retrieved_files": [
+        "corpus_clean_v4.jsonl:L133",
+        "corpus_clean_v4.jsonl:L687",
+        "corpus_clean_v4.jsonl:L1547"
+      ]
+    },
+    {
+      "question": "Who is the advisor of the student whose 2024 thesis is about protein evolution?",
+      "ground_truths": [
+        "Moritz Hardt",
+        "Jennifer Listgarten"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0,
+      "retrieval_recall": false,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [],
+      "retrieved_files": [
         "corpus_clean_v4.jsonl:L1673",
         "corpus_clean_v4.jsonl:L1468",
-        "corpus_clean_v4.jsonl:L1514",
-        "corpus_clean_v4.jsonl:L1546",
-        "corpus_clean_v4.jsonl:L707",
-        "corpus_clean_v4.jsonl:L1587",
-        "corpus_clean_v4.jsonl:L687",
-        "corpus_clean_v4.jsonl:L1446",
-        "corpus_clean_v4.jsonl:L698",
-        "corpus_clean_v4.jsonl:L700"
+        "corpus_clean_v4.jsonl:L1514"
       ]
     },
     {
@@ -151,14 +361,7 @@
       "retrieved_files": [
         "corpus_clean_v4.jsonl:L60",
         "corpus_clean_v4.jsonl:L1667",
-        "corpus_clean_v4.jsonl:L20",
-        "corpus_clean_v4.jsonl:L523",
-        "corpus_clean_v4.jsonl:L1416",
-        "corpus_clean_v4.jsonl:L1546",
-        "corpus_clean_v4.jsonl:L579",
-        "corpus_clean_v4.jsonl:L1751",
-        "corpus_clean_v4.jsonl:L2800",
-        "corpus_clean_v4.jsonl:L1814"
+        "corpus_clean_v4.jsonl:L20"
       ]
     },
     {
@@ -177,14 +380,7 @@
       "retrieved_files": [
         "corpus_clean_v4.jsonl:L182",
         "corpus_clean_v4.jsonl:L1868",
-        "corpus_clean_v4.jsonl:L182",
-        "corpus_clean_v4.jsonl:L2776",
-        "corpus_clean_v4.jsonl:L2519",
-        "corpus_clean_v4.jsonl:L2541",
-        "corpus_clean_v4.jsonl:L3062",
-        "corpus_clean_v4.jsonl:L1876",
-        "corpus_clean_v4.jsonl:L1389",
-        "corpus_clean_v4.jsonl:L2785"
+        "corpus_clean_v4.jsonl:L182"
       ]
     },
     {
@@ -192,9 +388,9 @@
       "ground_truths": [
         "Stanford University"
       ],
-      "prediction": "Stanford University (1999-2004)",
-      "em": false,
-      "f1": 0.8,
+      "prediction": "Stanford University.",
+      "em": true,
+      "f1": 1.0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -203,20 +399,13 @@
       "retrieved_files": [
         "corpus_clean_v4.jsonl:L331",
         "corpus_clean_v4.jsonl:L331",
-        "corpus_clean_v4.jsonl:L2628",
-        "corpus_clean_v4.jsonl:L2628",
-        "corpus_clean_v4.jsonl:L2617",
-        "corpus_clean_v4.jsonl:L2667",
-        "corpus_clean_v4.jsonl:L1677",
-        "corpus_clean_v4.jsonl:L2264",
-        "corpus_clean_v4.jsonl:L2600",
-        "corpus_clean_v4.jsonl:L274"
+        "corpus_clean_v4.jsonl:L2628"
       ]
     },
     {
       "question": "How many EE courses is Kristofer Pister teaching in Spring 2027?",
       "ground_truths": [
-        "6"
+        "2"
       ],
       "prediction": "I don't know.",
       "em": false,
@@ -226,22 +415,12 @@
       "content_match_chunk_files": [
         "corpus_clean_v4.jsonl:L307",
         "corpus_clean_v4.jsonl:L354",
-        "corpus_clean_v4.jsonl:L1518",
-        "corpus_clean_v4.jsonl:L42",
-        "corpus_clean_v4.jsonl:L401",
-        "corpus_clean_v4.jsonl:L114"
+        "corpus_clean_v4.jsonl:L1834"
       ],
       "retrieved_files": [
         "corpus_clean_v4.jsonl:L307",
         "corpus_clean_v4.jsonl:L354",
-        "corpus_clean_v4.jsonl:L1834",
-        "corpus_clean_v4.jsonl:L1518",
-        "corpus_clean_v4.jsonl:L42",
-        "corpus_clean_v4.jsonl:L401",
-        "corpus_clean_v4.jsonl:L401",
-        "corpus_clean_v4.jsonl:L2742",
-        "corpus_clean_v4.jsonl:L114",
-        "corpus_clean_v4.jsonl:L1232"
+        "corpus_clean_v4.jsonl:L1834"
       ]
     },
     {
@@ -257,24 +436,12 @@
       "content_match_chunk_files": [
         "corpus_clean_v4.jsonl:L579",
         "corpus_clean_v4.jsonl:L572",
-        "corpus_clean_v4.jsonl:L571",
-        "corpus_clean_v4.jsonl:L1304",
-        "corpus_clean_v4.jsonl:L719",
-        "corpus_clean_v4.jsonl:L1299",
-        "corpus_clean_v4.jsonl:L1420",
-        "corpus_clean_v4.jsonl:L36"
+        "corpus_clean_v4.jsonl:L571"
       ],
       "retrieved_files": [
         "corpus_clean_v4.jsonl:L579",
         "corpus_clean_v4.jsonl:L572",
-        "corpus_clean_v4.jsonl:L571",
-        "corpus_clean_v4.jsonl:L1304",
-        "corpus_clean_v4.jsonl:L652",
-        "corpus_clean_v4.jsonl:L719",
-        "corpus_clean_v4.jsonl:L1299",
-        "corpus_clean_v4.jsonl:L1420",
-        "corpus_clean_v4.jsonl:L2010",
-        "corpus_clean_v4.jsonl:L36"
+        "corpus_clean_v4.jsonl:L571"
       ]
     },
     {
@@ -293,14 +460,7 @@
       "retrieved_files": [
         "corpus_clean_v4.jsonl:L9",
         "corpus_clean_v4.jsonl:L651",
-        "corpus_clean_v4.jsonl:L651",
-        "corpus_clean_v4.jsonl:L2282",
-        "corpus_clean_v4.jsonl:L3273",
-        "corpus_clean_v4.jsonl:L1973",
-        "corpus_clean_v4.jsonl:L1893",
-        "corpus_clean_v4.jsonl:L2716",
-        "corpus_clean_v4.jsonl:L1973",
-        "corpus_clean_v4.jsonl:L2439"
+        "corpus_clean_v4.jsonl:L651"
       ]
     },
     {
@@ -321,14 +481,7 @@
       "retrieved_files": [
         "corpus_clean_v4.jsonl:L9",
         "corpus_clean_v4.jsonl:L1317",
-        "corpus_clean_v4.jsonl:L618",
-        "corpus_clean_v4.jsonl:L3294",
-        "corpus_clean_v4.jsonl:L1839",
-        "corpus_clean_v4.jsonl:L3061",
-        "corpus_clean_v4.jsonl:L258",
-        "corpus_clean_v4.jsonl:L1303",
-        "corpus_clean_v4.jsonl:L1673",
-        "corpus_clean_v4.jsonl:L1295"
+        "corpus_clean_v4.jsonl:L618"
       ]
     },
     {
@@ -336,28 +489,19 @@
       "ground_truths": [
         "12"
       ],
-      "prediction": "12 semester units maximum",
+      "prediction": "12 semester units maximum.",
       "em": false,
       "f1": 0.4,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
         "corpus_clean_v4.jsonl:L640",
-        "corpus_clean_v4.jsonl:L1304",
-        "corpus_clean_v4.jsonl:L642",
-        "corpus_clean_v4.jsonl:L719"
+        "corpus_clean_v4.jsonl:L1304"
       ],
       "retrieved_files": [
         "corpus_clean_v4.jsonl:L640",
         "corpus_clean_v4.jsonl:L1420",
-        "corpus_clean_v4.jsonl:L1304",
-        "corpus_clean_v4.jsonl:L642",
-        "corpus_clean_v4.jsonl:L1419",
-        "corpus_clean_v4.jsonl:L719",
-        "corpus_clean_v4.jsonl:L570",
-        "corpus_clean_v4.jsonl:L1299",
-        "corpus_clean_v4.jsonl:L39",
-        "corpus_clean_v4.jsonl:L1301"
+        "corpus_clean_v4.jsonl:L1304"
       ]
     },
     {
@@ -373,21 +517,12 @@
       "content_match_chunk_files": [
         "corpus_clean_v4.jsonl:L640",
         "corpus_clean_v4.jsonl:L641",
-        "corpus_clean_v4.jsonl:L658",
-        "corpus_clean_v4.jsonl:L668",
-        "corpus_clean_v4.jsonl:L175"
+        "corpus_clean_v4.jsonl:L658"
       ],
       "retrieved_files": [
         "corpus_clean_v4.jsonl:L640",
         "corpus_clean_v4.jsonl:L641",
-        "corpus_clean_v4.jsonl:L658",
-        "corpus_clean_v4.jsonl:L668",
-        "corpus_clean_v4.jsonl:L640",
-        "corpus_clean_v4.jsonl:L716",
-        "corpus_clean_v4.jsonl:L573",
-        "corpus_clean_v4.jsonl:L642",
-        "corpus_clean_v4.jsonl:L1425",
-        "corpus_clean_v4.jsonl:L175"
+        "corpus_clean_v4.jsonl:L658"
       ]
     },
     {
@@ -395,7 +530,7 @@
       "ground_truths": [
         "A-"
       ],
-      "prediction": "A- or better",
+      "prediction": "A- or better.",
       "em": false,
       "f1": 0,
       "retrieval_recall": true,
@@ -403,26 +538,12 @@
       "content_match_chunk_files": [
         "corpus_clean_v4.jsonl:L1304",
         "corpus_clean_v4.jsonl:L1299",
-        "corpus_clean_v4.jsonl:L721",
-        "corpus_clean_v4.jsonl:L571",
-        "corpus_clean_v4.jsonl:L652",
-        "corpus_clean_v4.jsonl:L547",
-        "corpus_clean_v4.jsonl:L572",
-        "corpus_clean_v4.jsonl:L43",
-        "corpus_clean_v4.jsonl:L535",
-        "corpus_clean_v4.jsonl:L580"
+        "corpus_clean_v4.jsonl:L721"
       ],
       "retrieved_files": [
         "corpus_clean_v4.jsonl:L1304",
         "corpus_clean_v4.jsonl:L1299",
-        "corpus_clean_v4.jsonl:L721",
-        "corpus_clean_v4.jsonl:L571",
-        "corpus_clean_v4.jsonl:L652",
-        "corpus_clean_v4.jsonl:L547",
-        "corpus_clean_v4.jsonl:L572",
-        "corpus_clean_v4.jsonl:L43",
-        "corpus_clean_v4.jsonl:L535",
-        "corpus_clean_v4.jsonl:L580"
+        "corpus_clean_v4.jsonl:L721"
       ]
     },
     {
@@ -438,26 +559,12 @@
       "content_match_chunk_files": [
         "corpus_clean_v4.jsonl:L1304",
         "corpus_clean_v4.jsonl:L1299",
-        "corpus_clean_v4.jsonl:L535",
-        "corpus_clean_v4.jsonl:L725",
-        "corpus_clean_v4.jsonl:L572",
-        "corpus_clean_v4.jsonl:L652",
-        "corpus_clean_v4.jsonl:L43",
-        "corpus_clean_v4.jsonl:L724",
-        "corpus_clean_v4.jsonl:L575",
-        "corpus_clean_v4.jsonl:L571"
+        "corpus_clean_v4.jsonl:L535"
       ],
       "retrieved_files": [
         "corpus_clean_v4.jsonl:L1304",
         "corpus_clean_v4.jsonl:L1299",
-        "corpus_clean_v4.jsonl:L535",
-        "corpus_clean_v4.jsonl:L725",
-        "corpus_clean_v4.jsonl:L572",
-        "corpus_clean_v4.jsonl:L652",
-        "corpus_clean_v4.jsonl:L43",
-        "corpus_clean_v4.jsonl:L724",
-        "corpus_clean_v4.jsonl:L575",
-        "corpus_clean_v4.jsonl:L571"
+        "corpus_clean_v4.jsonl:L535"
       ]
     },
     {
@@ -476,14 +583,7 @@
       "retrieved_files": [
         "corpus_clean_v4.jsonl:L671",
         "corpus_clean_v4.jsonl:L1297",
-        "corpus_clean_v4.jsonl:L1427",
-        "corpus_clean_v4.jsonl:L1985",
-        "corpus_clean_v4.jsonl:L671",
-        "corpus_clean_v4.jsonl:L580",
-        "corpus_clean_v4.jsonl:L1427",
-        "corpus_clean_v4.jsonl:L725",
-        "corpus_clean_v4.jsonl:L640",
-        "corpus_clean_v4.jsonl:L668"
+        "corpus_clean_v4.jsonl:L1427"
       ]
     },
     {
@@ -499,22 +599,12 @@
       "content_match_chunk_files": [
         "corpus_clean_v4.jsonl:L671",
         "corpus_clean_v4.jsonl:L1304",
-        "corpus_clean_v4.jsonl:L1299",
-        "corpus_clean_v4.jsonl:L580",
-        "corpus_clean_v4.jsonl:L1257",
-        "corpus_clean_v4.jsonl:L642"
+        "corpus_clean_v4.jsonl:L1299"
       ],
       "retrieved_files": [
         "corpus_clean_v4.jsonl:L671",
         "corpus_clean_v4.jsonl:L1304",
-        "corpus_clean_v4.jsonl:L1299",
-        "corpus_clean_v4.jsonl:L725",
-        "corpus_clean_v4.jsonl:L721",
-        "corpus_clean_v4.jsonl:L580",
-        "corpus_clean_v4.jsonl:L572",
-        "corpus_clean_v4.jsonl:L1257",
-        "corpus_clean_v4.jsonl:L43",
-        "corpus_clean_v4.jsonl:L642"
+        "corpus_clean_v4.jsonl:L1299"
       ]
     },
     {
@@ -522,9 +612,9 @@
       "ground_truths": [
         "6.0"
       ],
-      "prediction": "6.0",
-      "em": true,
-      "f1": 1.0,
+      "prediction": "At least 6.0.",
+      "em": false,
+      "f1": 0.5,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -533,14 +623,7 @@
       "retrieved_files": [
         "corpus_clean_v4.jsonl:L671",
         "corpus_clean_v4.jsonl:L2520",
-        "corpus_clean_v4.jsonl:L659",
-        "corpus_clean_v4.jsonl:L580",
-        "corpus_clean_v4.jsonl:L719",
-        "corpus_clean_v4.jsonl:L1302",
-        "corpus_clean_v4.jsonl:L547",
-        "corpus_clean_v4.jsonl:L1302",
-        "corpus_clean_v4.jsonl:L1265",
-        "corpus_clean_v4.jsonl:L317"
+        "corpus_clean_v4.jsonl:L659"
       ]
     },
     {
@@ -557,14 +640,7 @@
       "retrieved_files": [
         "corpus_clean_v4.jsonl:L714",
         "corpus_clean_v4.jsonl:L713",
-        "corpus_clean_v4.jsonl:L584",
-        "corpus_clean_v4.jsonl:L585",
-        "corpus_clean_v4.jsonl:L1303",
-        "corpus_clean_v4.jsonl:L731",
-        "corpus_clean_v4.jsonl:L710",
-        "corpus_clean_v4.jsonl:L639",
-        "corpus_clean_v4.jsonl:L38",
-        "corpus_clean_v4.jsonl:L639"
+        "corpus_clean_v4.jsonl:L584"
       ]
     },
     {
@@ -572,23 +648,16 @@
       "ground_truths": [
         "enrolled in classes and fees paid"
       ],
-      "prediction": "enrolled in classes and paid their first installment or full fees.",
+      "prediction": "enrolled in classes and paid fees.",
       "em": false,
-      "f1": 0.7058823529411764,
+      "f1": 1.0,
       "retrieval_recall": false,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [],
       "retrieved_files": [
         "corpus_clean_v4.jsonl:L1303",
         "corpus_clean_v4.jsonl:L714",
-        "corpus_clean_v4.jsonl:L1423",
-        "corpus_clean_v4.jsonl:L1418",
-        "corpus_clean_v4.jsonl:L719",
-        "corpus_clean_v4.jsonl:L643",
-        "corpus_clean_v4.jsonl:L1304",
-        "corpus_clean_v4.jsonl:L711",
-        "corpus_clean_v4.jsonl:L646",
-        "corpus_clean_v4.jsonl:L639"
+        "corpus_clean_v4.jsonl:L1423"
       ]
     },
     {
@@ -596,7 +665,7 @@
       "ground_truths": [
         "9 am - 12 pm and 1 pm - 4 pm"
       ],
-      "prediction": "9 am  12 pm and 1 pm  4 pm.",
+      "prediction": "9 am - 12 pm and 1 pm - 4 pm.",
       "em": true,
       "f1": 1.0,
       "retrieval_recall": true,
@@ -607,14 +676,7 @@
       "retrieved_files": [
         "corpus_clean_v4.jsonl:L716",
         "corpus_clean_v4.jsonl:L167",
-        "corpus_clean_v4.jsonl:L101",
-        "corpus_clean_v4.jsonl:L1256",
-        "corpus_clean_v4.jsonl:L665",
-        "corpus_clean_v4.jsonl:L2122",
-        "corpus_clean_v4.jsonl:L637",
-        "corpus_clean_v4.jsonl:L521",
-        "corpus_clean_v4.jsonl:L116",
-        "corpus_clean_v4.jsonl:L107"
+        "corpus_clean_v4.jsonl:L101"
       ]
     },
     {
@@ -622,27 +684,18 @@
       "ground_truths": [
         "387 Soda Hall"
       ],
-      "prediction": "387 Soda Hall",
-      "em": true,
-      "f1": 1.0,
+      "prediction": "the front desk at 387 Soda Hall.",
+      "em": false,
+      "f1": 0.6666666666666666,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L716",
-        "corpus_clean_v4.jsonl:L107",
-        "corpus_clean_v4.jsonl:L167"
+        "corpus_clean_v4.jsonl:L716"
       ],
       "retrieved_files": [
         "corpus_clean_v4.jsonl:L716",
         "corpus_clean_v4.jsonl:L712",
-        "corpus_clean_v4.jsonl:L638",
-        "corpus_clean_v4.jsonl:L101",
-        "corpus_clean_v4.jsonl:L526",
-        "corpus_clean_v4.jsonl:L107",
-        "corpus_clean_v4.jsonl:L538",
-        "corpus_clean_v4.jsonl:L1256",
-        "corpus_clean_v4.jsonl:L710",
-        "corpus_clean_v4.jsonl:L167"
+        "corpus_clean_v4.jsonl:L638"
       ]
     },
     {
@@ -661,14 +714,7 @@
       "retrieved_files": [
         "corpus_clean_v4.jsonl:L62",
         "corpus_clean_v4.jsonl:L647",
-        "corpus_clean_v4.jsonl:L521",
-        "corpus_clean_v4.jsonl:L658",
-        "corpus_clean_v4.jsonl:L641",
-        "corpus_clean_v4.jsonl:L1254",
-        "corpus_clean_v4.jsonl:L1256",
-        "corpus_clean_v4.jsonl:L726",
-        "corpus_clean_v4.jsonl:L573",
-        "corpus_clean_v4.jsonl:L733"
+        "corpus_clean_v4.jsonl:L521"
       ]
     },
     {
@@ -676,27 +722,19 @@
       "ground_truths": [
         "215 Cory"
       ],
-      "prediction": "215 Cory",
+      "prediction": "215 Cory.",
       "em": true,
       "f1": 1.0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
         "corpus_clean_v4.jsonl:L103",
-        "corpus_clean_v4.jsonl:L62",
-        "corpus_clean_v4.jsonl:L644"
+        "corpus_clean_v4.jsonl:L62"
       ],
       "retrieved_files": [
         "corpus_clean_v4.jsonl:L103",
         "corpus_clean_v4.jsonl:L62",
-        "corpus_clean_v4.jsonl:L658",
-        "corpus_clean_v4.jsonl:L1299",
-        "corpus_clean_v4.jsonl:L1301",
-        "corpus_clean_v4.jsonl:L643",
-        "corpus_clean_v4.jsonl:L654",
-        "corpus_clean_v4.jsonl:L658",
-        "corpus_clean_v4.jsonl:L116",
-        "corpus_clean_v4.jsonl:L644"
+        "corpus_clean_v4.jsonl:L658"
       ]
     },
     {
@@ -715,14 +753,7 @@
       "retrieved_files": [
         "corpus_clean_v4.jsonl:L627",
         "corpus_clean_v4.jsonl:L1243",
-        "corpus_clean_v4.jsonl:L1598",
-        "corpus_clean_v4.jsonl:L2647",
-        "corpus_clean_v4.jsonl:L1858",
-        "corpus_clean_v4.jsonl:L69",
-        "corpus_clean_v4.jsonl:L3133",
-        "corpus_clean_v4.jsonl:L704",
-        "corpus_clean_v4.jsonl:L1987",
-        "corpus_clean_v4.jsonl:L2085"
+        "corpus_clean_v4.jsonl:L1598"
       ]
     },
     {
@@ -741,14 +772,7 @@
       "retrieved_files": [
         "corpus_clean_v4.jsonl:L2744",
         "corpus_clean_v4.jsonl:L627",
-        "corpus_clean_v4.jsonl:L1861",
-        "corpus_clean_v4.jsonl:L1546",
-        "corpus_clean_v4.jsonl:L1446",
-        "corpus_clean_v4.jsonl:L1861",
-        "corpus_clean_v4.jsonl:L1587",
-        "corpus_clean_v4.jsonl:L60",
-        "corpus_clean_v4.jsonl:L1416",
-        "corpus_clean_v4.jsonl:L2742"
+        "corpus_clean_v4.jsonl:L1861"
       ]
     },
     {
@@ -764,23 +788,12 @@
       "content_match_chunk_files": [
         "corpus_clean_v4.jsonl:L511",
         "corpus_clean_v4.jsonl:L673",
-        "corpus_clean_v4.jsonl:L118",
-        "corpus_clean_v4.jsonl:L10",
-        "corpus_clean_v4.jsonl:L675",
-        "corpus_clean_v4.jsonl:L672",
-        "corpus_clean_v4.jsonl:L3"
+        "corpus_clean_v4.jsonl:L118"
       ],
       "retrieved_files": [
         "corpus_clean_v4.jsonl:L511",
         "corpus_clean_v4.jsonl:L673",
-        "corpus_clean_v4.jsonl:L118",
-        "corpus_clean_v4.jsonl:L10",
-        "corpus_clean_v4.jsonl:L675",
-        "corpus_clean_v4.jsonl:L672",
-        "corpus_clean_v4.jsonl:L118",
-        "corpus_clean_v4.jsonl:L3",
-        "corpus_clean_v4.jsonl:L1664",
-        "corpus_clean_v4.jsonl:L3287"
+        "corpus_clean_v4.jsonl:L118"
       ]
     },
     {
@@ -796,23 +809,1350 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L511",
-        "corpus_clean_v4.jsonl:L10",
-        "corpus_clean_v4.jsonl:L675",
-        "corpus_clean_v4.jsonl:L673",
-        "corpus_clean_v4.jsonl:L672"
+        "corpus_clean_v4.jsonl:L511"
       ],
       "retrieved_files": [
         "corpus_clean_v4.jsonl:L2411",
         "corpus_clean_v4.jsonl:L2368",
-        "corpus_clean_v4.jsonl:L511",
-        "corpus_clean_v4.jsonl:L10",
-        "corpus_clean_v4.jsonl:L675",
-        "corpus_clean_v4.jsonl:L673",
-        "corpus_clean_v4.jsonl:L672",
-        "corpus_clean_v4.jsonl:L111",
-        "corpus_clean_v4.jsonl:L109",
-        "corpus_clean_v4.jsonl:L3"
+        "corpus_clean_v4.jsonl:L511"
+      ]
+    },
+    {
+      "question": "Who became the first tenured Black professor in the entire University of California educational system after being promoted to associate professor in 1953?",
+      "ground_truths": [
+        "Joseph Gier"
+      ],
+      "prediction": "Joseph Thomas Gier.",
+      "em": false,
+      "f1": 0.8,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L14",
+        "corpus_clean_v4.jsonl:L148",
+        "corpus_clean_v4.jsonl:L13"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L14",
+        "corpus_clean_v4.jsonl:L148",
+        "corpus_clean_v4.jsonl:L13"
+      ]
+    },
+    {
+      "question": "What was the name of the commercially implemented time-sharing computer series released in 1966 from Berkeley's early computer systems research?",
+      "ground_truths": [
+        "SDS 940"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0,
+      "retrieval_recall": false,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L1405",
+        "corpus_clean_v4.jsonl:L1405",
+        "corpus_clean_v4.jsonl:L2850"
+      ]
+    },
+    {
+      "question": "Who serve as the Graduate Diversity Officers in the EECS department?",
+      "ground_truths": [
+        "Jessica Boles",
+        "Armando Fox"
+      ],
+      "prediction": "Professors Jessica Boles and Armando Fox.",
+      "em": false,
+      "f1": 0.5,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L15"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L15",
+        "corpus_clean_v4.jsonl:L1559",
+        "corpus_clean_v4.jsonl:L2252"
+      ]
+    },
+    {
+      "question": "Which university did Alexei (Alyosha) Efros receive his PhD in Computer Science from?",
+      "ground_truths": [
+        "UC Berkeley"
+      ],
+      "prediction": "UC Berkeley.",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L259"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L259",
+        "corpus_clean_v4.jsonl:L2788",
+        "corpus_clean_v4.jsonl:L259"
+      ]
+    },
+    {
+      "question": "Which course does Sewon Min teach in Spring 2026 that focuses on advanced natural language processing?",
+      "ground_truths": [
+        "CS 288"
+      ],
+      "prediction": "CS 288.",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L364",
+        "corpus_clean_v4.jsonl:L362"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L364",
+        "corpus_clean_v4.jsonl:L1579",
+        "corpus_clean_v4.jsonl:L362"
+      ]
+    },
+    {
+      "question": "Which professor teaches the course \"Introduction to Artificial Intelligence\" (CS 188) in Spring 2026?",
+      "ground_truths": [
+        "Daniel Klein",
+        "Stuart J. Russell"
+      ],
+      "prediction": "Dan Klein, Stuart J Russell.",
+      "em": false,
+      "f1": 0.7499999999999999,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L328"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L328",
+        "corpus_clean_v4.jsonl:L681",
+        "corpus_clean_v4.jsonl:L1530"
+      ]
+    },
+    {
+      "question": "Which professor listed has research interests including Artificial Intelligence, Control, Intelligent Systems, and Robotics, and Signal Processing?",
+      "ground_truths": [
+        "Jitendra Malik"
+      ],
+      "prediction": "Benjamin Recht",
+      "em": false,
+      "f1": 0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L5"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L5",
+        "corpus_clean_v4.jsonl:L417",
+        "corpus_clean_v4.jsonl:L305"
+      ]
+    },
+    {
+      "question": "Which professor received a PhD in Computer Science from Carnegie Mellon University in 1990 and lists Artificial Intelligence among their research interests?",
+      "ground_truths": [
+        "Ken Goldberg"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0,
+      "retrieval_recall": false,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L2855",
+        "corpus_clean_v4.jsonl:L289",
+        "corpus_clean_v4.jsonl:L1374"
+      ]
+    },
+    {
+      "question": "What is the room number of Pieter Abbeel's office in Sutardja Dai Hall?",
+      "ground_truths": [
+        "746 Sutardja Dai Hall"
+      ],
+      "prediction": "746",
+      "em": false,
+      "f1": 0.4,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": "corpus_clean_v4.jsonl:L182",
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L182"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L182",
+        "corpus_clean_v4.jsonl:L422",
+        "corpus_clean_v4.jsonl:L21"
+      ]
+    },
+    {
+      "question": "Which open-source software package developed under Edward A. Lee's leadership is mentioned together with Lingua Franca on his faculty page?",
+      "ground_truths": [
+        "Ptolemy"
+      ],
+      "prediction": "Ptolemy.",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": "corpus_clean_v4.jsonl:L336",
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L336",
+        "corpus_clean_v4.jsonl:L2404"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L336",
+        "corpus_clean_v4.jsonl:L2404",
+        "corpus_clean_v4.jsonl:L2205"
+      ]
+    },
+    {
+      "question": "Since what year has Katherine A. Yelick held a joint research appointment at Lawrence Berkeley National Laboratory?",
+      "ground_truths": [
+        "1996"
+      ],
+      "prediction": "1996",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": "corpus_clean_v4.jsonl:L482",
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L482",
+        "corpus_clean_v4.jsonl:L3428"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L482",
+        "corpus_clean_v4.jsonl:L3428",
+        "corpus_clean_v4.jsonl:L2692"
+      ]
+    },
+    {
+      "question": "Which Berkeley CS course covers supervised learning methods such as linear models, trees, neural networks, and ensemble methods as part of machine learning foundations?",
+      "ground_truths": [
+        "CS 189"
+      ],
+      "prediction": "CS 189",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L250"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L250",
+        "corpus_clean_v4.jsonl:L364",
+        "corpus_clean_v4.jsonl:L466"
+      ]
+    },
+    {
+      "question": "How many hours of laboratory per week does CS C8 have in the Summer format?",
+      "ground_truths": [
+        "4.0 hours"
+      ],
+      "prediction": "I don't know",
+      "em": false,
+      "f1": 0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L214",
+        "corpus_clean_v4.jsonl:L483"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L214",
+        "corpus_clean_v4.jsonl:L483",
+        "corpus_clean_v4.jsonl:L354"
+      ]
+    },
+    {
+      "question": "What prerequisite is listed for CS 285, the course that assumes familiarity with reinforcement learning, numerical optimization, and machine learning?",
+      "ground_truths": [
+        "COMPSCI189/289A or equivalent"
+      ],
+      "prediction": "COMPSCI189/289A or equivalent.",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L344"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L344",
+        "corpus_clean_v4.jsonl:L339",
+        "corpus_clean_v4.jsonl:L253"
+      ]
+    },
+    {
+      "question": "Which organization provided a generous gift supporting the initiative to integrate AI into UC Berkeley undergraduate engineering courses?",
+      "ground_truths": [
+        "Center for Advancing Women in Technology"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0,
+      "retrieval_recall": false,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L681",
+        "corpus_clean_v4.jsonl:L11",
+        "corpus_clean_v4.jsonl:L74"
+      ]
+    },
+    {
+      "question": "Which faculty member listed on the In Memoriam page earned an EE B.S. in 1922, an M.S. in 1924, and a Ph.D. in 1926?",
+      "ground_truths": [
+        "Lester Edwin Reukema"
+      ],
+      "prediction": "Lester Edwin Reukema",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L57"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L57",
+        "corpus_clean_v4.jsonl:L3087",
+        "corpus_clean_v4.jsonl:L3350"
+      ]
+    },
+    {
+      "question": "Which company did John R. Whinnery work for between earning his B.S. in 1937 and returning to Berkeley in 1946?",
+      "ground_truths": [
+        "General Electric Company"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0,
+      "retrieval_recall": false,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L3226",
+        "corpus_clean_v4.jsonl:L3394",
+        "corpus_clean_v4.jsonl:L148"
+      ]
+    },
+    {
+      "question": "What campus honor was John R. Whinnery awarded upon his retirement as Professor Emeritus in 1987 for his extraordinary service to the University?",
+      "ground_truths": [
+        "Berkeley Citation"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L629",
+        "corpus_clean_v4.jsonl:L627"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L629",
+        "corpus_clean_v4.jsonl:L627",
+        "corpus_clean_v4.jsonl:L1895"
+      ]
+    },
+    {
+      "question": "What type of venture capital investment focus is described for Sevin Rosen Funds, the firm that made the Sevin Rosen Funds Award for Innovation possible?",
+      "ground_truths": [
+        "early stage investments in pioneering technologies"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0,
+      "retrieval_recall": false,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L60",
+        "corpus_clean_v4.jsonl:L1458",
+        "corpus_clean_v4.jsonl:L2559"
+      ]
+    },
+    {
+      "question": "What is the name of the student-run program that helps applicants to Berkeley EECS higher-degree programs by providing feedback on materials such as the statement of purpose, personal history statement, and CV/resume?",
+      "ground_truths": [
+        "Equal Access Assistance (EAAA) program"
+      ],
+      "prediction": "Equal Access Assistance (EAAA)",
+      "em": false,
+      "f1": 0.888888888888889,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L38",
+        "corpus_clean_v4.jsonl:L18"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L38",
+        "corpus_clean_v4.jsonl:L18",
+        "corpus_clean_v4.jsonl:L1297"
+      ]
+    },
+    {
+      "question": "Which summer research program on the page is described as inviting undergraduates to spend 9 weeks on campus conducting engineering-related research at Berkeley?",
+      "ground_truths": [
+        "SUPERB"
+      ],
+      "prediction": "Summer Undergraduate Program in Engineering Research at Berkeley (SUPERB)",
+      "em": false,
+      "f1": 0.19999999999999998,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L35",
+        "corpus_clean_v4.jsonl:L18",
+        "corpus_clean_v4.jsonl:L540"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L35",
+        "corpus_clean_v4.jsonl:L18",
+        "corpus_clean_v4.jsonl:L540"
+      ]
+    },
+    {
+      "question": "What is the latest date by which a SUPERB applicant\u2019s required letter of recommendation must be received, after the application itself has already closed?",
+      "ground_truths": [
+        "January 29th, 2025"
+      ],
+      "prediction": "January 29th, 2025.",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L540"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L580",
+        "corpus_clean_v4.jsonl:L1297",
+        "corpus_clean_v4.jsonl:L540"
+      ]
+    },
+    {
+      "question": "What is the room number of the Association of Women EE & CS office mentioned on the Prospective Women Students page?",
+      "ground_truths": [
+        "Cory Hall Room 286"
+      ],
+      "prediction": "Cory Hall Room 286.",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L17"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L546",
+        "corpus_clean_v4.jsonl:L17",
+        "corpus_clean_v4.jsonl:L17"
+      ]
+    },
+    {
+      "question": "Which mentoring program organized by the EECS Center for Student Affairs provides each new woman student with a \"big sister\" they can contact with questions about starting college?",
+      "ground_truths": [
+        "The Big/Little Sister Mentoring Program"
+      ],
+      "prediction": "AWE Mentorship Program.",
+      "em": false,
+      "f1": 0.28571428571428575,
+      "retrieval_recall": false,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L534",
+        "corpus_clean_v4.jsonl:L116",
+        "corpus_clean_v4.jsonl:L534"
+      ]
+    },
+    {
+      "question": "Which Berkeley EECS faculty member appears in both the National Medal of Science list and the National Academy of Engineering member list, and in what year were they elected to the NAE?",
+      "ground_truths": [
+        "John R. Whinnery, 1972"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0,
+      "retrieval_recall": false,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L53",
+        "corpus_clean_v4.jsonl:L1444",
+        "corpus_clean_v4.jsonl:L3287"
+      ]
+    },
+    {
+      "question": "Among the recipients listed under the ACM A.M. Turing Award, who received the award most recently?",
+      "ground_truths": [
+        "David A. Patterson"
+      ],
+      "prediction": "David Patterson (2017)",
+      "em": false,
+      "f1": 0.8,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L3066",
+        "corpus_clean_v4.jsonl:L1295"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L3066",
+        "corpus_clean_v4.jsonl:L1295",
+        "corpus_clean_v4.jsonl:L3066"
+      ]
+    },
+    {
+      "question": "Who is the most recent Berkeley EECS faculty member listed as a UC Berkeley Distinguished Teaching Award recipient, and what year did they receive it?",
+      "ground_truths": [
+        "Dan Garcia, 2025"
+      ],
+      "prediction": "Joshua Hug, 2023.",
+      "em": false,
+      "f1": 0,
+      "retrieval_recall": false,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L1692",
+        "corpus_clean_v4.jsonl:L2757",
+        "corpus_clean_v4.jsonl:L1520"
+      ]
+    },
+    {
+      "question": "In what year did Joseph Thomas Gier become the first tenured Black professor in the entire University of California system?",
+      "ground_truths": [
+        "1952"
+      ],
+      "prediction": "1952",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L14",
+        "corpus_clean_v4.jsonl:L148"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L14",
+        "corpus_clean_v4.jsonl:L148",
+        "corpus_clean_v4.jsonl:L2356"
+      ]
+    },
+    {
+      "question": "Which student organization is described as UC Berkeley\u2019s largest cloud computing organization providing opportunities to learn cloud technologies?",
+      "ground_truths": [
+        "Cloud at Cal"
+      ],
+      "prediction": "Blockchain@Berkeley",
+      "em": false,
+      "f1": 0,
+      "retrieval_recall": false,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L1894",
+        "corpus_clean_v4.jsonl:L3432",
+        "corpus_clean_v4.jsonl:L3346"
+      ]
+    },
+    {
+      "question": "Which student organization at UC Berkeley EECS provides free drop-in tutoring in offices 345 Soda and 290 Cory?",
+      "ground_truths": [
+        "Eta Kappa Nu (HKN)"
+      ],
+      "prediction": "Eta Kappa Nu (HKN)",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L58"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L648",
+        "corpus_clean_v4.jsonl:L58",
+        "corpus_clean_v4.jsonl:L573"
+      ]
+    },
+    {
+      "question": "Which 2025 CS Distinguished Alumni Award winner earned a Ph.D. in 2016 under Pieter Abbeel and is identified on the page as the co-founder of OpenAI and creator of ChatGPT?",
+      "ground_truths": [
+        "John Schulman"
+      ],
+      "prediction": "John Schulman.",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L71",
+        "corpus_clean_v4.jsonl:L122"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L71",
+        "corpus_clean_v4.jsonl:L122",
+        "corpus_clean_v4.jsonl:L3082"
+      ]
+    },
+    {
+      "question": "Which 2006 CS Distinguished Alumni Award winner is described as the RSA Professor of Electrical Engineering and Computer Science at the Massachusetts Institute of Technology and completed a Ph.D. in 1984 under Manuel Blum?",
+      "ground_truths": [
+        "Shafi Goldwasser"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0,
+      "retrieval_recall": false,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L122",
+        "corpus_clean_v4.jsonl:L130",
+        "corpus_clean_v4.jsonl:L680"
+      ]
+    },
+    {
+      "question": "Among the 2025 EE Distinguished Alumni Award winners, who is listed as the Co-Founder and President of Neuralink?",
+      "ground_truths": [
+        "DJ Seo"
+      ],
+      "prediction": "DJ Seo",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L69",
+        "corpus_clean_v4.jsonl:L70"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L69",
+        "corpus_clean_v4.jsonl:L71",
+        "corpus_clean_v4.jsonl:L70"
+      ]
+    },
+    {
+      "question": "Which 2018 EE Distinguished Alumni Award winner is the Stephen Harris Professor in the School of Engineering at Stanford?",
+      "ground_truths": [
+        "Andrea Goldsmith"
+      ],
+      "prediction": "Andrea Goldsmith.",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L2056",
+        "corpus_clean_v4.jsonl:L157",
+        "corpus_clean_v4.jsonl:L2593"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L2056",
+        "corpus_clean_v4.jsonl:L157",
+        "corpus_clean_v4.jsonl:L2593"
+      ]
+    },
+    {
+      "question": "Which type of real-world application does the article specifically highlight as a future use case for fabricating information-optimal lensless masks?",
+      "ground_truths": [
+        "biological applications",
+        "biological and in vivo imaging"
+      ],
+      "prediction": "biological and in vivo imaging.",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L120"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L120",
+        "corpus_clean_v4.jsonl:L678",
+        "corpus_clean_v4.jsonl:L676"
+      ]
+    },
+    {
+      "question": "What is the name of the combined Bachelor and Master\u2019s program that is only available to UC Berkeley EECS and CS undergraduates who apply in their final year?",
+      "ground_truths": [
+        "The 5th Year M.S."
+      ],
+      "prediction": "The 5th Year M.S.",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L566",
+        "corpus_clean_v4.jsonl:L1300",
+        "corpus_clean_v4.jsonl:L28"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L566",
+        "corpus_clean_v4.jsonl:L1300",
+        "corpus_clean_v4.jsonl:L28"
+      ]
+    },
+    {
+      "question": "Which online course taught by Professor Dan Garcia is mentioned on the Computer Science Bachelor of Arts page as a way to explore Berkeley CS?",
+      "ground_truths": [
+        "The Beauty and Joy of Computing"
+      ],
+      "prediction": "The Beauty and Joy of Computing.",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L29",
+        "corpus_clean_v4.jsonl:L115",
+        "corpus_clean_v4.jsonl:L33"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L29",
+        "corpus_clean_v4.jsonl:L115",
+        "corpus_clean_v4.jsonl:L33"
+      ]
+    },
+    {
+      "question": "For students admitted in Fall 2023 onward who did not select CS on their UC Berkeley application, through what process may they apply to the CS major?",
+      "ground_truths": [
+        "comprehensive review"
+      ],
+      "prediction": "Comprehensive Review.",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L725"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L725",
+        "corpus_clean_v4.jsonl:L1297",
+        "corpus_clean_v4.jsonl:L722"
+      ]
+    },
+    {
+      "question": "According to the CS Major Upper Division Degree Requirements page, which email address should students contact if they are unsure whether a course counts because some courses such as 199, 198, 197, 195, certain 194, 191, 190, and various seminars do not count?",
+      "ground_truths": [
+        "cs-advising@berkeley.edu"
+      ],
+      "prediction": "cs-advising@berkeley.edu",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L724",
+        "corpus_clean_v4.jsonl:L727"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L724",
+        "corpus_clean_v4.jsonl:L721",
+        "corpus_clean_v4.jsonl:L727"
+      ]
+    },
+    {
+      "question": "When Berkeley EECS does not offer a similar course and a student wants it considered as an upper division technical elective, who reviews the Computer Science Major Appeals and Exceptions Requests form?",
+      "ground_truths": [
+        "Faculty Vice Chair"
+      ],
+      "prediction": "The Faculty Vice Chair.",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L724"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L533",
+        "corpus_clean_v4.jsonl:L724",
+        "corpus_clean_v4.jsonl:L727"
+      ]
+    },
+    {
+      "question": "For restricted upper division Computer Science classes during the academic year, what should visiting and exchange students do if they still want to take the class?",
+      "ground_truths": [
+        "Consider enrolling in the class over summer session"
+      ],
+      "prediction": "Consider enrolling in the class over summer session.",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L584",
+        "corpus_clean_v4.jsonl:L585"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L724",
+        "corpus_clean_v4.jsonl:L584",
+        "corpus_clean_v4.jsonl:L585"
+      ]
+    },
+    {
+      "question": "If a student completed equivalent versions of CS 61A, CS 61B, and CS 70 at another institution, what is the minimum number of those prerequisite courses that must still be completed at UC Berkeley in order to calculate the CS major application GPA?",
+      "ground_truths": [
+        "one course"
+      ],
+      "prediction": "At least one.",
+      "em": false,
+      "f1": 0.4,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L725"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L725",
+        "corpus_clean_v4.jsonl:L576",
+        "corpus_clean_v4.jsonl:L575"
+      ]
+    },
+    {
+      "question": "What is the maximum allowed length of the personal statement required for a CS major appeal?",
+      "ground_truths": [
+        "3000 characters"
+      ],
+      "prediction": "3000 characters (or 1 page)",
+      "em": false,
+      "f1": 0.5714285714285715,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L722"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L722",
+        "corpus_clean_v4.jsonl:L722",
+        "corpus_clean_v4.jsonl:L725"
+      ]
+    },
+    {
+      "question": "Who became the first Latina full professor at the University of Washington and was also a pilot on the United States Unlimited Aerobatic Team?",
+      "ground_truths": [
+        "Cecilia Rodriguez Aragon"
+      ],
+      "prediction": "Cecilia Aragon.",
+      "em": false,
+      "f1": 0.8,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L1415"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L2008",
+        "corpus_clean_v4.jsonl:L1415",
+        "corpus_clean_v4.jsonl:L1794"
+      ]
+    },
+    {
+      "question": "Who served as the first EECS Director of Diversity from 1982 to 2015?",
+      "ground_truths": [
+        "Sheila Morrin Humphreys"
+      ],
+      "prediction": "Sheila Humphreys.",
+      "em": false,
+      "f1": 0.8,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L705"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L705",
+        "corpus_clean_v4.jsonl:L1817",
+        "corpus_clean_v4.jsonl:L1243"
+      ]
+    },
+    {
+      "question": "Which Berkeley research lab is mentioned as a source for more information about AI research in EECS?",
+      "ground_truths": [
+        "Berkeley Artificial Intelligence Research Lab"
+      ],
+      "prediction": "Berkeley Artificial Intelligence Research Lab (BAIR) .",
+      "em": false,
+      "f1": 0.9090909090909091,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L82"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L82",
+        "corpus_clean_v4.jsonl:L2206",
+        "corpus_clean_v4.jsonl:L525"
+      ]
+    },
+    {
+      "question": "Which Berkeley EECS faculty member serves as the coordinator of the Database Management Systems research area?",
+      "ground_truths": [
+        "Joseph M. Hellerstein"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0,
+      "retrieval_recall": false,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L3261",
+        "corpus_clean_v4.jsonl:L3407",
+        "corpus_clean_v4.jsonl:L144"
+      ]
+    },
+    {
+      "question": "Which open source system mentioned on the Berkeley DBMS research page is widely used for large-scale data processing?",
+      "ground_truths": [
+        "Apache Spark"
+      ],
+      "prediction": "Apache Spark.",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L83",
+        "corpus_clean_v4.jsonl:L2324"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L83",
+        "corpus_clean_v4.jsonl:L2324",
+        "corpus_clean_v4.jsonl:L798"
+      ]
+    },
+    {
+      "question": "Which research lab listed on the Berkeley DBMS page focuses on data-related systems research?",
+      "ground_truths": [
+        "EPIC Data lab",
+        "Sky Computing Lab"
+      ],
+      "prediction": "RISELab",
+      "em": false,
+      "f1": 0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L83"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L83",
+        "corpus_clean_v4.jsonl:L3261",
+        "corpus_clean_v4.jsonl:L1287"
+      ]
+    },
+    {
+      "question": "What type of colloquium does Berkeley EECS hold weekly where faculty invite speakers to discuss topics in Electrical Engineering and Computer Science?",
+      "ground_truths": [
+        "EECS Joint Colloquium"
+      ],
+      "prediction": "EECS Colloquium.",
+      "em": false,
+      "f1": 0.8,
+      "retrieval_recall": false,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L603",
+        "corpus_clean_v4.jsonl:L597",
+        "corpus_clean_v4.jsonl:L601"
+      ]
+    },
+    {
+      "question": "What kind of research project allows Berkeley undergraduates to work closely with a faculty mentor or experienced researcher?",
+      "ground_truths": [
+        "faculty-initiated research project"
+      ],
+      "prediction": "Faculty-initiated research project.",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L173",
+        "corpus_clean_v4.jsonl:L46"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L173",
+        "corpus_clean_v4.jsonl:L46",
+        "corpus_clean_v4.jsonl:L153"
+      ]
+    },
+    {
+      "question": "Which publication category on the Berkeley EECS research page includes doctoral-level research works?",
+      "ground_truths": [
+        "Ph.D. Dissertations"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0,
+      "retrieval_recall": false,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L678",
+        "corpus_clean_v4.jsonl:L1479",
+        "corpus_clean_v4.jsonl:L1482"
+      ]
+    },
+    {
+      "question": "Which Berkeley research lab focuses on making privacy and security systems more usable by studying how people make security and privacy decisions?",
+      "ground_truths": [
+        "Berkeley Laboratory for Usable and Experimental Security"
+      ],
+      "prediction": "Berkeley Laboratory for Usable and Experimental Security",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L96"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L96",
+        "corpus_clean_v4.jsonl:L2206",
+        "corpus_clean_v4.jsonl:L3277"
+      ]
+    },
+    {
+      "question": "Which Berkeley research center studies decentralized technologies and web3 to support a responsible digital economy?",
+      "ground_truths": [
+        "Berkeley Center for Responsible, Decentralized Intelligence"
+      ],
+      "prediction": "Berkeley Center for Responsible Decentralized Intelligence",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L1682",
+        "corpus_clean_v4.jsonl:L624"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L1682",
+        "corpus_clean_v4.jsonl:L624",
+        "corpus_clean_v4.jsonl:L2693"
+      ]
+    },
+    {
+      "question": "Which Berkeley research lab aims to create autonomous robots that navigate using only on-board sensors without relying on GPS or external infrastructure?",
+      "ground_truths": [
+        "Agile Robotics And Perception Lab"
+      ],
+      "prediction": "Agile Robotics And Perception Lab (ARPL)",
+      "em": false,
+      "f1": 0.9090909090909091,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L47"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L47",
+        "corpus_clean_v4.jsonl:L935",
+        "corpus_clean_v4.jsonl:L2815"
+      ]
+    },
+    {
+      "question": "Where is the EECS Department Colloquium usually held on campus?",
+      "ground_truths": [
+        "HP Auditorium, 306 Soda Hall"
+      ],
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0,
+      "retrieval_recall": false,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L50",
+        "corpus_clean_v4.jsonl:L49",
+        "corpus_clean_v4.jsonl:L602"
+      ]
+    },
+    {
+      "question": "How many business days after each session do EECS colloquium talk recordings become available?",
+      "ground_truths": [
+        "four"
+      ],
+      "prediction": "four business days",
+      "em": false,
+      "f1": 0.5,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L50",
+        "corpus_clean_v4.jsonl:L590",
+        "corpus_clean_v4.jsonl:L591"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L50",
+        "corpus_clean_v4.jsonl:L590",
+        "corpus_clean_v4.jsonl:L591"
+      ]
+    },
+    {
+      "question": "Which graduate research-oriented degree program at Berkeley EECS is primarily intended for registered UC Berkeley Ph.D. students who want to add a master's degree?",
+      "ground_truths": [
+        "Master of Science (M.S.)"
+      ],
+      "prediction": "The 2-year M.S. degree in EECS.",
+      "em": false,
+      "f1": 0.22222222222222224,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L39",
+        "corpus_clean_v4.jsonl:L38"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L39",
+        "corpus_clean_v4.jsonl:L38",
+        "corpus_clean_v4.jsonl:L566"
+      ]
+    },
+    {
+      "question": "What is the minimum GPA required for applicants whose university uses a 4.0 grading scale when applying to Berkeley EECS graduate research degree programs?",
+      "ground_truths": [
+        "3.0"
+      ],
+      "prediction": "A satisfactory scholastic average with a minimum GPA of 3.0 (B).",
+      "em": false,
+      "f1": 0.19999999999999998,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L580",
+        "corpus_clean_v4.jsonl:L43",
+        "corpus_clean_v4.jsonl:L1257"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L580",
+        "corpus_clean_v4.jsonl:L43",
+        "corpus_clean_v4.jsonl:L1257"
+      ]
+    },
+    {
+      "question": "What is the deadline for submitting the online application and supplemental materials for Berkeley EECS graduate research programs?",
+      "ground_truths": [
+        "December 1"
+      ],
+      "prediction": "December 1",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L1297",
+        "corpus_clean_v4.jsonl:L580"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L1297",
+        "corpus_clean_v4.jsonl:L36",
+        "corpus_clean_v4.jsonl:L580"
+      ]
+    },
+    {
+      "question": "Which standardized test scores are no longer required or accepted for Berkeley EECS graduate research degree program applications?",
+      "ground_truths": [
+        "GRE"
+      ],
+      "prediction": "GRE scores.",
+      "em": false,
+      "f1": 0.6666666666666666,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L580",
+        "corpus_clean_v4.jsonl:L1985",
+        "corpus_clean_v4.jsonl:L41"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L580",
+        "corpus_clean_v4.jsonl:L1985",
+        "corpus_clean_v4.jsonl:L41"
+      ]
+    },
+    {
+      "question": "Who gave the Fall 2023 EECS Colloquium talk titled \"Turning Brain Waves into Words\"?",
+      "ground_truths": [
+        "Edward Chang & Gopala Anumanchipalli"
+      ],
+      "prediction": "Edward Chang & Gopala Anumanchipalli",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L593"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L1332",
+        "corpus_clean_v4.jsonl:L593",
+        "corpus_clean_v4.jsonl:L589"
+      ]
+    },
+    {
+      "question": "What is the course number for the Berkeley class titled 'Introduction to Digital Electronics'?",
+      "ground_truths": [
+        "EE 42"
+      ],
+      "prediction": "EECS 151",
+      "em": false,
+      "f1": 0,
+      "retrieval_recall": false,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L316",
+        "corpus_clean_v4.jsonl:L318",
+        "corpus_clean_v4.jsonl:L536"
+      ]
+    },
+    {
+      "question": "Which Berkeley EECS course teaches topics such as sample space, conditional probability, random variables, and the central limit theorem?",
+      "ground_truths": [
+        "EE 126"
+      ],
+      "prediction": "EECS 126.",
+      "em": false,
+      "f1": 0.5,
+      "retrieval_recall": false,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L409",
+        "corpus_clean_v4.jsonl:L303",
+        "corpus_clean_v4.jsonl:L376"
+      ]
+    },
+    {
+      "question": "What is the course number of the Berkeley class 'Introduction to Electric Power and Renewable Energy'?",
+      "ground_truths": [
+        "EE 108"
+      ],
+      "prediction": "EE 108.",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L402"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L402",
+        "corpus_clean_v4.jsonl:L368",
+        "corpus_clean_v4.jsonl:L354"
+      ]
+    },
+    {
+      "question": "Which company sponsors the New Silicon Initiative (NSI) program at Berkeley EECS?",
+      "ground_truths": [
+        "Apple"
+      ],
+      "prediction": "Apple.",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L114",
+        "corpus_clean_v4.jsonl:L541"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L114",
+        "corpus_clean_v4.jsonl:L114",
+        "corpus_clean_v4.jsonl:L541"
+      ]
+    },
+    {
+      "question": "Who is listed as the NSI Faculty Lead for the Apple New Silicon Initiative?",
+      "ground_truths": [
+        "Rikky Muller"
+      ],
+      "prediction": "Rikky Muller.",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L114"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L114",
+        "corpus_clean_v4.jsonl:L541",
+        "corpus_clean_v4.jsonl:L114"
+      ]
+    },
+    {
+      "question": "Which course are EECS and CS students encouraged to take as the \"tapeout\" course?",
+      "ground_truths": [
+        "EE 194"
+      ],
+      "prediction": "EE 194.",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L539",
+        "corpus_clean_v4.jsonl:L114"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L539",
+        "corpus_clean_v4.jsonl:L114",
+        "corpus_clean_v4.jsonl:L1656"
+      ]
+    },
+    {
+      "question": "How many Apple Masters Scholarships in Integrated Systems may be awarded per year at Berkeley in this application period?",
+      "ground_truths": [
+        "4"
+      ],
+      "prediction": "up to four (4)",
+      "em": false,
+      "f1": 0.4,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L581",
+        "corpus_clean_v4.jsonl:L37"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L581",
+        "corpus_clean_v4.jsonl:L581",
+        "corpus_clean_v4.jsonl:L37"
+      ]
+    },
+    {
+      "question": "How many semesters of funding can an Apple Masters Scholar in Integrated Systems receive?",
+      "ground_truths": [
+        "two"
+      ],
+      "prediction": "Up to two-semesters.",
+      "em": false,
+      "f1": 0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v4.jsonl:L581"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v4.jsonl:L581",
+        "corpus_clean_v4.jsonl:L581",
+        "corpus_clean_v4.jsonl:L1687"
       ]
     }
   ]

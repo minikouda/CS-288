@@ -1,5 +1,0 @@
-{
-  "url": "https://www2.eecs.berkeley.edu/Pubs/TechRpts/2020/EECS-2020-115.html",
-  "title": "Test-Time Training for Improved Object Affordance Prediction | EECS at UC Berkeley",
-  "content": "Test-Time Training for Improved Object Affordance Prediction | EECS at UC Berkeley Test-Time Training for Improved Object Affordance Prediction EECS Department, University of California, Berkeley Technical Report No. UCB/EECS-2020-115 May 29, 2020 http://www2.eecs.berkeley.edu/Pubs/TechRpts/2020/EECS-2020-115.pdf BibTeX citation: @mastersthesis{EECS-2020-115, Editor= {Malik, Jitendra and Ng, Ren}, Title= {Test-Time Training for Improved Object Affordance Prediction}, School= {EECS Department, University of California, Berkeley}, Year= {2020}, Month= {May}, Url= {http://www2.eecs.berkeley.edu/Pubs/TechRpts/2020/EECS-2020-115.html}, Number= {UCB/EECS-2020-115}, } EndNote citation: %0 Thesis %E Malik, Jitendra %E Ng, Ren %T Test-Time Training for Improved Object Affordance Prediction %I EECS Department, University of California, Berkeley %D 2020 %8 May 29 %@ UCB/EECS-2020-115 %U http://www2.eecs.berkeley.edu/Pubs/TechRpts/2020/EECS-2020-115.html %F EECS-2020-115"
-}

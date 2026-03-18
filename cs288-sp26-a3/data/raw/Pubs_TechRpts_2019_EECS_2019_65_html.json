@@ -1,5 +1,0 @@
-{
-  "url": "https://www2.eecs.berkeley.edu/Pubs/TechRpts/2019/EECS-2019-65.html",
-  "title": "Compression of Molecular Dynamics Simulation Data | EECS at UC Berkeley",
-  "content": "Compression of Molecular Dynamics Simulation Data | EECS at UC Berkeley Compression of Molecular Dynamics Simulation Data Shuai Liu EECS Department, University of California, Berkeley Technical Report No. UCB/EECS-2019-65 May 17, 2019 http://www2.eecs.berkeley.edu/Pubs/TechRpts/2019/EECS-2019-65.pdf Advisors: Gerald Friedland BibTeX citation: @mastersthesis{Liu:EECS-2019-65, Author= {Liu, Shuai}, Title= {Compression of Molecular Dynamics Simulation Data}, School= {EECS Department, University of California, Berkeley}, Year= {2019}, Month= {May}, Url= {http://www2.eecs.berkeley.edu/Pubs/TechRpts/2019/EECS-2019-65.html}, Number= {UCB/EECS-2019-65}, } EndNote citation: %0 Thesis %A Liu, Shuai %T Compression of Molecular Dynamics Simulation Data %I EECS Department, University of California, Berkeley %D 2019 %8 May 17 %@ UCB/EECS-2019-65 %U http://www2.eecs.berkeley.edu/Pubs/TechRpts/2019/EECS-2019-65.html %F Liu:EECS-2019-65"
-}

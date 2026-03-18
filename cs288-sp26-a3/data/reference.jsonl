@@ -2,7 +2,7 @@
 {"question": "How many CS courses are listed as open upper-division classes available to any UC Berkeley or visiting undergraduate students?", "answer": "2", "url": "https://eecs.berkeley.edu/resources/undergrads/cs/enrollment-policy/"}
 {"question": "How many courses is Dan Garcia scheduled to teach in Spring 2026 according to the EECS teaching faculty page?", "answer": "4", "url": "https://www2.eecs.berkeley.edu/Faculty/Lists/teaching.html"}
 {"question": "How many research centers related to theory are listed on the Berkeley EECS Theory research area page?", "answer": "4", "url": "https://www2.eecs.berkeley.edu/Research/Areas/THY/"}
-{"question":"For transfer students admitted in Fall 2024 onward who did not select computer science on their UC Berkeley application, are they allowed to change their major to computer science or add computer science as a double major?","answer":"No","url":"https://eecs.berkeley.edu/resources/undergrads/cs/how-to-declare-cs/"}
+{"question": "For transfer students admitted in Fall 2024 onward who did not select computer science on their UC Berkeley application, are they allowed to change their major to computer science or add computer science as a double major?","answer":"No","url":"https://eecs.berkeley.edu/resources/undergrads/cs/how-to-declare-cs/"}
 {"question": "Can students who already hold another industry-sponsored full fellowship be considered for the Apple Masters Scholarship in Integrated Systems?", "answer": "No", "url": "https://eecs.berkeley.edu/academics/graduate/fellowships/apple-ms-scholarship/"}
 {"question": "Are the fellowships listed on the Berkeley EECS Graduate Fellowships page generally intended for U.S. citizens and permanent residents?", "answer": "Yes", "url": "https://eecs.berkeley.edu/academics/graduate/fellowships/"}
 {"question": "Is it allowed to take EECS 299 units with the S/U grading option for the EECS M.S. degree?", "answer": "Yes", "url": "https://eecs.berkeley.edu/book/ms/"}
@@ -19,7 +19,7 @@
 {"question": "When is the deadline for the nomination of the outstanding TA awards?", "answer": "2/18/26", "url": "https://eecs.berkeley.edu/people/students-2/awards/"}
 {"question": "Which university did Pieter Abbeel do his masters degree from?", "answer": "KU Leuven", "url": "https://www2.eecs.berkeley.edu/Faculty/Homepages/abbeel.html"}
 {"question": "Where did Dan Klein get his PhD?", "answer": "Stanford University", "url": "https://eecs.berkeley.edu/book/faculty/"}
-{"question": "How many EE courses is Kristofer Pister teaching in Spring 2027?", "answer": "4", "url": "https://www2.eecs.berkeley.edu/Scheduling/EE/schedule-draft.html"}
+{"question": "How many EE courses is Kristofer Pister teaching in Spring 2027?", "answer": "2", "url": "https://www2.eecs.berkeley.edu/Scheduling/EE/schedule-draft.html"}
 {"question": "How many minor credits do PhD students have to take?", "answer": "6+", "url": "https://eecs.berkeley.edu/book/phd/coursework/"}
 {"question":"What room hosts the Accel Scholars Info-Session on March 16, 2026?","answer":"Wozniak Lounge","url":"https://eecs.berkeley.edu/"}
 {"question":"On what day of the week is the Dissertation Talk: Understanding Misalignment in AI Agents scheduled?","answer":"Wednesday","url":"https://eecs.berkeley.edu/"}
@@ -104,7 +104,7 @@
 {"question": "Who gave the Fall 2023 EECS Colloquium talk titled \"Turning Brain Waves into Words\"?", "answer": "Edward Chang & Gopala Anumanchipalli", "url": "https://eecs.berkeley.edu/research/colloquium/archives/fall2023/"}
 {"question": "What is the course number for the Berkeley class titled 'Introduction to Digital Electronics'?", "answer": "EE 42", "url": "https://www2.eecs.berkeley.edu/Courses/EE/"}
 {"question": "Which Berkeley EECS course teaches topics such as sample space, conditional probability, random variables, and the central limit theorem?", "answer": "EE 126", "url": "https://www2.eecs.berkeley.edu/Courses/EE/"}
-{"question": "What is the course number of the Berkeley class 'Introduction to Electric Power and Renewable Energy'?", "answer": "EE 108", "url": "https://www2.eecs.berkeley.edu/Courses/EE/"
+{"question": "What is the course number of the Berkeley class 'Introduction to Electric Power and Renewable Energy'?", "answer": "EE 108", "url": "https://www2.eecs.berkeley.edu/Courses/EE/"}
 {"question": "Which company sponsors the New Silicon Initiative (NSI) program at Berkeley EECS?", "answer": "Apple", "url": "https://eecs.berkeley.edu/academics/new-silicon-initiative-nsi/"}
 {"question": "Who is listed as the NSI Faculty Lead for the Apple New Silicon Initiative?", "answer": "Rikky Muller", "url": "https://eecs.berkeley.edu/academics/new-silicon-initiative-nsi/"}
 {"question": "Which course are EECS and CS students encouraged to take as the \"tapeout\" course?", "answer": "EE 194", "url": "https://eecs.berkeley.edu/academics/new-silicon-initiative-nsi/"}

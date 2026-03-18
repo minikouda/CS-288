@@ -1,5 +1,0 @@
-{
-  "url": "https://www2.eecs.berkeley.edu/Pubs/TechRpts/2025/EECS-2025-131.html",
-  "title": "Investigations in Optimal Transaction Scheduling | EECS at UC Berkeley",
-  "content": "Investigations in Optimal Transaction Scheduling | EECS at UC Berkeley Investigations in Optimal Transaction Scheduling Darren Teh and Jianzhi Wang EECS Department, University of California, Berkeley Technical Report No. UCB/EECS-2025-131 May 23, 2025 http://www2.eecs.berkeley.edu/Pubs/TechRpts/2025/EECS-2025-131.pdf Advisors: Ion Stoica BibTeX citation: @mastersthesis{Teh:EECS-2025-131, Author= {Teh, Darren and Wang, Jianzhi}, Title= {Investigations in Optimal Transaction Scheduling}, School= {EECS Department, University of California, Berkeley}, Year= {2025}, Month= {May}, Url= {http://www2.eecs.berkeley.edu/Pubs/TechRpts/2025/EECS-2025-131.html}, Number= {UCB/EECS-2025-131}, } EndNote citation: %0 Thesis %A Teh, Darren %A Wang, Jianzhi %T Investigations in Optimal Transaction Scheduling %I EECS Department, University of California, Berkeley %D 2025 %8 May 23 %@ UCB/EECS-2025-131 %U http://www2.eecs.berkeley.edu/Pubs/TechRpts/2025/EECS-2025-131.html %F Teh:EECS-2025-131"
-}

@@ -1,5 +1,0 @@
-{
-  "url": "https://eecs.berkeley.edu/news/eecs-researchers-win-mlarchsys-best-paper-award/",
-  "title": "EECS researchers win MLArchSys Best Paper Award - EECS at Berkeley",
-  "content": "EECS researchers win MLArchSys Best Paper Award - EECS at Berkeley Alvin Cheung, Sophia Shao, and their students Charles Hong and Sahil Batia EECS Professors Alvin Cheung and Sophia Shao, and their students Charles Hong and Sahil Batia, have won the Best Paper Award at the Machine Learning for Computer Architecture and Systems (MLArchSys) Workshop, held at ISCA 2025. Their award-winning paper, titled \u201cAutocomp: LLM-Driven Code Optimization for Tensor Accelerators\u201d, presents a novel approach that leverages large language models (LLMs) to automatically optimize code for modern tensor accelerators, which is a critical component in machine learning and AI workloads. The full paper can be found here. Categories Faculty Honors Research Staff Students View Open Faculty Positions"
-}
