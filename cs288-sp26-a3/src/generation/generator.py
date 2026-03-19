@@ -19,6 +19,30 @@ class Generator:
             "If the answer is not explicitly supported by context, output exactly 'I don't know'."
         )
 
+        # Test
+        def classify_query(query):
+            q = query.lower()
+            if "how many" in q:
+                return "count"
+            if q.startswith(("who", "when", "where")):
+                return "factoid"
+            if q.startswith(("what", "which")):
+                return "entity"
+            return "general"
+
+        qtype = classify_query(query)
+
+        extra_rules = ""
+        
+        if qtype == "count":
+            extra_rules += "Count all relevant items carefully.\n"
+        elif qtype == "who":
+            extra_rules += "Answer with a person's name only.\n"
+        elif qtype == "when":
+            extra_rules += "Answer with a date or time only.\n"
+        
+        system_prompt += extra_rules
+        ### End Test
 
         prompt = (
             f"Context:\n{context_text}\n\n"
