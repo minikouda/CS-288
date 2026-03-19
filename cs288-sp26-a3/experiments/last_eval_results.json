@@ -1,25 +1,35 @@
 {
-  "overall_em": 0.45535714285714285,
-  "overall_f1": 0.6178583816976675,
+  "overall_em": 0.5178571428571429,
+  "overall_f1": 0.696009595563167,
   "details": [
     {
       "question": "How many COMPSCI 198 group courses are offered in the CS Spring 2026 schedule?",
       "ground_truths": [
         "5"
       ],
-      "prediction": "4",
+      "prediction": "8",
       "em": false,
       "f1": 0,
       "retrieval_recall": true,
-      "gt_url_chunk_file": null,
+      "gt_url_chunk_file": "corpus_clean_v5.jsonl:L820",
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L277",
-        "corpus_clean_v4.jsonl:L214"
+        "corpus_clean_v5.jsonl:L461",
+        "corpus_clean_v5.jsonl:L867",
+        "corpus_clean_v5.jsonl:L820",
+        "corpus_clean_v5.jsonl:L41",
+        "corpus_clean_v5.jsonl:L510"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L277",
-        "corpus_clean_v4.jsonl:L214",
-        "corpus_clean_v4.jsonl:L232"
+        "corpus_clean_v5.jsonl:L461",
+        "corpus_clean_v5.jsonl:L867",
+        "corpus_clean_v5.jsonl:L820",
+        "corpus_clean_v5.jsonl:L41",
+        "corpus_clean_v5.jsonl:L510",
+        "corpus_clean_v5.jsonl:L820",
+        "corpus_clean_v5.jsonl:L831",
+        "corpus_clean_v5.jsonl:L818",
+        "corpus_clean_v5.jsonl:L952",
+        "corpus_clean_v5.jsonl:L954"
       ]
     },
     {
@@ -27,20 +37,34 @@
       "ground_truths": [
         "2"
       ],
-      "prediction": "Two.",
-      "em": false,
-      "f1": 0,
+      "prediction": "2",
+      "em": true,
+      "f1": 1.0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L724",
-        "corpus_clean_v4.jsonl:L584",
-        "corpus_clean_v4.jsonl:L572"
+        "corpus_clean_v5.jsonl:L9073",
+        "corpus_clean_v5.jsonl:L836",
+        "corpus_clean_v5.jsonl:L813",
+        "corpus_clean_v5.jsonl:L9078",
+        "corpus_clean_v5.jsonl:L9080",
+        "corpus_clean_v5.jsonl:L837",
+        "corpus_clean_v5.jsonl:L9082",
+        "corpus_clean_v5.jsonl:L777",
+        "corpus_clean_v5.jsonl:L960",
+        "corpus_clean_v5.jsonl:L9075"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L724",
-        "corpus_clean_v4.jsonl:L584",
-        "corpus_clean_v4.jsonl:L572"
+        "corpus_clean_v5.jsonl:L9073",
+        "corpus_clean_v5.jsonl:L836",
+        "corpus_clean_v5.jsonl:L813",
+        "corpus_clean_v5.jsonl:L9078",
+        "corpus_clean_v5.jsonl:L9080",
+        "corpus_clean_v5.jsonl:L837",
+        "corpus_clean_v5.jsonl:L9082",
+        "corpus_clean_v5.jsonl:L777",
+        "corpus_clean_v5.jsonl:L960",
+        "corpus_clean_v5.jsonl:L9075"
       ]
     },
     {
@@ -54,13 +78,24 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L1436",
-        "corpus_clean_v4.jsonl:L274"
+        "corpus_clean_v5.jsonl:L9327",
+        "corpus_clean_v5.jsonl:L457",
+        "corpus_clean_v5.jsonl:L41",
+        "corpus_clean_v5.jsonl:L10049",
+        "corpus_clean_v5.jsonl:L9395",
+        "corpus_clean_v5.jsonl:L9340"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L1436",
-        "corpus_clean_v4.jsonl:L274",
-        "corpus_clean_v4.jsonl:L1563"
+        "corpus_clean_v5.jsonl:L9327",
+        "corpus_clean_v5.jsonl:L457",
+        "corpus_clean_v5.jsonl:L9458",
+        "corpus_clean_v5.jsonl:L41",
+        "corpus_clean_v5.jsonl:L10142",
+        "corpus_clean_v5.jsonl:L10049",
+        "corpus_clean_v5.jsonl:L9395",
+        "corpus_clean_v5.jsonl:L9340",
+        "corpus_clean_v5.jsonl:L10405",
+        "corpus_clean_v5.jsonl:L10235"
       ]
     },
     {
@@ -68,19 +103,27 @@
       "ground_truths": [
         "4"
       ],
-      "prediction": "I don't know.",
+      "prediction": "I don't know",
       "em": false,
       "f1": 0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L81",
-        "corpus_clean_v4.jsonl:L1679"
+        "corpus_clean_v5.jsonl:L9529",
+        "corpus_clean_v5.jsonl:L95",
+        "corpus_clean_v5.jsonl:L9677"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L81",
-        "corpus_clean_v4.jsonl:L1679",
-        "corpus_clean_v4.jsonl:L47"
+        "corpus_clean_v5.jsonl:L9529",
+        "corpus_clean_v5.jsonl:L95",
+        "corpus_clean_v5.jsonl:L9677",
+        "corpus_clean_v5.jsonl:L48",
+        "corpus_clean_v5.jsonl:L110",
+        "corpus_clean_v5.jsonl:L101",
+        "corpus_clean_v5.jsonl:L109",
+        "corpus_clean_v5.jsonl:L98",
+        "corpus_clean_v5.jsonl:L107",
+        "corpus_clean_v5.jsonl:L108"
       ]
     },
     {
@@ -94,14 +137,28 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L725",
-        "corpus_clean_v4.jsonl:L576",
-        "corpus_clean_v4.jsonl:L570"
+        "corpus_clean_v5.jsonl:L9072",
+        "corpus_clean_v5.jsonl:L822",
+        "corpus_clean_v5.jsonl:L816",
+        "corpus_clean_v5.jsonl:L814",
+        "corpus_clean_v5.jsonl:L815",
+        "corpus_clean_v5.jsonl:L43",
+        "corpus_clean_v5.jsonl:L813",
+        "corpus_clean_v5.jsonl:L824",
+        "corpus_clean_v5.jsonl:L668",
+        "corpus_clean_v5.jsonl:L9075"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L725",
-        "corpus_clean_v4.jsonl:L576",
-        "corpus_clean_v4.jsonl:L570"
+        "corpus_clean_v5.jsonl:L9072",
+        "corpus_clean_v5.jsonl:L822",
+        "corpus_clean_v5.jsonl:L816",
+        "corpus_clean_v5.jsonl:L814",
+        "corpus_clean_v5.jsonl:L815",
+        "corpus_clean_v5.jsonl:L43",
+        "corpus_clean_v5.jsonl:L813",
+        "corpus_clean_v5.jsonl:L824",
+        "corpus_clean_v5.jsonl:L668",
+        "corpus_clean_v5.jsonl:L9075"
       ]
     },
     {
@@ -115,13 +172,25 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L37",
-        "corpus_clean_v4.jsonl:L581"
+        "corpus_clean_v5.jsonl:L40",
+        "corpus_clean_v5.jsonl:L832",
+        "corpus_clean_v5.jsonl:L781",
+        "corpus_clean_v5.jsonl:L782",
+        "corpus_clean_v5.jsonl:L670",
+        "corpus_clean_v5.jsonl:L9190",
+        "corpus_clean_v5.jsonl:L43"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L37",
-        "corpus_clean_v4.jsonl:L581",
-        "corpus_clean_v4.jsonl:L581"
+        "corpus_clean_v5.jsonl:L40",
+        "corpus_clean_v5.jsonl:L832",
+        "corpus_clean_v5.jsonl:L832",
+        "corpus_clean_v5.jsonl:L9659",
+        "corpus_clean_v5.jsonl:L781",
+        "corpus_clean_v5.jsonl:L782",
+        "corpus_clean_v5.jsonl:L670",
+        "corpus_clean_v5.jsonl:L9190",
+        "corpus_clean_v5.jsonl:L782",
+        "corpus_clean_v5.jsonl:L43"
       ]
     },
     {
@@ -132,13 +201,22 @@
       "prediction": "Yes.",
       "em": true,
       "f1": 1.0,
-      "retrieval_recall": false,
+      "retrieval_recall": true,
       "gt_url_chunk_file": null,
-      "content_match_chunk_files": [],
+      "content_match_chunk_files": [
+        "corpus_clean_v5.jsonl:L9389"
+      ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L37",
-        "corpus_clean_v4.jsonl:L37",
-        "corpus_clean_v4.jsonl:L1687"
+        "corpus_clean_v5.jsonl:L40",
+        "corpus_clean_v5.jsonl:L40",
+        "corpus_clean_v5.jsonl:L9659",
+        "corpus_clean_v5.jsonl:L9696",
+        "corpus_clean_v5.jsonl:L9692",
+        "corpus_clean_v5.jsonl:L9066",
+        "corpus_clean_v5.jsonl:L671",
+        "corpus_clean_v5.jsonl:L9389",
+        "corpus_clean_v5.jsonl:L10346",
+        "corpus_clean_v5.jsonl:L10057"
       ]
     },
     {
@@ -146,18 +224,25 @@
       "ground_truths": [
         "Yes"
       ],
-      "prediction": "Yes.",
+      "prediction": "Yes",
       "em": true,
       "f1": 1.0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L642"
+        "corpus_clean_v5.jsonl:L1383"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L1299",
-        "corpus_clean_v4.jsonl:L642",
-        "corpus_clean_v4.jsonl:L1304"
+        "corpus_clean_v5.jsonl:L9191",
+        "corpus_clean_v5.jsonl:L1383",
+        "corpus_clean_v5.jsonl:L9194",
+        "corpus_clean_v5.jsonl:L9315",
+        "corpus_clean_v5.jsonl:L9314",
+        "corpus_clean_v5.jsonl:L9076",
+        "corpus_clean_v5.jsonl:L9073",
+        "corpus_clean_v5.jsonl:L1365",
+        "corpus_clean_v5.jsonl:L796",
+        "corpus_clean_v5.jsonl:L9140"
       ]
     },
     {
@@ -165,20 +250,32 @@
       "ground_truths": [
         "3"
       ],
-      "prediction": "Three.",
-      "em": false,
-      "f1": 0,
+      "prediction": "3",
+      "em": true,
+      "f1": 1.0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L37",
-        "corpus_clean_v4.jsonl:L1687",
-        "corpus_clean_v4.jsonl:L2436"
+        "corpus_clean_v5.jsonl:L40",
+        "corpus_clean_v5.jsonl:L9659",
+        "corpus_clean_v5.jsonl:L10346",
+        "corpus_clean_v5.jsonl:L9696",
+        "corpus_clean_v5.jsonl:L9424",
+        "corpus_clean_v5.jsonl:L9662",
+        "corpus_clean_v5.jsonl:L9389",
+        "corpus_clean_v5.jsonl:L9387"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L37",
-        "corpus_clean_v4.jsonl:L1687",
-        "corpus_clean_v4.jsonl:L2436"
+        "corpus_clean_v5.jsonl:L40",
+        "corpus_clean_v5.jsonl:L9659",
+        "corpus_clean_v5.jsonl:L10346",
+        "corpus_clean_v5.jsonl:L10342",
+        "corpus_clean_v5.jsonl:L9696",
+        "corpus_clean_v5.jsonl:L9424",
+        "corpus_clean_v5.jsonl:L9662",
+        "corpus_clean_v5.jsonl:L9389",
+        "corpus_clean_v5.jsonl:L9387",
+        "corpus_clean_v5.jsonl:L40"
       ]
     },
     {
@@ -193,9 +290,16 @@
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L711",
-        "corpus_clean_v4.jsonl:L37",
-        "corpus_clean_v4.jsonl:L662"
+        "corpus_clean_v5.jsonl:L9066",
+        "corpus_clean_v5.jsonl:L40",
+        "corpus_clean_v5.jsonl:L1376",
+        "corpus_clean_v5.jsonl:L10326",
+        "corpus_clean_v5.jsonl:L10342",
+        "corpus_clean_v5.jsonl:L40",
+        "corpus_clean_v5.jsonl:L1369",
+        "corpus_clean_v5.jsonl:L9189",
+        "corpus_clean_v5.jsonl:L10072",
+        "corpus_clean_v5.jsonl:L786"
       ]
     },
     {
@@ -203,16 +307,23 @@
       "ground_truths": [
         "They may be dropped"
       ],
-      "prediction": "Students who have prerequisites in progress at the time of enrollment are allowed to enroll. At the end of phase 2, staff will conduct a prerequisite check. Students who didn't pass will be dropped.",
+      "prediction": "You may be dropped.",
       "em": false,
-      "f1": 0.1142857142857143,
+      "f1": 0.75,
       "retrieval_recall": false,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L725",
-        "corpus_clean_v4.jsonl:L232",
-        "corpus_clean_v4.jsonl:L671"
+        "corpus_clean_v5.jsonl:L9072",
+        "corpus_clean_v5.jsonl:L416",
+        "corpus_clean_v5.jsonl:L9062",
+        "corpus_clean_v5.jsonl:L9073",
+        "corpus_clean_v5.jsonl:L836",
+        "corpus_clean_v5.jsonl:L837",
+        "corpus_clean_v5.jsonl:L813",
+        "corpus_clean_v5.jsonl:L9077",
+        "corpus_clean_v5.jsonl:L1374",
+        "corpus_clean_v5.jsonl:L9062"
       ]
     },
     {
@@ -227,9 +338,16 @@
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L533",
-        "corpus_clean_v4.jsonl:L724",
-        "corpus_clean_v4.jsonl:L535"
+        "corpus_clean_v5.jsonl:L776",
+        "corpus_clean_v5.jsonl:L9073",
+        "corpus_clean_v5.jsonl:L777",
+        "corpus_clean_v5.jsonl:L813",
+        "corpus_clean_v5.jsonl:L796",
+        "corpus_clean_v5.jsonl:L824",
+        "corpus_clean_v5.jsonl:L9082",
+        "corpus_clean_v5.jsonl:L963",
+        "corpus_clean_v5.jsonl:L971",
+        "corpus_clean_v5.jsonl:L825"
       ]
     },
     {
@@ -243,13 +361,24 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L53",
-        "corpus_clean_v4.jsonl:L2010"
+        "corpus_clean_v5.jsonl:L54",
+        "corpus_clean_v5.jsonl:L10035",
+        "corpus_clean_v5.jsonl:L10937",
+        "corpus_clean_v5.jsonl:L55",
+        "corpus_clean_v5.jsonl:L10856",
+        "corpus_clean_v5.jsonl:L9328"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L53",
-        "corpus_clean_v4.jsonl:L2010",
-        "corpus_clean_v4.jsonl:L3108"
+        "corpus_clean_v5.jsonl:L54",
+        "corpus_clean_v5.jsonl:L10035",
+        "corpus_clean_v5.jsonl:L10997",
+        "corpus_clean_v5.jsonl:L10937",
+        "corpus_clean_v5.jsonl:L55",
+        "corpus_clean_v5.jsonl:L10938",
+        "corpus_clean_v5.jsonl:L10996",
+        "corpus_clean_v5.jsonl:L10856",
+        "corpus_clean_v5.jsonl:L10935",
+        "corpus_clean_v5.jsonl:L9328"
       ]
     },
     {
@@ -263,12 +392,21 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L240"
+        "corpus_clean_v5.jsonl:L426",
+        "corpus_clean_v5.jsonl:L107",
+        "corpus_clean_v5.jsonl:L425"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L469",
-        "corpus_clean_v4.jsonl:L240",
-        "corpus_clean_v4.jsonl:L536"
+        "corpus_clean_v5.jsonl:L644",
+        "corpus_clean_v5.jsonl:L426",
+        "corpus_clean_v5.jsonl:L977",
+        "corpus_clean_v5.jsonl:L778",
+        "corpus_clean_v5.jsonl:L813",
+        "corpus_clean_v5.jsonl:L107",
+        "corpus_clean_v5.jsonl:L513",
+        "corpus_clean_v5.jsonl:L425",
+        "corpus_clean_v5.jsonl:L812",
+        "corpus_clean_v5.jsonl:L778"
       ]
     },
     {
@@ -279,16 +417,26 @@
         "Grayson Johnston",
         "Carol Marshall"
       ],
-      "prediction": "Charlene Duncan.",
+      "prediction": "Gina Garcia, Grayson Johnston, Floriberto Garcia, Carol Marshall.",
       "em": false,
-      "f1": 0,
-      "retrieval_recall": false,
+      "f1": 0.4,
+      "retrieval_recall": true,
       "gt_url_chunk_file": null,
-      "content_match_chunk_files": [],
+      "content_match_chunk_files": [
+        "corpus_clean_v5.jsonl:L823",
+        "corpus_clean_v5.jsonl:L784"
+      ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L707",
-        "corpus_clean_v4.jsonl:L1546",
-        "corpus_clean_v4.jsonl:L1861"
+        "corpus_clean_v5.jsonl:L9125",
+        "corpus_clean_v5.jsonl:L9442",
+        "corpus_clean_v5.jsonl:L9711",
+        "corpus_clean_v5.jsonl:L823",
+        "corpus_clean_v5.jsonl:L823",
+        "corpus_clean_v5.jsonl:L1366",
+        "corpus_clean_v5.jsonl:L784",
+        "corpus_clean_v5.jsonl:L1376",
+        "corpus_clean_v5.jsonl:L1351",
+        "corpus_clean_v5.jsonl:L790"
       ]
     },
     {
@@ -302,36 +450,25 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L1581"
+        "corpus_clean_v5.jsonl:L9472"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L1581",
-        "corpus_clean_v4.jsonl:L1726",
-        "corpus_clean_v4.jsonl:L2690"
+        "corpus_clean_v5.jsonl:L9472",
+        "corpus_clean_v5.jsonl:L9692",
+        "corpus_clean_v5.jsonl:L10553",
+        "corpus_clean_v5.jsonl:L10326",
+        "corpus_clean_v5.jsonl:L9992",
+        "corpus_clean_v5.jsonl:L9389",
+        "corpus_clean_v5.jsonl:L9472",
+        "corpus_clean_v5.jsonl:L10733",
+        "corpus_clean_v5.jsonl:L11270",
+        "corpus_clean_v5.jsonl:L10326"
       ]
     },
     {
       "question": "Who was the earliest-born professor at UC Berkeley?",
       "ground_truths": [
         "Lester Edwin Reukema"
-      ],
-      "prediction": "I don't know",
-      "em": false,
-      "f1": 0,
-      "retrieval_recall": false,
-      "gt_url_chunk_file": null,
-      "content_match_chunk_files": [],
-      "retrieved_files": [
-        "corpus_clean_v4.jsonl:L133",
-        "corpus_clean_v4.jsonl:L687",
-        "corpus_clean_v4.jsonl:L1547"
-      ]
-    },
-    {
-      "question": "Who is the advisor of the student whose 2024 thesis is about protein evolution?",
-      "ground_truths": [
-        "Moritz Hardt",
-        "Jennifer Listgarten"
       ],
       "prediction": "I don't know.",
       "em": false,
@@ -340,9 +477,44 @@
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L1673",
-        "corpus_clean_v4.jsonl:L1468",
-        "corpus_clean_v4.jsonl:L1514"
+        "corpus_clean_v5.jsonl:L702",
+        "corpus_clean_v5.jsonl:L716",
+        "corpus_clean_v5.jsonl:L9443",
+        "corpus_clean_v5.jsonl:L10543",
+        "corpus_clean_v5.jsonl:L11349",
+        "corpus_clean_v5.jsonl:L1309",
+        "corpus_clean_v5.jsonl:L728",
+        "corpus_clean_v5.jsonl:L830",
+        "corpus_clean_v5.jsonl:L4",
+        "corpus_clean_v5.jsonl:L1294"
+      ]
+    },
+    {
+      "question": "Who is the advisor of the student whose 2024 thesis is about protein evolution?",
+      "ground_truths": [
+        "Moritz Hardt",
+        "Jennifer Listgarten"
+      ],
+      "prediction": "Moritz Hardt and Jennifer Listgarten",
+      "em": false,
+      "f1": 0.5714285714285715,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": null,
+      "content_match_chunk_files": [
+        "corpus_clean_v5.jsonl:L1889",
+        "corpus_clean_v5.jsonl:L1893"
+      ],
+      "retrieved_files": [
+        "corpus_clean_v5.jsonl:L1889",
+        "corpus_clean_v5.jsonl:L1893",
+        "corpus_clean_v5.jsonl:L2299",
+        "corpus_clean_v5.jsonl:L2033",
+        "corpus_clean_v5.jsonl:L1893",
+        "corpus_clean_v5.jsonl:L1889",
+        "corpus_clean_v5.jsonl:L2299",
+        "corpus_clean_v5.jsonl:L9388",
+        "corpus_clean_v5.jsonl:L9397",
+        "corpus_clean_v5.jsonl:L9442"
       ]
     },
     {
@@ -356,12 +528,19 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L60"
+        "corpus_clean_v5.jsonl:L58"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L60",
-        "corpus_clean_v4.jsonl:L1667",
-        "corpus_clean_v4.jsonl:L20"
+        "corpus_clean_v5.jsonl:L58",
+        "corpus_clean_v5.jsonl:L1335",
+        "corpus_clean_v5.jsonl:L9546",
+        "corpus_clean_v5.jsonl:L742",
+        "corpus_clean_v5.jsonl:L21",
+        "corpus_clean_v5.jsonl:L1335",
+        "corpus_clean_v5.jsonl:L746",
+        "corpus_clean_v5.jsonl:L9442",
+        "corpus_clean_v5.jsonl:L1686",
+        "corpus_clean_v5.jsonl:L9596"
       ]
     },
     {
@@ -373,14 +552,21 @@
       "em": false,
       "f1": 0.8,
       "retrieval_recall": true,
-      "gt_url_chunk_file": "corpus_clean_v4.jsonl:L182",
+      "gt_url_chunk_file": "corpus_clean_v5.jsonl:L370",
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L182"
+        "corpus_clean_v5.jsonl:L370"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L182",
-        "corpus_clean_v4.jsonl:L1868",
-        "corpus_clean_v4.jsonl:L182"
+        "corpus_clean_v5.jsonl:L370",
+        "corpus_clean_v5.jsonl:L9725",
+        "corpus_clean_v5.jsonl:L370",
+        "corpus_clean_v5.jsonl:L10670",
+        "corpus_clean_v5.jsonl:L10384",
+        "corpus_clean_v5.jsonl:L10863",
+        "corpus_clean_v5.jsonl:L10942",
+        "corpus_clean_v5.jsonl:L9727",
+        "corpus_clean_v5.jsonl:L9278",
+        "corpus_clean_v5.jsonl:L10678"
       ]
     },
     {
@@ -388,18 +574,23 @@
       "ground_truths": [
         "Stanford University"
       ],
-      "prediction": "Stanford University.",
-      "em": true,
-      "f1": 1.0,
-      "retrieval_recall": true,
+      "prediction": "I don't know.",
+      "em": false,
+      "f1": 0,
+      "retrieval_recall": false,
       "gt_url_chunk_file": null,
-      "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L331"
-      ],
+      "content_match_chunk_files": [],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L331",
-        "corpus_clean_v4.jsonl:L331",
-        "corpus_clean_v4.jsonl:L2628"
+        "corpus_clean_v5.jsonl:L511",
+        "corpus_clean_v5.jsonl:L10518",
+        "corpus_clean_v5.jsonl:L10518",
+        "corpus_clean_v5.jsonl:L261",
+        "corpus_clean_v5.jsonl:L10505",
+        "corpus_clean_v5.jsonl:L1154",
+        "corpus_clean_v5.jsonl:L9568",
+        "corpus_clean_v5.jsonl:L10130",
+        "corpus_clean_v5.jsonl:L10490",
+        "corpus_clean_v5.jsonl:L457"
       ]
     },
     {
@@ -411,16 +602,29 @@
       "em": false,
       "f1": 0,
       "retrieval_recall": true,
-      "gt_url_chunk_file": null,
+      "gt_url_chunk_file": "corpus_clean_v5.jsonl:L834",
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L307",
-        "corpus_clean_v4.jsonl:L354",
-        "corpus_clean_v4.jsonl:L1834"
+        "corpus_clean_v5.jsonl:L485",
+        "corpus_clean_v5.jsonl:L532",
+        "corpus_clean_v5.jsonl:L834",
+        "corpus_clean_v5.jsonl:L9705",
+        "corpus_clean_v5.jsonl:L9398",
+        "corpus_clean_v5.jsonl:L41",
+        "corpus_clean_v5.jsonl:L582",
+        "corpus_clean_v5.jsonl:L304",
+        "corpus_clean_v5.jsonl:L527"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L307",
-        "corpus_clean_v4.jsonl:L354",
-        "corpus_clean_v4.jsonl:L1834"
+        "corpus_clean_v5.jsonl:L485",
+        "corpus_clean_v5.jsonl:L532",
+        "corpus_clean_v5.jsonl:L834",
+        "corpus_clean_v5.jsonl:L9705",
+        "corpus_clean_v5.jsonl:L9398",
+        "corpus_clean_v5.jsonl:L41",
+        "corpus_clean_v5.jsonl:L582",
+        "corpus_clean_v5.jsonl:L582",
+        "corpus_clean_v5.jsonl:L304",
+        "corpus_clean_v5.jsonl:L527"
       ]
     },
     {
@@ -434,14 +638,26 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L579",
-        "corpus_clean_v4.jsonl:L572",
-        "corpus_clean_v4.jsonl:L571"
+        "corpus_clean_v5.jsonl:L824",
+        "corpus_clean_v5.jsonl:L813",
+        "corpus_clean_v5.jsonl:L812",
+        "corpus_clean_v5.jsonl:L9194",
+        "corpus_clean_v5.jsonl:L9076",
+        "corpus_clean_v5.jsonl:L9191",
+        "corpus_clean_v5.jsonl:L9314",
+        "corpus_clean_v5.jsonl:L38"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L579",
-        "corpus_clean_v4.jsonl:L572",
-        "corpus_clean_v4.jsonl:L571"
+        "corpus_clean_v5.jsonl:L824",
+        "corpus_clean_v5.jsonl:L813",
+        "corpus_clean_v5.jsonl:L812",
+        "corpus_clean_v5.jsonl:L9194",
+        "corpus_clean_v5.jsonl:L1378",
+        "corpus_clean_v5.jsonl:L9076",
+        "corpus_clean_v5.jsonl:L9191",
+        "corpus_clean_v5.jsonl:L9314",
+        "corpus_clean_v5.jsonl:L38",
+        "corpus_clean_v5.jsonl:L1381"
       ]
     },
     {
@@ -455,12 +671,19 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L9"
+        "corpus_clean_v5.jsonl:L12"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L9",
-        "corpus_clean_v4.jsonl:L651",
-        "corpus_clean_v4.jsonl:L651"
+        "corpus_clean_v5.jsonl:L12",
+        "corpus_clean_v5.jsonl:L1369",
+        "corpus_clean_v5.jsonl:L1369",
+        "corpus_clean_v5.jsonl:L10176",
+        "corpus_clean_v5.jsonl:L11162",
+        "corpus_clean_v5.jsonl:L9855",
+        "corpus_clean_v5.jsonl:L9787",
+        "corpus_clean_v5.jsonl:L10644",
+        "corpus_clean_v5.jsonl:L9855",
+        "corpus_clean_v5.jsonl:L10350"
       ]
     },
     {
@@ -474,14 +697,20 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L9",
-        "corpus_clean_v4.jsonl:L1317",
-        "corpus_clean_v4.jsonl:L618"
+        "corpus_clean_v5.jsonl:L12",
+        "corpus_clean_v5.jsonl:L9216"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L9",
-        "corpus_clean_v4.jsonl:L1317",
-        "corpus_clean_v4.jsonl:L618"
+        "corpus_clean_v5.jsonl:L12",
+        "corpus_clean_v5.jsonl:L9216",
+        "corpus_clean_v5.jsonl:L1899",
+        "corpus_clean_v5.jsonl:L1932",
+        "corpus_clean_v5.jsonl:L2871",
+        "corpus_clean_v5.jsonl:L1865",
+        "corpus_clean_v5.jsonl:L2239",
+        "corpus_clean_v5.jsonl:L1454",
+        "corpus_clean_v5.jsonl:L2871",
+        "corpus_clean_v5.jsonl:L440"
       ]
     },
     {
@@ -495,13 +724,22 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L640",
-        "corpus_clean_v4.jsonl:L1304"
+        "corpus_clean_v5.jsonl:L1381",
+        "corpus_clean_v5.jsonl:L9194",
+        "corpus_clean_v5.jsonl:L1383",
+        "corpus_clean_v5.jsonl:L9076"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L640",
-        "corpus_clean_v4.jsonl:L1420",
-        "corpus_clean_v4.jsonl:L1304"
+        "corpus_clean_v5.jsonl:L1381",
+        "corpus_clean_v5.jsonl:L9314",
+        "corpus_clean_v5.jsonl:L9194",
+        "corpus_clean_v5.jsonl:L1383",
+        "corpus_clean_v5.jsonl:L9315",
+        "corpus_clean_v5.jsonl:L9076",
+        "corpus_clean_v5.jsonl:L816",
+        "corpus_clean_v5.jsonl:L9191",
+        "corpus_clean_v5.jsonl:L37",
+        "corpus_clean_v5.jsonl:L9190"
       ]
     },
     {
@@ -515,14 +753,22 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L640",
-        "corpus_clean_v4.jsonl:L641",
-        "corpus_clean_v4.jsonl:L658"
+        "corpus_clean_v5.jsonl:L1381",
+        "corpus_clean_v5.jsonl:L1365",
+        "corpus_clean_v5.jsonl:L1366",
+        "corpus_clean_v5.jsonl:L9063"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L640",
-        "corpus_clean_v4.jsonl:L641",
-        "corpus_clean_v4.jsonl:L658"
+        "corpus_clean_v5.jsonl:L1381",
+        "corpus_clean_v5.jsonl:L1365",
+        "corpus_clean_v5.jsonl:L1366",
+        "corpus_clean_v5.jsonl:L9063",
+        "corpus_clean_v5.jsonl:L1381",
+        "corpus_clean_v5.jsonl:L9068",
+        "corpus_clean_v5.jsonl:L1351",
+        "corpus_clean_v5.jsonl:L823",
+        "corpus_clean_v5.jsonl:L1383",
+        "corpus_clean_v5.jsonl:L9310"
       ]
     },
     {
@@ -536,14 +782,28 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L1304",
-        "corpus_clean_v4.jsonl:L1299",
-        "corpus_clean_v4.jsonl:L721"
+        "corpus_clean_v5.jsonl:L9194",
+        "corpus_clean_v5.jsonl:L9191",
+        "corpus_clean_v5.jsonl:L9078",
+        "corpus_clean_v5.jsonl:L812",
+        "corpus_clean_v5.jsonl:L1378",
+        "corpus_clean_v5.jsonl:L796",
+        "corpus_clean_v5.jsonl:L813",
+        "corpus_clean_v5.jsonl:L45",
+        "corpus_clean_v5.jsonl:L777",
+        "corpus_clean_v5.jsonl:L829"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L1304",
-        "corpus_clean_v4.jsonl:L1299",
-        "corpus_clean_v4.jsonl:L721"
+        "corpus_clean_v5.jsonl:L9194",
+        "corpus_clean_v5.jsonl:L9191",
+        "corpus_clean_v5.jsonl:L9078",
+        "corpus_clean_v5.jsonl:L812",
+        "corpus_clean_v5.jsonl:L1378",
+        "corpus_clean_v5.jsonl:L796",
+        "corpus_clean_v5.jsonl:L813",
+        "corpus_clean_v5.jsonl:L45",
+        "corpus_clean_v5.jsonl:L777",
+        "corpus_clean_v5.jsonl:L829"
       ]
     },
     {
@@ -557,14 +817,28 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L1304",
-        "corpus_clean_v4.jsonl:L1299",
-        "corpus_clean_v4.jsonl:L535"
+        "corpus_clean_v5.jsonl:L9194",
+        "corpus_clean_v5.jsonl:L9191",
+        "corpus_clean_v5.jsonl:L777",
+        "corpus_clean_v5.jsonl:L9072",
+        "corpus_clean_v5.jsonl:L813",
+        "corpus_clean_v5.jsonl:L1378",
+        "corpus_clean_v5.jsonl:L45",
+        "corpus_clean_v5.jsonl:L9073",
+        "corpus_clean_v5.jsonl:L825",
+        "corpus_clean_v5.jsonl:L812"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L1304",
-        "corpus_clean_v4.jsonl:L1299",
-        "corpus_clean_v4.jsonl:L535"
+        "corpus_clean_v5.jsonl:L9194",
+        "corpus_clean_v5.jsonl:L9191",
+        "corpus_clean_v5.jsonl:L777",
+        "corpus_clean_v5.jsonl:L9072",
+        "corpus_clean_v5.jsonl:L813",
+        "corpus_clean_v5.jsonl:L1378",
+        "corpus_clean_v5.jsonl:L45",
+        "corpus_clean_v5.jsonl:L9073",
+        "corpus_clean_v5.jsonl:L825",
+        "corpus_clean_v5.jsonl:L812"
       ]
     },
     {
@@ -578,12 +852,19 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L671"
+        "corpus_clean_v5.jsonl:L9062"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L671",
-        "corpus_clean_v4.jsonl:L1297",
-        "corpus_clean_v4.jsonl:L1427"
+        "corpus_clean_v5.jsonl:L9062",
+        "corpus_clean_v5.jsonl:L9189",
+        "corpus_clean_v5.jsonl:L9322",
+        "corpus_clean_v5.jsonl:L9900",
+        "corpus_clean_v5.jsonl:L9062",
+        "corpus_clean_v5.jsonl:L829",
+        "corpus_clean_v5.jsonl:L9322",
+        "corpus_clean_v5.jsonl:L1381",
+        "corpus_clean_v5.jsonl:L9063",
+        "corpus_clean_v5.jsonl:L2528"
       ]
     },
     {
@@ -597,14 +878,23 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L671",
-        "corpus_clean_v4.jsonl:L1304",
-        "corpus_clean_v4.jsonl:L1299"
+        "corpus_clean_v5.jsonl:L9062",
+        "corpus_clean_v5.jsonl:L9194",
+        "corpus_clean_v5.jsonl:L9191",
+        "corpus_clean_v5.jsonl:L829",
+        "corpus_clean_v5.jsonl:L9138"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L671",
-        "corpus_clean_v4.jsonl:L1304",
-        "corpus_clean_v4.jsonl:L1299"
+        "corpus_clean_v5.jsonl:L9062",
+        "corpus_clean_v5.jsonl:L842",
+        "corpus_clean_v5.jsonl:L9194",
+        "corpus_clean_v5.jsonl:L9191",
+        "corpus_clean_v5.jsonl:L9072",
+        "corpus_clean_v5.jsonl:L9078",
+        "corpus_clean_v5.jsonl:L829",
+        "corpus_clean_v5.jsonl:L813",
+        "corpus_clean_v5.jsonl:L9138",
+        "corpus_clean_v5.jsonl:L45"
       ]
     },
     {
@@ -618,12 +908,19 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L671"
+        "corpus_clean_v5.jsonl:L9062"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L671",
-        "corpus_clean_v4.jsonl:L2520",
-        "corpus_clean_v4.jsonl:L659"
+        "corpus_clean_v5.jsonl:L9062",
+        "corpus_clean_v5.jsonl:L10385",
+        "corpus_clean_v5.jsonl:L1368",
+        "corpus_clean_v5.jsonl:L9076",
+        "corpus_clean_v5.jsonl:L5399",
+        "corpus_clean_v5.jsonl:L9195",
+        "corpus_clean_v5.jsonl:L796",
+        "corpus_clean_v5.jsonl:L9195",
+        "corpus_clean_v5.jsonl:L9156",
+        "corpus_clean_v5.jsonl:L9140"
       ]
     },
     {
@@ -638,9 +935,16 @@
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L714",
-        "corpus_clean_v4.jsonl:L713",
-        "corpus_clean_v4.jsonl:L584"
+        "corpus_clean_v5.jsonl:L9067",
+        "corpus_clean_v5.jsonl:L9070",
+        "corpus_clean_v5.jsonl:L9310",
+        "corpus_clean_v5.jsonl:L836",
+        "corpus_clean_v5.jsonl:L837",
+        "corpus_clean_v5.jsonl:L9197",
+        "corpus_clean_v5.jsonl:L9083",
+        "corpus_clean_v5.jsonl:L9064",
+        "corpus_clean_v5.jsonl:L749",
+        "corpus_clean_v5.jsonl:L1370"
       ]
     },
     {
@@ -648,16 +952,23 @@
       "ground_truths": [
         "enrolled in classes and fees paid"
       ],
-      "prediction": "enrolled in classes and paid fees.",
+      "prediction": "enrolled in classes and paid your fees.",
       "em": false,
-      "f1": 1.0,
+      "f1": 0.923076923076923,
       "retrieval_recall": false,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L1303",
-        "corpus_clean_v4.jsonl:L714",
-        "corpus_clean_v4.jsonl:L1423"
+        "corpus_clean_v5.jsonl:L9197",
+        "corpus_clean_v5.jsonl:L9067",
+        "corpus_clean_v5.jsonl:L9317",
+        "corpus_clean_v5.jsonl:L9313",
+        "corpus_clean_v5.jsonl:L9076",
+        "corpus_clean_v5.jsonl:L1382",
+        "corpus_clean_v5.jsonl:L9194",
+        "corpus_clean_v5.jsonl:L9066",
+        "corpus_clean_v5.jsonl:L1385",
+        "corpus_clean_v5.jsonl:L1370"
       ]
     },
     {
@@ -671,12 +982,19 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L716"
+        "corpus_clean_v5.jsonl:L9068"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L716",
-        "corpus_clean_v4.jsonl:L167",
-        "corpus_clean_v4.jsonl:L101"
+        "corpus_clean_v5.jsonl:L9068",
+        "corpus_clean_v5.jsonl:L674",
+        "corpus_clean_v5.jsonl:L81",
+        "corpus_clean_v5.jsonl:L9139",
+        "corpus_clean_v5.jsonl:L62",
+        "corpus_clean_v5.jsonl:L736",
+        "corpus_clean_v5.jsonl:L10091",
+        "corpus_clean_v5.jsonl:L1357",
+        "corpus_clean_v5.jsonl:L671",
+        "corpus_clean_v5.jsonl:L82"
       ]
     },
     {
@@ -684,18 +1002,27 @@
       "ground_truths": [
         "387 Soda Hall"
       ],
-      "prediction": "the front desk at 387 Soda Hall.",
-      "em": false,
-      "f1": 0.6666666666666666,
+      "prediction": "387 Soda Hall",
+      "em": true,
+      "f1": 1.0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L716"
+        "corpus_clean_v5.jsonl:L9068",
+        "corpus_clean_v5.jsonl:L82",
+        "corpus_clean_v5.jsonl:L674"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L716",
-        "corpus_clean_v4.jsonl:L712",
-        "corpus_clean_v4.jsonl:L638"
+        "corpus_clean_v5.jsonl:L9068",
+        "corpus_clean_v5.jsonl:L9065",
+        "corpus_clean_v5.jsonl:L1358",
+        "corpus_clean_v5.jsonl:L81",
+        "corpus_clean_v5.jsonl:L755",
+        "corpus_clean_v5.jsonl:L82",
+        "corpus_clean_v5.jsonl:L780",
+        "corpus_clean_v5.jsonl:L9064",
+        "corpus_clean_v5.jsonl:L674",
+        "corpus_clean_v5.jsonl:L1360"
       ]
     },
     {
@@ -709,12 +1036,19 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L62"
+        "corpus_clean_v5.jsonl:L62"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L62",
-        "corpus_clean_v4.jsonl:L647",
-        "corpus_clean_v4.jsonl:L521"
+        "corpus_clean_v5.jsonl:L62",
+        "corpus_clean_v5.jsonl:L1374",
+        "corpus_clean_v5.jsonl:L748",
+        "corpus_clean_v5.jsonl:L1351",
+        "corpus_clean_v5.jsonl:L1366",
+        "corpus_clean_v5.jsonl:L1378",
+        "corpus_clean_v5.jsonl:L1365",
+        "corpus_clean_v5.jsonl:L9140",
+        "corpus_clean_v5.jsonl:L823",
+        "corpus_clean_v5.jsonl:L1366"
       ]
     },
     {
@@ -722,19 +1056,27 @@
       "ground_truths": [
         "215 Cory"
       ],
-      "prediction": "215 Cory.",
+      "prediction": "215 Cory",
       "em": true,
       "f1": 1.0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L103",
-        "corpus_clean_v4.jsonl:L62"
+        "corpus_clean_v5.jsonl:L84",
+        "corpus_clean_v5.jsonl:L62",
+        "corpus_clean_v5.jsonl:L1363"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L103",
-        "corpus_clean_v4.jsonl:L62",
-        "corpus_clean_v4.jsonl:L658"
+        "corpus_clean_v5.jsonl:L84",
+        "corpus_clean_v5.jsonl:L62",
+        "corpus_clean_v5.jsonl:L1366",
+        "corpus_clean_v5.jsonl:L9191",
+        "corpus_clean_v5.jsonl:L9190",
+        "corpus_clean_v5.jsonl:L1382",
+        "corpus_clean_v5.jsonl:L1359",
+        "corpus_clean_v5.jsonl:L1366",
+        "corpus_clean_v5.jsonl:L671",
+        "corpus_clean_v5.jsonl:L1363"
       ]
     },
     {
@@ -742,18 +1084,25 @@
       "ground_truths": [
         "Kate Riley"
       ],
-      "prediction": "Kate Riley",
-      "em": true,
-      "f1": 1.0,
+      "prediction": "Sheila Humphreys",
+      "em": false,
+      "f1": 0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L627"
+        "corpus_clean_v5.jsonl:L1330"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L627",
-        "corpus_clean_v4.jsonl:L1243",
-        "corpus_clean_v4.jsonl:L1598"
+        "corpus_clean_v5.jsonl:L1330",
+        "corpus_clean_v5.jsonl:L9151",
+        "corpus_clean_v5.jsonl:L9489",
+        "corpus_clean_v5.jsonl:L10529",
+        "corpus_clean_v5.jsonl:L9707",
+        "corpus_clean_v5.jsonl:L72",
+        "corpus_clean_v5.jsonl:L9121",
+        "corpus_clean_v5.jsonl:L9899",
+        "corpus_clean_v5.jsonl:L9976",
+        "corpus_clean_v5.jsonl:L9442"
       ]
     },
     {
@@ -767,12 +1116,19 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L627"
+        "corpus_clean_v5.jsonl:L1330"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L2744",
-        "corpus_clean_v4.jsonl:L627",
-        "corpus_clean_v4.jsonl:L1861"
+        "corpus_clean_v5.jsonl:L10615",
+        "corpus_clean_v5.jsonl:L1330",
+        "corpus_clean_v5.jsonl:L9711",
+        "corpus_clean_v5.jsonl:L9442",
+        "corpus_clean_v5.jsonl:L9341",
+        "corpus_clean_v5.jsonl:L9711",
+        "corpus_clean_v5.jsonl:L9475",
+        "corpus_clean_v5.jsonl:L1335",
+        "corpus_clean_v5.jsonl:L58",
+        "corpus_clean_v5.jsonl:L746"
       ]
     },
     {
@@ -786,14 +1142,25 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L511",
-        "corpus_clean_v4.jsonl:L673",
-        "corpus_clean_v4.jsonl:L118"
+        "corpus_clean_v5.jsonl:L756",
+        "corpus_clean_v5.jsonl:L9091",
+        "corpus_clean_v5.jsonl:L688",
+        "corpus_clean_v5.jsonl:L10",
+        "corpus_clean_v5.jsonl:L9092",
+        "corpus_clean_v5.jsonl:L9090",
+        "corpus_clean_v5.jsonl:L6"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L511",
-        "corpus_clean_v4.jsonl:L673",
-        "corpus_clean_v4.jsonl:L118"
+        "corpus_clean_v5.jsonl:L756",
+        "corpus_clean_v5.jsonl:L9091",
+        "corpus_clean_v5.jsonl:L688",
+        "corpus_clean_v5.jsonl:L10",
+        "corpus_clean_v5.jsonl:L9092",
+        "corpus_clean_v5.jsonl:L9090",
+        "corpus_clean_v5.jsonl:L688",
+        "corpus_clean_v5.jsonl:L6",
+        "corpus_clean_v5.jsonl:L9545",
+        "corpus_clean_v5.jsonl:L11182"
       ]
     },
     {
@@ -809,12 +1176,23 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L511"
+        "corpus_clean_v5.jsonl:L756",
+        "corpus_clean_v5.jsonl:L10",
+        "corpus_clean_v5.jsonl:L9092",
+        "corpus_clean_v5.jsonl:L9091",
+        "corpus_clean_v5.jsonl:L9090"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L2411",
-        "corpus_clean_v4.jsonl:L2368",
-        "corpus_clean_v4.jsonl:L511"
+        "corpus_clean_v5.jsonl:L10299",
+        "corpus_clean_v5.jsonl:L10258",
+        "corpus_clean_v5.jsonl:L756",
+        "corpus_clean_v5.jsonl:L10",
+        "corpus_clean_v5.jsonl:L9092",
+        "corpus_clean_v5.jsonl:L9091",
+        "corpus_clean_v5.jsonl:L9090",
+        "corpus_clean_v5.jsonl:L90",
+        "corpus_clean_v5.jsonl:L89",
+        "corpus_clean_v5.jsonl:L10674"
       ]
     },
     {
@@ -822,20 +1200,33 @@
       "ground_truths": [
         "Joseph Gier"
       ],
-      "prediction": "Joseph Thomas Gier.",
+      "prediction": "Joseph Thomas Gier",
       "em": false,
       "f1": 0.8,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L14",
-        "corpus_clean_v4.jsonl:L148",
-        "corpus_clean_v4.jsonl:L13"
+        "corpus_clean_v5.jsonl:L14",
+        "corpus_clean_v5.jsonl:L716",
+        "corpus_clean_v5.jsonl:L15",
+        "corpus_clean_v5.jsonl:L11349",
+        "corpus_clean_v5.jsonl:L10252",
+        "corpus_clean_v5.jsonl:L9443",
+        "corpus_clean_v5.jsonl:L9104",
+        "corpus_clean_v5.jsonl:L9105",
+        "corpus_clean_v5.jsonl:L9352"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L14",
-        "corpus_clean_v4.jsonl:L148",
-        "corpus_clean_v4.jsonl:L13"
+        "corpus_clean_v5.jsonl:L14",
+        "corpus_clean_v5.jsonl:L716",
+        "corpus_clean_v5.jsonl:L15",
+        "corpus_clean_v5.jsonl:L11349",
+        "corpus_clean_v5.jsonl:L10252",
+        "corpus_clean_v5.jsonl:L9443",
+        "corpus_clean_v5.jsonl:L9104",
+        "corpus_clean_v5.jsonl:L9105",
+        "corpus_clean_v5.jsonl:L9352",
+        "corpus_clean_v5.jsonl:L698"
       ]
     },
     {
@@ -850,9 +1241,16 @@
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L1405",
-        "corpus_clean_v4.jsonl:L1405",
-        "corpus_clean_v4.jsonl:L2850"
+        "corpus_clean_v5.jsonl:L9295",
+        "corpus_clean_v5.jsonl:L7839",
+        "corpus_clean_v5.jsonl:L8330",
+        "corpus_clean_v5.jsonl:L9295",
+        "corpus_clean_v5.jsonl:L10748",
+        "corpus_clean_v5.jsonl:L8105",
+        "corpus_clean_v5.jsonl:L5308",
+        "corpus_clean_v5.jsonl:L8107",
+        "corpus_clean_v5.jsonl:L9270",
+        "corpus_clean_v5.jsonl:L7454"
       ]
     },
     {
@@ -867,12 +1265,20 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L15"
+        "corpus_clean_v5.jsonl:L731",
+        "corpus_clean_v5.jsonl:L17"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L15",
-        "corpus_clean_v4.jsonl:L1559",
-        "corpus_clean_v4.jsonl:L2252"
+        "corpus_clean_v5.jsonl:L731",
+        "corpus_clean_v5.jsonl:L17",
+        "corpus_clean_v5.jsonl:L9450",
+        "corpus_clean_v5.jsonl:L10114",
+        "corpus_clean_v5.jsonl:L9888",
+        "corpus_clean_v5.jsonl:L26",
+        "corpus_clean_v5.jsonl:L9151",
+        "corpus_clean_v5.jsonl:L760",
+        "corpus_clean_v5.jsonl:L57",
+        "corpus_clean_v5.jsonl:L11"
       ]
     },
     {
@@ -880,18 +1286,26 @@
       "ground_truths": [
         "UC Berkeley"
       ],
-      "prediction": "UC Berkeley.",
+      "prediction": "UC Berkeley",
       "em": true,
       "f1": 1.0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L259"
+        "corpus_clean_v5.jsonl:L443",
+        "corpus_clean_v5.jsonl:L11208"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L259",
-        "corpus_clean_v4.jsonl:L2788",
-        "corpus_clean_v4.jsonl:L259"
+        "corpus_clean_v5.jsonl:L443",
+        "corpus_clean_v5.jsonl:L10679",
+        "corpus_clean_v5.jsonl:L443",
+        "corpus_clean_v5.jsonl:L11093",
+        "corpus_clean_v5.jsonl:L11208",
+        "corpus_clean_v5.jsonl:L3442",
+        "corpus_clean_v5.jsonl:L10596",
+        "corpus_clean_v5.jsonl:L3488",
+        "corpus_clean_v5.jsonl:L3840",
+        "corpus_clean_v5.jsonl:L221"
       ]
     },
     {
@@ -899,19 +1313,27 @@
       "ground_truths": [
         "CS 288"
       ],
-      "prediction": "CS 288.",
+      "prediction": "CS 288",
       "em": true,
       "f1": 1.0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L364",
-        "corpus_clean_v4.jsonl:L362"
+        "corpus_clean_v5.jsonl:L544",
+        "corpus_clean_v5.jsonl:L542",
+        "corpus_clean_v5.jsonl:L835"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L364",
-        "corpus_clean_v4.jsonl:L1579",
-        "corpus_clean_v4.jsonl:L362"
+        "corpus_clean_v5.jsonl:L544",
+        "corpus_clean_v5.jsonl:L9479",
+        "corpus_clean_v5.jsonl:L542",
+        "corpus_clean_v5.jsonl:L9467",
+        "corpus_clean_v5.jsonl:L9145",
+        "corpus_clean_v5.jsonl:L942",
+        "corpus_clean_v5.jsonl:L835",
+        "corpus_clean_v5.jsonl:L542",
+        "corpus_clean_v5.jsonl:L41",
+        "corpus_clean_v5.jsonl:L485"
       ]
     },
     {
@@ -920,18 +1342,25 @@
         "Daniel Klein",
         "Stuart J. Russell"
       ],
-      "prediction": "Dan Klein, Stuart J Russell.",
+      "prediction": "Dan Klein and Stuart J Russell.",
       "em": false,
-      "f1": 0.7499999999999999,
+      "f1": 0.6666666666666666,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L328"
+        "corpus_clean_v5.jsonl:L510"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L328",
-        "corpus_clean_v4.jsonl:L681",
-        "corpus_clean_v4.jsonl:L1530"
+        "corpus_clean_v5.jsonl:L510",
+        "corpus_clean_v5.jsonl:L2450",
+        "corpus_clean_v5.jsonl:L510",
+        "corpus_clean_v5.jsonl:L9193",
+        "corpus_clean_v5.jsonl:L416",
+        "corpus_clean_v5.jsonl:L2196",
+        "corpus_clean_v5.jsonl:L9810",
+        "corpus_clean_v5.jsonl:L959",
+        "corpus_clean_v5.jsonl:L9712",
+        "corpus_clean_v5.jsonl:L461"
       ]
     },
     {
@@ -939,18 +1368,27 @@
       "ground_truths": [
         "Jitendra Malik"
       ],
-      "prediction": "Benjamin Recht",
+      "prediction": "Jiantao Jiao",
       "em": false,
       "f1": 0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L5"
+        "corpus_clean_v5.jsonl:L4",
+        "corpus_clean_v5.jsonl:L830",
+        "corpus_clean_v5.jsonl:L1293"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L5",
-        "corpus_clean_v4.jsonl:L417",
-        "corpus_clean_v4.jsonl:L305"
+        "corpus_clean_v5.jsonl:L4",
+        "corpus_clean_v5.jsonl:L830",
+        "corpus_clean_v5.jsonl:L597",
+        "corpus_clean_v5.jsonl:L1393",
+        "corpus_clean_v5.jsonl:L484",
+        "corpus_clean_v5.jsonl:L1293",
+        "corpus_clean_v5.jsonl:L537",
+        "corpus_clean_v5.jsonl:L1392",
+        "corpus_clean_v5.jsonl:L2",
+        "corpus_clean_v5.jsonl:L1301"
       ]
     },
     {
@@ -958,16 +1396,25 @@
       "ground_truths": [
         "Ken Goldberg"
       ],
-      "prediction": "I don't know.",
+      "prediction": "I don't know",
       "em": false,
       "f1": 0,
-      "retrieval_recall": false,
-      "gt_url_chunk_file": null,
-      "content_match_chunk_files": [],
+      "retrieval_recall": true,
+      "gt_url_chunk_file": "corpus_clean_v5.jsonl:L1296",
+      "content_match_chunk_files": [
+        "corpus_clean_v5.jsonl:L1296"
+      ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L2855",
-        "corpus_clean_v4.jsonl:L289",
-        "corpus_clean_v4.jsonl:L1374"
+        "corpus_clean_v5.jsonl:L10753",
+        "corpus_clean_v5.jsonl:L469",
+        "corpus_clean_v5.jsonl:L9248",
+        "corpus_clean_v5.jsonl:L9205",
+        "corpus_clean_v5.jsonl:L652",
+        "corpus_clean_v5.jsonl:L664",
+        "corpus_clean_v5.jsonl:L1296",
+        "corpus_clean_v5.jsonl:L375",
+        "corpus_clean_v5.jsonl:L1299",
+        "corpus_clean_v5.jsonl:L388"
       ]
     },
     {
@@ -979,14 +1426,21 @@
       "em": false,
       "f1": 0.4,
       "retrieval_recall": true,
-      "gt_url_chunk_file": "corpus_clean_v4.jsonl:L182",
+      "gt_url_chunk_file": "corpus_clean_v5.jsonl:L370",
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L182"
+        "corpus_clean_v5.jsonl:L370"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L182",
-        "corpus_clean_v4.jsonl:L422",
-        "corpus_clean_v4.jsonl:L21"
+        "corpus_clean_v5.jsonl:L370",
+        "corpus_clean_v5.jsonl:L370",
+        "corpus_clean_v5.jsonl:L9725",
+        "corpus_clean_v5.jsonl:L9321",
+        "corpus_clean_v5.jsonl:L1392",
+        "corpus_clean_v5.jsonl:L11211",
+        "corpus_clean_v5.jsonl:L1295",
+        "corpus_clean_v5.jsonl:L1390",
+        "corpus_clean_v5.jsonl:L1014",
+        "corpus_clean_v5.jsonl:L1360"
       ]
     },
     {
@@ -994,19 +1448,31 @@
       "ground_truths": [
         "Ptolemy"
       ],
-      "prediction": "Ptolemy.",
+      "prediction": "Ptolemy",
       "em": true,
       "f1": 1.0,
       "retrieval_recall": true,
-      "gt_url_chunk_file": "corpus_clean_v4.jsonl:L336",
+      "gt_url_chunk_file": "corpus_clean_v5.jsonl:L517",
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L336",
-        "corpus_clean_v4.jsonl:L2404"
+        "corpus_clean_v5.jsonl:L517",
+        "corpus_clean_v5.jsonl:L10693",
+        "corpus_clean_v5.jsonl:L5067",
+        "corpus_clean_v5.jsonl:L4342",
+        "corpus_clean_v5.jsonl:L3686",
+        "corpus_clean_v5.jsonl:L5461",
+        "corpus_clean_v5.jsonl:L10880"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L336",
-        "corpus_clean_v4.jsonl:L2404",
-        "corpus_clean_v4.jsonl:L2205"
+        "corpus_clean_v5.jsonl:L517",
+        "corpus_clean_v5.jsonl:L1714",
+        "corpus_clean_v5.jsonl:L10693",
+        "corpus_clean_v5.jsonl:L5067",
+        "corpus_clean_v5.jsonl:L4342",
+        "corpus_clean_v5.jsonl:L3686",
+        "corpus_clean_v5.jsonl:L1948",
+        "corpus_clean_v5.jsonl:L5461",
+        "corpus_clean_v5.jsonl:L517",
+        "corpus_clean_v5.jsonl:L10880"
       ]
     },
     {
@@ -1018,15 +1484,22 @@
       "em": true,
       "f1": 1.0,
       "retrieval_recall": true,
-      "gt_url_chunk_file": "corpus_clean_v4.jsonl:L482",
+      "gt_url_chunk_file": "corpus_clean_v5.jsonl:L658",
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L482",
-        "corpus_clean_v4.jsonl:L3428"
+        "corpus_clean_v5.jsonl:L658",
+        "corpus_clean_v5.jsonl:L11323"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L482",
-        "corpus_clean_v4.jsonl:L3428",
-        "corpus_clean_v4.jsonl:L2692"
+        "corpus_clean_v5.jsonl:L658",
+        "corpus_clean_v5.jsonl:L11323",
+        "corpus_clean_v5.jsonl:L10554",
+        "corpus_clean_v5.jsonl:L11019",
+        "corpus_clean_v5.jsonl:L10954",
+        "corpus_clean_v5.jsonl:L11065",
+        "corpus_clean_v5.jsonl:L11225",
+        "corpus_clean_v5.jsonl:L10672",
+        "corpus_clean_v5.jsonl:L772",
+        "corpus_clean_v5.jsonl:L10112"
       ]
     },
     {
@@ -1040,12 +1513,19 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L250"
+        "corpus_clean_v5.jsonl:L436"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L250",
-        "corpus_clean_v4.jsonl:L364",
-        "corpus_clean_v4.jsonl:L466"
+        "corpus_clean_v5.jsonl:L436",
+        "corpus_clean_v5.jsonl:L991",
+        "corpus_clean_v5.jsonl:L2906",
+        "corpus_clean_v5.jsonl:L643",
+        "corpus_clean_v5.jsonl:L4899",
+        "corpus_clean_v5.jsonl:L3150",
+        "corpus_clean_v5.jsonl:L9498",
+        "corpus_clean_v5.jsonl:L1677",
+        "corpus_clean_v5.jsonl:L2867",
+        "corpus_clean_v5.jsonl:L461"
       ]
     },
     {
@@ -1053,19 +1533,26 @@
       "ground_truths": [
         "4.0 hours"
       ],
-      "prediction": "I don't know",
+      "prediction": "4.0 hours of laboratory per week.",
       "em": false,
-      "f1": 0,
+      "f1": 0.5,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L214",
-        "corpus_clean_v4.jsonl:L483"
+        "corpus_clean_v5.jsonl:L949",
+        "corpus_clean_v5.jsonl:L657"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L214",
-        "corpus_clean_v4.jsonl:L483",
-        "corpus_clean_v4.jsonl:L354"
+        "corpus_clean_v5.jsonl:L951",
+        "corpus_clean_v5.jsonl:L949",
+        "corpus_clean_v5.jsonl:L967",
+        "corpus_clean_v5.jsonl:L657",
+        "corpus_clean_v5.jsonl:L969",
+        "corpus_clean_v5.jsonl:L968",
+        "corpus_clean_v5.jsonl:L532",
+        "corpus_clean_v5.jsonl:L844",
+        "corpus_clean_v5.jsonl:L918",
+        "corpus_clean_v5.jsonl:L2528"
       ]
     },
     {
@@ -1079,12 +1566,19 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L344"
+        "corpus_clean_v5.jsonl:L520"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L344",
-        "corpus_clean_v4.jsonl:L339",
-        "corpus_clean_v4.jsonl:L253"
+        "corpus_clean_v5.jsonl:L520",
+        "corpus_clean_v5.jsonl:L522",
+        "corpus_clean_v5.jsonl:L437",
+        "corpus_clean_v5.jsonl:L986",
+        "corpus_clean_v5.jsonl:L520",
+        "corpus_clean_v5.jsonl:L2906",
+        "corpus_clean_v5.jsonl:L3000",
+        "corpus_clean_v5.jsonl:L9072",
+        "corpus_clean_v5.jsonl:L2420",
+        "corpus_clean_v5.jsonl:L986"
       ]
     },
     {
@@ -1099,9 +1593,16 @@
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L681",
-        "corpus_clean_v4.jsonl:L11",
-        "corpus_clean_v4.jsonl:L74"
+        "corpus_clean_v5.jsonl:L9098",
+        "corpus_clean_v5.jsonl:L9421",
+        "corpus_clean_v5.jsonl:L9",
+        "corpus_clean_v5.jsonl:L761",
+        "corpus_clean_v5.jsonl:L10941",
+        "corpus_clean_v5.jsonl:L10598",
+        "corpus_clean_v5.jsonl:L9343",
+        "corpus_clean_v5.jsonl:L783",
+        "corpus_clean_v5.jsonl:L9373",
+        "corpus_clean_v5.jsonl:L10388"
       ]
     },
     {
@@ -1115,12 +1616,19 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L57"
+        "corpus_clean_v5.jsonl:L56"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L57",
-        "corpus_clean_v4.jsonl:L3087",
-        "corpus_clean_v4.jsonl:L3350"
+        "corpus_clean_v5.jsonl:L56",
+        "corpus_clean_v5.jsonl:L10969",
+        "corpus_clean_v5.jsonl:L11242",
+        "corpus_clean_v5.jsonl:L56",
+        "corpus_clean_v5.jsonl:L9896",
+        "corpus_clean_v5.jsonl:L10597",
+        "corpus_clean_v5.jsonl:L9404",
+        "corpus_clean_v5.jsonl:L1293",
+        "corpus_clean_v5.jsonl:L11327",
+        "corpus_clean_v5.jsonl:L1392"
       ]
     },
     {
@@ -1128,16 +1636,26 @@
       "ground_truths": [
         "General Electric Company"
       ],
-      "prediction": "I don't know.",
-      "em": false,
-      "f1": 0,
-      "retrieval_recall": false,
-      "gt_url_chunk_file": null,
-      "content_match_chunk_files": [],
+      "prediction": "General Electric Company",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
+      "gt_url_chunk_file": "corpus_clean_v5.jsonl:L1303",
+      "content_match_chunk_files": [
+        "corpus_clean_v5.jsonl:L1303",
+        "corpus_clean_v5.jsonl:L1254"
+      ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L3226",
-        "corpus_clean_v4.jsonl:L3394",
-        "corpus_clean_v4.jsonl:L148"
+        "corpus_clean_v5.jsonl:L1303",
+        "corpus_clean_v5.jsonl:L1254",
+        "corpus_clean_v5.jsonl:L11116",
+        "corpus_clean_v5.jsonl:L1303",
+        "corpus_clean_v5.jsonl:L11281",
+        "corpus_clean_v5.jsonl:L698",
+        "corpus_clean_v5.jsonl:L1254",
+        "corpus_clean_v5.jsonl:L716",
+        "corpus_clean_v5.jsonl:L9184",
+        "corpus_clean_v5.jsonl:L10116"
       ]
     },
     {
@@ -1145,19 +1663,28 @@
       "ground_truths": [
         "Berkeley Citation"
       ],
-      "prediction": "I don't know.",
-      "em": false,
-      "f1": 0,
+      "prediction": "The Berkeley Citation.",
+      "em": true,
+      "f1": 1.0,
       "retrieval_recall": true,
-      "gt_url_chunk_file": null,
+      "gt_url_chunk_file": "corpus_clean_v5.jsonl:L1303",
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L629",
-        "corpus_clean_v4.jsonl:L627"
+        "corpus_clean_v5.jsonl:L1303",
+        "corpus_clean_v5.jsonl:L1327",
+        "corpus_clean_v5.jsonl:L1305",
+        "corpus_clean_v5.jsonl:L9548"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L629",
-        "corpus_clean_v4.jsonl:L627",
-        "corpus_clean_v4.jsonl:L1895"
+        "corpus_clean_v5.jsonl:L1303",
+        "corpus_clean_v5.jsonl:L1303",
+        "corpus_clean_v5.jsonl:L1327",
+        "corpus_clean_v5.jsonl:L1254",
+        "corpus_clean_v5.jsonl:L1305",
+        "corpus_clean_v5.jsonl:L9801",
+        "corpus_clean_v5.jsonl:L9976",
+        "corpus_clean_v5.jsonl:L9548",
+        "corpus_clean_v5.jsonl:L1295",
+        "corpus_clean_v5.jsonl:L1392"
       ]
     },
     {
@@ -1165,16 +1692,26 @@
       "ground_truths": [
         "early stage investments in pioneering technologies"
       ],
-      "prediction": "I don't know.",
-      "em": false,
-      "f1": 0,
-      "retrieval_recall": false,
+      "prediction": "Early stage investments in pioneering technologies.",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
       "gt_url_chunk_file": null,
-      "content_match_chunk_files": [],
+      "content_match_chunk_files": [
+        "corpus_clean_v5.jsonl:L1340",
+        "corpus_clean_v5.jsonl:L1325"
+      ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L60",
-        "corpus_clean_v4.jsonl:L1458",
-        "corpus_clean_v4.jsonl:L2559"
+        "corpus_clean_v5.jsonl:L1340",
+        "corpus_clean_v5.jsonl:L1340",
+        "corpus_clean_v5.jsonl:L58",
+        "corpus_clean_v5.jsonl:L9355",
+        "corpus_clean_v5.jsonl:L9373",
+        "corpus_clean_v5.jsonl:L9864",
+        "corpus_clean_v5.jsonl:L9566",
+        "corpus_clean_v5.jsonl:L1325",
+        "corpus_clean_v5.jsonl:L9872",
+        "corpus_clean_v5.jsonl:L9788"
       ]
     },
     {
@@ -1182,19 +1719,27 @@
       "ground_truths": [
         "Equal Access Assistance (EAAA) program"
       ],
-      "prediction": "Equal Access Assistance (EAAA)",
-      "em": false,
-      "f1": 0.888888888888889,
+      "prediction": "Equal Access Assistance (EAAA) program.",
+      "em": true,
+      "f1": 1.0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L38",
-        "corpus_clean_v4.jsonl:L18"
+        "corpus_clean_v5.jsonl:L36",
+        "corpus_clean_v5.jsonl:L18",
+        "corpus_clean_v5.jsonl:L829"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L38",
-        "corpus_clean_v4.jsonl:L18",
-        "corpus_clean_v4.jsonl:L1297"
+        "corpus_clean_v5.jsonl:L36",
+        "corpus_clean_v5.jsonl:L18",
+        "corpus_clean_v5.jsonl:L9189",
+        "corpus_clean_v5.jsonl:L1368",
+        "corpus_clean_v5.jsonl:L821",
+        "corpus_clean_v5.jsonl:L88",
+        "corpus_clean_v5.jsonl:L33",
+        "corpus_clean_v5.jsonl:L829",
+        "corpus_clean_v5.jsonl:L783",
+        "corpus_clean_v5.jsonl:L28"
       ]
     },
     {
@@ -1208,14 +1753,25 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L35",
-        "corpus_clean_v4.jsonl:L18",
-        "corpus_clean_v4.jsonl:L540"
+        "corpus_clean_v5.jsonl:L33",
+        "corpus_clean_v5.jsonl:L18",
+        "corpus_clean_v5.jsonl:L783",
+        "corpus_clean_v5.jsonl:L760",
+        "corpus_clean_v5.jsonl:L10568",
+        "corpus_clean_v5.jsonl:L10726",
+        "corpus_clean_v5.jsonl:L681"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L35",
-        "corpus_clean_v4.jsonl:L18",
-        "corpus_clean_v4.jsonl:L540"
+        "corpus_clean_v5.jsonl:L33",
+        "corpus_clean_v5.jsonl:L18",
+        "corpus_clean_v5.jsonl:L783",
+        "corpus_clean_v5.jsonl:L783",
+        "corpus_clean_v5.jsonl:L760",
+        "corpus_clean_v5.jsonl:L10568",
+        "corpus_clean_v5.jsonl:L10726",
+        "corpus_clean_v5.jsonl:L681",
+        "corpus_clean_v5.jsonl:L827",
+        "corpus_clean_v5.jsonl:L827"
       ]
     },
     {
@@ -1229,12 +1785,19 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L540"
+        "corpus_clean_v5.jsonl:L783"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L580",
-        "corpus_clean_v4.jsonl:L1297",
-        "corpus_clean_v4.jsonl:L540"
+        "corpus_clean_v5.jsonl:L829",
+        "corpus_clean_v5.jsonl:L9189",
+        "corpus_clean_v5.jsonl:L783",
+        "corpus_clean_v5.jsonl:L723",
+        "corpus_clean_v5.jsonl:L38",
+        "corpus_clean_v5.jsonl:L1368",
+        "corpus_clean_v5.jsonl:L813",
+        "corpus_clean_v5.jsonl:L9070",
+        "corpus_clean_v5.jsonl:L9077",
+        "corpus_clean_v5.jsonl:L1382"
       ]
     },
     {
@@ -1242,18 +1805,25 @@
       "ground_truths": [
         "Cory Hall Room 286"
       ],
-      "prediction": "Cory Hall Room 286.",
-      "em": true,
-      "f1": 1.0,
+      "prediction": "286",
+      "em": false,
+      "f1": 0.4,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L17"
+        "corpus_clean_v5.jsonl:L16"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L546",
-        "corpus_clean_v4.jsonl:L17",
-        "corpus_clean_v4.jsonl:L17"
+        "corpus_clean_v5.jsonl:L787",
+        "corpus_clean_v5.jsonl:L16",
+        "corpus_clean_v5.jsonl:L16",
+        "corpus_clean_v5.jsonl:L17",
+        "corpus_clean_v5.jsonl:L10126",
+        "corpus_clean_v5.jsonl:L29",
+        "corpus_clean_v5.jsonl:L707",
+        "corpus_clean_v5.jsonl:L778",
+        "corpus_clean_v5.jsonl:L762",
+        "corpus_clean_v5.jsonl:L9661"
       ]
     },
     {
@@ -1261,16 +1831,23 @@
       "ground_truths": [
         "The Big/Little Sister Mentoring Program"
       ],
-      "prediction": "AWE Mentorship Program.",
+      "prediction": "CS Kickstart",
       "em": false,
-      "f1": 0.28571428571428575,
+      "f1": 0,
       "retrieval_recall": false,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L534",
-        "corpus_clean_v4.jsonl:L116",
-        "corpus_clean_v4.jsonl:L534"
+        "corpus_clean_v5.jsonl:L775",
+        "corpus_clean_v5.jsonl:L671",
+        "corpus_clean_v5.jsonl:L775",
+        "corpus_clean_v5.jsonl:L62",
+        "corpus_clean_v5.jsonl:L9127",
+        "corpus_clean_v5.jsonl:L787",
+        "corpus_clean_v5.jsonl:L9945",
+        "corpus_clean_v5.jsonl:L1372",
+        "corpus_clean_v5.jsonl:L9855",
+        "corpus_clean_v5.jsonl:L748"
       ]
     },
     {
@@ -1278,16 +1855,23 @@
       "ground_truths": [
         "John R. Whinnery, 1972"
       ],
-      "prediction": "I don't know.",
+      "prediction": "Chenming Hu",
       "em": false,
       "f1": 0,
       "retrieval_recall": false,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L53",
-        "corpus_clean_v4.jsonl:L1444",
-        "corpus_clean_v4.jsonl:L3287"
+        "corpus_clean_v5.jsonl:L54",
+        "corpus_clean_v5.jsonl:L9338",
+        "corpus_clean_v5.jsonl:L11182",
+        "corpus_clean_v5.jsonl:L9751",
+        "corpus_clean_v5.jsonl:L20",
+        "corpus_clean_v5.jsonl:L10879",
+        "corpus_clean_v5.jsonl:L11343",
+        "corpus_clean_v5.jsonl:L10757",
+        "corpus_clean_v5.jsonl:L10521",
+        "corpus_clean_v5.jsonl:L10533"
       ]
     },
     {
@@ -1301,13 +1885,23 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L3066",
-        "corpus_clean_v4.jsonl:L1295"
+        "corpus_clean_v5.jsonl:L10960",
+        "corpus_clean_v5.jsonl:L9170",
+        "corpus_clean_v5.jsonl:L10914",
+        "corpus_clean_v5.jsonl:L795",
+        "corpus_clean_v5.jsonl:L10920"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L3066",
-        "corpus_clean_v4.jsonl:L1295",
-        "corpus_clean_v4.jsonl:L3066"
+        "corpus_clean_v5.jsonl:L10960",
+        "corpus_clean_v5.jsonl:L9170",
+        "corpus_clean_v5.jsonl:L10960",
+        "corpus_clean_v5.jsonl:L10638",
+        "corpus_clean_v5.jsonl:L9690",
+        "corpus_clean_v5.jsonl:L10914",
+        "corpus_clean_v5.jsonl:L10679",
+        "corpus_clean_v5.jsonl:L795",
+        "corpus_clean_v5.jsonl:L10920",
+        "corpus_clean_v5.jsonl:L9899"
       ]
     },
     {
@@ -1315,16 +1909,23 @@
       "ground_truths": [
         "Dan Garcia, 2025"
       ],
-      "prediction": "Joshua Hug, 2023.",
-      "em": false,
-      "f1": 0,
+      "prediction": "Dan Garcia, 2025.",
+      "em": true,
+      "f1": 1.0,
       "retrieval_recall": false,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L1692",
-        "corpus_clean_v4.jsonl:L2757",
-        "corpus_clean_v4.jsonl:L1520"
+        "corpus_clean_v5.jsonl:L9664",
+        "corpus_clean_v5.jsonl:L10620",
+        "corpus_clean_v5.jsonl:L9401",
+        "corpus_clean_v5.jsonl:L9458",
+        "corpus_clean_v5.jsonl:L10620",
+        "corpus_clean_v5.jsonl:L9121",
+        "corpus_clean_v5.jsonl:L9664",
+        "corpus_clean_v5.jsonl:L11292",
+        "corpus_clean_v5.jsonl:L9429",
+        "corpus_clean_v5.jsonl:L9458"
       ]
     },
     {
@@ -1338,13 +1939,22 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L14",
-        "corpus_clean_v4.jsonl:L148"
+        "corpus_clean_v5.jsonl:L14",
+        "corpus_clean_v5.jsonl:L716",
+        "corpus_clean_v5.jsonl:L701",
+        "corpus_clean_v5.jsonl:L9746"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L14",
-        "corpus_clean_v4.jsonl:L148",
-        "corpus_clean_v4.jsonl:L2356"
+        "corpus_clean_v5.jsonl:L14",
+        "corpus_clean_v5.jsonl:L716",
+        "corpus_clean_v5.jsonl:L10252",
+        "corpus_clean_v5.jsonl:L701",
+        "corpus_clean_v5.jsonl:L9746",
+        "corpus_clean_v5.jsonl:L9443",
+        "corpus_clean_v5.jsonl:L11349",
+        "corpus_clean_v5.jsonl:L9105",
+        "corpus_clean_v5.jsonl:L11214",
+        "corpus_clean_v5.jsonl:L9352"
       ]
     },
     {
@@ -1352,16 +1962,25 @@
       "ground_truths": [
         "Cloud at Cal"
       ],
-      "prediction": "Blockchain@Berkeley",
-      "em": false,
-      "f1": 0,
-      "retrieval_recall": false,
+      "prediction": "Cloud at Cal",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
       "gt_url_chunk_file": null,
-      "content_match_chunk_files": [],
+      "content_match_chunk_files": [
+        "corpus_clean_v5.jsonl:L59"
+      ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L1894",
-        "corpus_clean_v4.jsonl:L3432",
-        "corpus_clean_v4.jsonl:L3346"
+        "corpus_clean_v5.jsonl:L9799",
+        "corpus_clean_v5.jsonl:L4176",
+        "corpus_clean_v5.jsonl:L4176",
+        "corpus_clean_v5.jsonl:L11321",
+        "corpus_clean_v5.jsonl:L11237",
+        "corpus_clean_v5.jsonl:L59",
+        "corpus_clean_v5.jsonl:L2468",
+        "corpus_clean_v5.jsonl:L790",
+        "corpus_clean_v5.jsonl:L1430",
+        "corpus_clean_v5.jsonl:L9387"
       ]
     },
     {
@@ -1375,12 +1994,19 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L58"
+        "corpus_clean_v5.jsonl:L59"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L648",
-        "corpus_clean_v4.jsonl:L58",
-        "corpus_clean_v4.jsonl:L573"
+        "corpus_clean_v5.jsonl:L1372",
+        "corpus_clean_v5.jsonl:L59",
+        "corpus_clean_v5.jsonl:L823",
+        "corpus_clean_v5.jsonl:L784",
+        "corpus_clean_v5.jsonl:L9068",
+        "corpus_clean_v5.jsonl:L674",
+        "corpus_clean_v5.jsonl:L79",
+        "corpus_clean_v5.jsonl:L82",
+        "corpus_clean_v5.jsonl:L9068",
+        "corpus_clean_v5.jsonl:L672"
       ]
     },
     {
@@ -1388,19 +2014,26 @@
       "ground_truths": [
         "John Schulman"
       ],
-      "prediction": "John Schulman.",
+      "prediction": "John Schulman",
       "em": true,
       "f1": 1.0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L71",
-        "corpus_clean_v4.jsonl:L122"
+        "corpus_clean_v5.jsonl:L71",
+        "corpus_clean_v5.jsonl:L696"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L71",
-        "corpus_clean_v4.jsonl:L122",
-        "corpus_clean_v4.jsonl:L3082"
+        "corpus_clean_v5.jsonl:L71",
+        "corpus_clean_v5.jsonl:L11009",
+        "corpus_clean_v5.jsonl:L696",
+        "corpus_clean_v5.jsonl:L10970",
+        "corpus_clean_v5.jsonl:L700",
+        "corpus_clean_v5.jsonl:L9100",
+        "corpus_clean_v5.jsonl:L9350",
+        "corpus_clean_v5.jsonl:L9773",
+        "corpus_clean_v5.jsonl:L10427",
+        "corpus_clean_v5.jsonl:L10670"
       ]
     },
     {
@@ -1408,16 +2041,25 @@
       "ground_truths": [
         "Shafi Goldwasser"
       ],
-      "prediction": "I don't know.",
-      "em": false,
-      "f1": 0,
-      "retrieval_recall": false,
+      "prediction": "Shafi Goldwasser",
+      "em": true,
+      "f1": 1.0,
+      "retrieval_recall": true,
       "gt_url_chunk_file": null,
-      "content_match_chunk_files": [],
+      "content_match_chunk_files": [
+        "corpus_clean_v5.jsonl:L71"
+      ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L122",
-        "corpus_clean_v4.jsonl:L130",
-        "corpus_clean_v4.jsonl:L680"
+        "corpus_clean_v5.jsonl:L696",
+        "corpus_clean_v5.jsonl:L700",
+        "corpus_clean_v5.jsonl:L9100",
+        "corpus_clean_v5.jsonl:L71",
+        "corpus_clean_v5.jsonl:L9204",
+        "corpus_clean_v5.jsonl:L11073",
+        "corpus_clean_v5.jsonl:L9410",
+        "corpus_clean_v5.jsonl:L11137",
+        "corpus_clean_v5.jsonl:L704",
+        "corpus_clean_v5.jsonl:L10513"
       ]
     },
     {
@@ -1431,13 +2073,20 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L69",
-        "corpus_clean_v4.jsonl:L70"
+        "corpus_clean_v5.jsonl:L72",
+        "corpus_clean_v5.jsonl:L696"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L69",
-        "corpus_clean_v4.jsonl:L71",
-        "corpus_clean_v4.jsonl:L70"
+        "corpus_clean_v5.jsonl:L72",
+        "corpus_clean_v5.jsonl:L71",
+        "corpus_clean_v5.jsonl:L700",
+        "corpus_clean_v5.jsonl:L9100",
+        "corpus_clean_v5.jsonl:L696",
+        "corpus_clean_v5.jsonl:L10698",
+        "corpus_clean_v5.jsonl:L9340",
+        "corpus_clean_v5.jsonl:L24",
+        "corpus_clean_v5.jsonl:L72",
+        "corpus_clean_v5.jsonl:L90"
       ]
     },
     {
@@ -1451,14 +2100,24 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L2056",
-        "corpus_clean_v4.jsonl:L157",
-        "corpus_clean_v4.jsonl:L2593"
+        "corpus_clean_v5.jsonl:L9948",
+        "corpus_clean_v5.jsonl:L728",
+        "corpus_clean_v5.jsonl:L10485",
+        "corpus_clean_v5.jsonl:L10921",
+        "corpus_clean_v5.jsonl:L72",
+        "corpus_clean_v5.jsonl:L10885"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L2056",
-        "corpus_clean_v4.jsonl:L157",
-        "corpus_clean_v4.jsonl:L2593"
+        "corpus_clean_v5.jsonl:L9948",
+        "corpus_clean_v5.jsonl:L728",
+        "corpus_clean_v5.jsonl:L10485",
+        "corpus_clean_v5.jsonl:L10921",
+        "corpus_clean_v5.jsonl:L718",
+        "corpus_clean_v5.jsonl:L10186",
+        "corpus_clean_v5.jsonl:L72",
+        "corpus_clean_v5.jsonl:L700",
+        "corpus_clean_v5.jsonl:L9923",
+        "corpus_clean_v5.jsonl:L10885"
       ]
     },
     {
@@ -1467,18 +2126,25 @@
         "biological applications",
         "biological and in vivo imaging"
       ],
-      "prediction": "biological and in vivo imaging.",
+      "prediction": "Biological and in vivo imaging.",
       "em": true,
       "f1": 1.0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L120"
+        "corpus_clean_v5.jsonl:L692"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L120",
-        "corpus_clean_v4.jsonl:L678",
-        "corpus_clean_v4.jsonl:L676"
+        "corpus_clean_v5.jsonl:L692",
+        "corpus_clean_v5.jsonl:L9094",
+        "corpus_clean_v5.jsonl:L9097",
+        "corpus_clean_v5.jsonl:L24",
+        "corpus_clean_v5.jsonl:L9096",
+        "corpus_clean_v5.jsonl:L3083",
+        "corpus_clean_v5.jsonl:L2522",
+        "corpus_clean_v5.jsonl:L7314",
+        "corpus_clean_v5.jsonl:L692",
+        "corpus_clean_v5.jsonl:L3083"
       ]
     },
     {
@@ -1492,14 +2158,23 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L566",
-        "corpus_clean_v4.jsonl:L1300",
-        "corpus_clean_v4.jsonl:L28"
+        "corpus_clean_v5.jsonl:L819",
+        "corpus_clean_v5.jsonl:L9192",
+        "corpus_clean_v5.jsonl:L30",
+        "corpus_clean_v5.jsonl:L9190",
+        "corpus_clean_v5.jsonl:L9189"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L566",
-        "corpus_clean_v4.jsonl:L1300",
-        "corpus_clean_v4.jsonl:L28"
+        "corpus_clean_v5.jsonl:L819",
+        "corpus_clean_v5.jsonl:L9192",
+        "corpus_clean_v5.jsonl:L30",
+        "corpus_clean_v5.jsonl:L28",
+        "corpus_clean_v5.jsonl:L9190",
+        "corpus_clean_v5.jsonl:L760",
+        "corpus_clean_v5.jsonl:L43",
+        "corpus_clean_v5.jsonl:L829",
+        "corpus_clean_v5.jsonl:L45",
+        "corpus_clean_v5.jsonl:L9189"
       ]
     },
     {
@@ -1507,20 +2182,29 @@
       "ground_truths": [
         "The Beauty and Joy of Computing"
       ],
-      "prediction": "The Beauty and Joy of Computing.",
+      "prediction": "The Beauty and Joy of Computing",
       "em": true,
       "f1": 1.0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L29",
-        "corpus_clean_v4.jsonl:L115",
-        "corpus_clean_v4.jsonl:L33"
+        "corpus_clean_v5.jsonl:L668",
+        "corpus_clean_v5.jsonl:L31",
+        "corpus_clean_v5.jsonl:L9458",
+        "corpus_clean_v5.jsonl:L761",
+        "corpus_clean_v5.jsonl:L10228"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L29",
-        "corpus_clean_v4.jsonl:L115",
-        "corpus_clean_v4.jsonl:L33"
+        "corpus_clean_v5.jsonl:L668",
+        "corpus_clean_v5.jsonl:L31",
+        "corpus_clean_v5.jsonl:L10142",
+        "corpus_clean_v5.jsonl:L9458",
+        "corpus_clean_v5.jsonl:L761",
+        "corpus_clean_v5.jsonl:L16",
+        "corpus_clean_v5.jsonl:L10228",
+        "corpus_clean_v5.jsonl:L9348",
+        "corpus_clean_v5.jsonl:L9395",
+        "corpus_clean_v5.jsonl:L31"
       ]
     },
     {
@@ -1528,18 +2212,25 @@
       "ground_truths": [
         "comprehensive review"
       ],
-      "prediction": "Comprehensive Review.",
+      "prediction": "Comprehensive Review",
       "em": true,
       "f1": 1.0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L725"
+        "corpus_clean_v5.jsonl:L9072"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L725",
-        "corpus_clean_v4.jsonl:L1297",
-        "corpus_clean_v4.jsonl:L722"
+        "corpus_clean_v5.jsonl:L9072",
+        "corpus_clean_v5.jsonl:L9189",
+        "corpus_clean_v5.jsonl:L9077",
+        "corpus_clean_v5.jsonl:L813",
+        "corpus_clean_v5.jsonl:L43",
+        "corpus_clean_v5.jsonl:L814",
+        "corpus_clean_v5.jsonl:L9073",
+        "corpus_clean_v5.jsonl:L9075",
+        "corpus_clean_v5.jsonl:L816",
+        "corpus_clean_v5.jsonl:L9067"
       ]
     },
     {
@@ -1553,13 +2244,21 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L724",
-        "corpus_clean_v4.jsonl:L727"
+        "corpus_clean_v5.jsonl:L9073",
+        "corpus_clean_v5.jsonl:L9082",
+        "corpus_clean_v5.jsonl:L813"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L724",
-        "corpus_clean_v4.jsonl:L721",
-        "corpus_clean_v4.jsonl:L727"
+        "corpus_clean_v5.jsonl:L9073",
+        "corpus_clean_v5.jsonl:L9078",
+        "corpus_clean_v5.jsonl:L9082",
+        "corpus_clean_v5.jsonl:L777",
+        "corpus_clean_v5.jsonl:L9073",
+        "corpus_clean_v5.jsonl:L813",
+        "corpus_clean_v5.jsonl:L796",
+        "corpus_clean_v5.jsonl:L675",
+        "corpus_clean_v5.jsonl:L776",
+        "corpus_clean_v5.jsonl:L825"
       ]
     },
     {
@@ -1573,12 +2272,19 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L724"
+        "corpus_clean_v5.jsonl:L9073"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L533",
-        "corpus_clean_v4.jsonl:L724",
-        "corpus_clean_v4.jsonl:L727"
+        "corpus_clean_v5.jsonl:L776",
+        "corpus_clean_v5.jsonl:L9073",
+        "corpus_clean_v5.jsonl:L9082",
+        "corpus_clean_v5.jsonl:L812",
+        "corpus_clean_v5.jsonl:L9078",
+        "corpus_clean_v5.jsonl:L9138",
+        "corpus_clean_v5.jsonl:L45",
+        "corpus_clean_v5.jsonl:L777",
+        "corpus_clean_v5.jsonl:L675",
+        "corpus_clean_v5.jsonl:L9077"
       ]
     },
     {
@@ -1592,13 +2298,21 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L584",
-        "corpus_clean_v4.jsonl:L585"
+        "corpus_clean_v5.jsonl:L836",
+        "corpus_clean_v5.jsonl:L837",
+        "corpus_clean_v5.jsonl:L9075"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L724",
-        "corpus_clean_v4.jsonl:L584",
-        "corpus_clean_v4.jsonl:L585"
+        "corpus_clean_v5.jsonl:L9073",
+        "corpus_clean_v5.jsonl:L836",
+        "corpus_clean_v5.jsonl:L837",
+        "corpus_clean_v5.jsonl:L813",
+        "corpus_clean_v5.jsonl:L9080",
+        "corpus_clean_v5.jsonl:L9075",
+        "corpus_clean_v5.jsonl:L2943",
+        "corpus_clean_v5.jsonl:L777",
+        "corpus_clean_v5.jsonl:L45",
+        "corpus_clean_v5.jsonl:L1351"
       ]
     },
     {
@@ -1606,18 +2320,25 @@
       "ground_truths": [
         "one course"
       ],
-      "prediction": "At least one.",
+      "prediction": "at least one course.",
       "em": false,
-      "f1": 0.4,
+      "f1": 0.6666666666666666,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L725"
+        "corpus_clean_v5.jsonl:L9072"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L725",
-        "corpus_clean_v4.jsonl:L576",
-        "corpus_clean_v4.jsonl:L575"
+        "corpus_clean_v5.jsonl:L9072",
+        "corpus_clean_v5.jsonl:L822",
+        "corpus_clean_v5.jsonl:L825",
+        "corpus_clean_v5.jsonl:L813",
+        "corpus_clean_v5.jsonl:L10365",
+        "corpus_clean_v5.jsonl:L821",
+        "corpus_clean_v5.jsonl:L812",
+        "corpus_clean_v5.jsonl:L9080",
+        "corpus_clean_v5.jsonl:L10365",
+        "corpus_clean_v5.jsonl:L45"
       ]
     },
     {
@@ -1631,12 +2352,19 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L722"
+        "corpus_clean_v5.jsonl:L9077"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L722",
-        "corpus_clean_v4.jsonl:L722",
-        "corpus_clean_v4.jsonl:L725"
+        "corpus_clean_v5.jsonl:L9077",
+        "corpus_clean_v5.jsonl:L9077",
+        "corpus_clean_v5.jsonl:L9072",
+        "corpus_clean_v5.jsonl:L9073",
+        "corpus_clean_v5.jsonl:L9189",
+        "corpus_clean_v5.jsonl:L9073",
+        "corpus_clean_v5.jsonl:L814",
+        "corpus_clean_v5.jsonl:L43",
+        "corpus_clean_v5.jsonl:L9134",
+        "corpus_clean_v5.jsonl:L9190"
       ]
     },
     {
@@ -1650,12 +2378,20 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L1415"
+        "corpus_clean_v5.jsonl:L9308",
+        "corpus_clean_v5.jsonl:L1300"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L2008",
-        "corpus_clean_v4.jsonl:L1415",
-        "corpus_clean_v4.jsonl:L1794"
+        "corpus_clean_v5.jsonl:L9882",
+        "corpus_clean_v5.jsonl:L9308",
+        "corpus_clean_v5.jsonl:L9622",
+        "corpus_clean_v5.jsonl:L9772",
+        "corpus_clean_v5.jsonl:L9451",
+        "corpus_clean_v5.jsonl:L11250",
+        "corpus_clean_v5.jsonl:L1300",
+        "corpus_clean_v5.jsonl:L9454",
+        "corpus_clean_v5.jsonl:L11223",
+        "corpus_clean_v5.jsonl:L716"
       ]
     },
     {
@@ -1669,12 +2405,19 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L705"
+        "corpus_clean_v5.jsonl:L9123"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L705",
-        "corpus_clean_v4.jsonl:L1817",
-        "corpus_clean_v4.jsonl:L1243"
+        "corpus_clean_v5.jsonl:L9123",
+        "corpus_clean_v5.jsonl:L9723",
+        "corpus_clean_v5.jsonl:L9151",
+        "corpus_clean_v5.jsonl:L9450",
+        "corpus_clean_v5.jsonl:L9700",
+        "corpus_clean_v5.jsonl:L9762",
+        "corpus_clean_v5.jsonl:L9914",
+        "corpus_clean_v5.jsonl:L9456",
+        "corpus_clean_v5.jsonl:L9877",
+        "corpus_clean_v5.jsonl:L10114"
       ]
     },
     {
@@ -1682,18 +2425,23 @@
       "ground_truths": [
         "Berkeley Artificial Intelligence Research Lab"
       ],
-      "prediction": "Berkeley Artificial Intelligence Research Lab (BAIR) .",
+      "prediction": "RISELab.",
       "em": false,
-      "f1": 0.9090909090909091,
-      "retrieval_recall": true,
+      "f1": 0,
+      "retrieval_recall": false,
       "gt_url_chunk_file": null,
-      "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L82"
-      ],
+      "content_match_chunk_files": [],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L82",
-        "corpus_clean_v4.jsonl:L2206",
-        "corpus_clean_v4.jsonl:L525"
+        "corpus_clean_v5.jsonl:L9478",
+        "corpus_clean_v5.jsonl:L10032",
+        "corpus_clean_v5.jsonl:L9419",
+        "corpus_clean_v5.jsonl:L9385",
+        "corpus_clean_v5.jsonl:L783",
+        "corpus_clean_v5.jsonl:L93",
+        "corpus_clean_v5.jsonl:L9172",
+        "corpus_clean_v5.jsonl:L9158",
+        "corpus_clean_v5.jsonl:L2",
+        "corpus_clean_v5.jsonl:L9952"
       ]
     },
     {
@@ -1708,9 +2456,16 @@
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L3261",
-        "corpus_clean_v4.jsonl:L3407",
-        "corpus_clean_v4.jsonl:L144"
+        "corpus_clean_v5.jsonl:L11154",
+        "corpus_clean_v5.jsonl:L9785",
+        "corpus_clean_v5.jsonl:L11008",
+        "corpus_clean_v5.jsonl:L10519",
+        "corpus_clean_v5.jsonl:L97",
+        "corpus_clean_v5.jsonl:L9573",
+        "corpus_clean_v5.jsonl:L57",
+        "corpus_clean_v5.jsonl:L54",
+        "corpus_clean_v5.jsonl:L8894",
+        "corpus_clean_v5.jsonl:L1293"
       ]
     },
     {
@@ -1724,13 +2479,21 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L83",
-        "corpus_clean_v4.jsonl:L2324"
+        "corpus_clean_v5.jsonl:L97",
+        "corpus_clean_v5.jsonl:L10201",
+        "corpus_clean_v5.jsonl:L665"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L83",
-        "corpus_clean_v4.jsonl:L2324",
-        "corpus_clean_v4.jsonl:L798"
+        "corpus_clean_v5.jsonl:L97",
+        "corpus_clean_v5.jsonl:L2884",
+        "corpus_clean_v5.jsonl:L10201",
+        "corpus_clean_v5.jsonl:L4566",
+        "corpus_clean_v5.jsonl:L665",
+        "corpus_clean_v5.jsonl:L9243",
+        "corpus_clean_v5.jsonl:L9824",
+        "corpus_clean_v5.jsonl:L9787",
+        "corpus_clean_v5.jsonl:L4968",
+        "corpus_clean_v5.jsonl:L9243"
       ]
     },
     {
@@ -1739,18 +2502,26 @@
         "EPIC Data lab",
         "Sky Computing Lab"
       ],
-      "prediction": "RISELab",
-      "em": false,
-      "f1": 0,
+      "prediction": "EPIC Data lab",
+      "em": true,
+      "f1": 1.0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L83"
+        "corpus_clean_v5.jsonl:L97",
+        "corpus_clean_v5.jsonl:L409"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L83",
-        "corpus_clean_v4.jsonl:L3261",
-        "corpus_clean_v4.jsonl:L1287"
+        "corpus_clean_v5.jsonl:L97",
+        "corpus_clean_v5.jsonl:L11154",
+        "corpus_clean_v5.jsonl:L9172",
+        "corpus_clean_v5.jsonl:L97",
+        "corpus_clean_v5.jsonl:L11291",
+        "corpus_clean_v5.jsonl:L409",
+        "corpus_clean_v5.jsonl:L10954",
+        "corpus_clean_v5.jsonl:L10997",
+        "corpus_clean_v5.jsonl:L9904",
+        "corpus_clean_v5.jsonl:L9159"
       ]
     },
     {
@@ -1765,9 +2536,16 @@
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L603",
-        "corpus_clean_v4.jsonl:L597",
-        "corpus_clean_v4.jsonl:L601"
+        "corpus_clean_v5.jsonl:L1041",
+        "corpus_clean_v5.jsonl:L1030",
+        "corpus_clean_v5.jsonl:L1034",
+        "corpus_clean_v5.jsonl:L1033",
+        "corpus_clean_v5.jsonl:L1032",
+        "corpus_clean_v5.jsonl:L1028",
+        "corpus_clean_v5.jsonl:L1035",
+        "corpus_clean_v5.jsonl:L1043",
+        "corpus_clean_v5.jsonl:L46",
+        "corpus_clean_v5.jsonl:L1029"
       ]
     },
     {
@@ -1781,13 +2559,20 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L173",
-        "corpus_clean_v4.jsonl:L46"
+        "corpus_clean_v5.jsonl:L681",
+        "corpus_clean_v5.jsonl:L47"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L173",
-        "corpus_clean_v4.jsonl:L46",
-        "corpus_clean_v4.jsonl:L153"
+        "corpus_clean_v5.jsonl:L681",
+        "corpus_clean_v5.jsonl:L47",
+        "corpus_clean_v5.jsonl:L722",
+        "corpus_clean_v5.jsonl:L33",
+        "corpus_clean_v5.jsonl:L775",
+        "corpus_clean_v5.jsonl:L9945",
+        "corpus_clean_v5.jsonl:L681",
+        "corpus_clean_v5.jsonl:L827",
+        "corpus_clean_v5.jsonl:L1371",
+        "corpus_clean_v5.jsonl:L9191"
       ]
     },
     {
@@ -1802,9 +2587,16 @@
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L678",
-        "corpus_clean_v4.jsonl:L1479",
-        "corpus_clean_v4.jsonl:L1482"
+        "corpus_clean_v5.jsonl:L9094",
+        "corpus_clean_v5.jsonl:L9374",
+        "corpus_clean_v5.jsonl:L9931",
+        "corpus_clean_v5.jsonl:L9378",
+        "corpus_clean_v5.jsonl:L11040",
+        "corpus_clean_v5.jsonl:L10984",
+        "corpus_clean_v5.jsonl:L9373",
+        "corpus_clean_v5.jsonl:L11033",
+        "corpus_clean_v5.jsonl:L9096",
+        "corpus_clean_v5.jsonl:L10306"
       ]
     },
     {
@@ -1818,12 +2610,19 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L96"
+        "corpus_clean_v5.jsonl:L107"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L96",
-        "corpus_clean_v4.jsonl:L2206",
-        "corpus_clean_v4.jsonl:L3277"
+        "corpus_clean_v5.jsonl:L107",
+        "corpus_clean_v5.jsonl:L5212",
+        "corpus_clean_v5.jsonl:L5212",
+        "corpus_clean_v5.jsonl:L9588",
+        "corpus_clean_v5.jsonl:L1852",
+        "corpus_clean_v5.jsonl:L10080",
+        "corpus_clean_v5.jsonl:L48",
+        "corpus_clean_v5.jsonl:L47",
+        "corpus_clean_v5.jsonl:L4403",
+        "corpus_clean_v5.jsonl:L642"
       ]
     },
     {
@@ -1831,19 +2630,29 @@
       "ground_truths": [
         "Berkeley Center for Responsible, Decentralized Intelligence"
       ],
-      "prediction": "Berkeley Center for Responsible Decentralized Intelligence",
-      "em": true,
-      "f1": 1.0,
+      "prediction": "Berkeley Center for Responsible, Decentralized Intelligence (RDI)",
+      "em": false,
+      "f1": 0.923076923076923,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L1682",
-        "corpus_clean_v4.jsonl:L624"
+        "corpus_clean_v5.jsonl:L9588",
+        "corpus_clean_v5.jsonl:L1066",
+        "corpus_clean_v5.jsonl:L484",
+        "corpus_clean_v5.jsonl:L9416",
+        "corpus_clean_v5.jsonl:L48"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L1682",
-        "corpus_clean_v4.jsonl:L624",
-        "corpus_clean_v4.jsonl:L2693"
+        "corpus_clean_v5.jsonl:L9588",
+        "corpus_clean_v5.jsonl:L1066",
+        "corpus_clean_v5.jsonl:L10551",
+        "corpus_clean_v5.jsonl:L484",
+        "corpus_clean_v5.jsonl:L9476",
+        "corpus_clean_v5.jsonl:L9416",
+        "corpus_clean_v5.jsonl:L103",
+        "corpus_clean_v5.jsonl:L48",
+        "corpus_clean_v5.jsonl:L10447",
+        "corpus_clean_v5.jsonl:L10614"
       ]
     },
     {
@@ -1857,12 +2666,19 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L47"
+        "corpus_clean_v5.jsonl:L48"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L47",
-        "corpus_clean_v4.jsonl:L935",
-        "corpus_clean_v4.jsonl:L2815"
+        "corpus_clean_v5.jsonl:L48",
+        "corpus_clean_v5.jsonl:L3350",
+        "corpus_clean_v5.jsonl:L10724",
+        "corpus_clean_v5.jsonl:L4371",
+        "corpus_clean_v5.jsonl:L3350",
+        "corpus_clean_v5.jsonl:L2233",
+        "corpus_clean_v5.jsonl:L1918",
+        "corpus_clean_v5.jsonl:L9281",
+        "corpus_clean_v5.jsonl:L5280",
+        "corpus_clean_v5.jsonl:L2997"
       ]
     },
     {
@@ -1877,9 +2693,16 @@
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L50",
-        "corpus_clean_v4.jsonl:L49",
-        "corpus_clean_v4.jsonl:L602"
+        "corpus_clean_v5.jsonl:L1045",
+        "corpus_clean_v5.jsonl:L1053",
+        "corpus_clean_v5.jsonl:L1057",
+        "corpus_clean_v5.jsonl:L1052",
+        "corpus_clean_v5.jsonl:L1058",
+        "corpus_clean_v5.jsonl:L1047",
+        "corpus_clean_v5.jsonl:L1061",
+        "corpus_clean_v5.jsonl:L1049",
+        "corpus_clean_v5.jsonl:L1056",
+        "corpus_clean_v5.jsonl:L1059"
       ]
     },
     {
@@ -1887,20 +2710,29 @@
       "ground_truths": [
         "four"
       ],
-      "prediction": "four business days",
+      "prediction": "Four business days.",
       "em": false,
       "f1": 0.5,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L50",
-        "corpus_clean_v4.jsonl:L590",
-        "corpus_clean_v4.jsonl:L591"
+        "corpus_clean_v5.jsonl:L46",
+        "corpus_clean_v5.jsonl:L1027",
+        "corpus_clean_v5.jsonl:L1025",
+        "corpus_clean_v5.jsonl:L1026",
+        "corpus_clean_v5.jsonl:L81"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L50",
-        "corpus_clean_v4.jsonl:L590",
-        "corpus_clean_v4.jsonl:L591"
+        "corpus_clean_v5.jsonl:L46",
+        "corpus_clean_v5.jsonl:L1027",
+        "corpus_clean_v5.jsonl:L1025",
+        "corpus_clean_v5.jsonl:L1026",
+        "corpus_clean_v5.jsonl:L9464",
+        "corpus_clean_v5.jsonl:L1029",
+        "corpus_clean_v5.jsonl:L9933",
+        "corpus_clean_v5.jsonl:L1046",
+        "corpus_clean_v5.jsonl:L1384",
+        "corpus_clean_v5.jsonl:L81"
       ]
     },
     {
@@ -1914,13 +2746,22 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L39",
-        "corpus_clean_v4.jsonl:L38"
+        "corpus_clean_v5.jsonl:L37",
+        "corpus_clean_v5.jsonl:L36",
+        "corpus_clean_v5.jsonl:L39",
+        "corpus_clean_v5.jsonl:L829"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L39",
-        "corpus_clean_v4.jsonl:L38",
-        "corpus_clean_v4.jsonl:L566"
+        "corpus_clean_v5.jsonl:L37",
+        "corpus_clean_v5.jsonl:L36",
+        "corpus_clean_v5.jsonl:L819",
+        "corpus_clean_v5.jsonl:L39",
+        "corpus_clean_v5.jsonl:L9190",
+        "corpus_clean_v5.jsonl:L43",
+        "corpus_clean_v5.jsonl:L829",
+        "corpus_clean_v5.jsonl:L37",
+        "corpus_clean_v5.jsonl:L1373",
+        "corpus_clean_v5.jsonl:L29"
       ]
     },
     {
@@ -1928,20 +2769,32 @@
       "ground_truths": [
         "3.0"
       ],
-      "prediction": "A satisfactory scholastic average with a minimum GPA of 3.0 (B).",
+      "prediction": "3.0 (B)",
       "em": false,
-      "f1": 0.19999999999999998,
+      "f1": 0.6666666666666666,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L580",
-        "corpus_clean_v4.jsonl:L43",
-        "corpus_clean_v4.jsonl:L1257"
+        "corpus_clean_v5.jsonl:L829",
+        "corpus_clean_v5.jsonl:L45",
+        "corpus_clean_v5.jsonl:L9138",
+        "corpus_clean_v5.jsonl:L9191",
+        "corpus_clean_v5.jsonl:L9900",
+        "corpus_clean_v5.jsonl:L9072",
+        "corpus_clean_v5.jsonl:L1383",
+        "corpus_clean_v5.jsonl:L9140"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L580",
-        "corpus_clean_v4.jsonl:L43",
-        "corpus_clean_v4.jsonl:L1257"
+        "corpus_clean_v5.jsonl:L829",
+        "corpus_clean_v5.jsonl:L45",
+        "corpus_clean_v5.jsonl:L842",
+        "corpus_clean_v5.jsonl:L9138",
+        "corpus_clean_v5.jsonl:L9191",
+        "corpus_clean_v5.jsonl:L9900",
+        "corpus_clean_v5.jsonl:L9072",
+        "corpus_clean_v5.jsonl:L1383",
+        "corpus_clean_v5.jsonl:L9140",
+        "corpus_clean_v5.jsonl:L1378"
       ]
     },
     {
@@ -1955,13 +2808,20 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L1297",
-        "corpus_clean_v4.jsonl:L580"
+        "corpus_clean_v5.jsonl:L9189",
+        "corpus_clean_v5.jsonl:L829"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L1297",
-        "corpus_clean_v4.jsonl:L36",
-        "corpus_clean_v4.jsonl:L580"
+        "corpus_clean_v5.jsonl:L9189",
+        "corpus_clean_v5.jsonl:L38",
+        "corpus_clean_v5.jsonl:L1368",
+        "corpus_clean_v5.jsonl:L829",
+        "corpus_clean_v5.jsonl:L9909",
+        "corpus_clean_v5.jsonl:L43",
+        "corpus_clean_v5.jsonl:L1362",
+        "corpus_clean_v5.jsonl:L10401",
+        "corpus_clean_v5.jsonl:L9070",
+        "corpus_clean_v5.jsonl:L9189"
       ]
     },
     {
@@ -1975,14 +2835,27 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L580",
-        "corpus_clean_v4.jsonl:L1985",
-        "corpus_clean_v4.jsonl:L41"
+        "corpus_clean_v5.jsonl:L829",
+        "corpus_clean_v5.jsonl:L9900",
+        "corpus_clean_v5.jsonl:L43",
+        "corpus_clean_v5.jsonl:L9189",
+        "corpus_clean_v5.jsonl:L9190",
+        "corpus_clean_v5.jsonl:L45",
+        "corpus_clean_v5.jsonl:L9164",
+        "corpus_clean_v5.jsonl:L38",
+        "corpus_clean_v5.jsonl:L9192"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L580",
-        "corpus_clean_v4.jsonl:L1985",
-        "corpus_clean_v4.jsonl:L41"
+        "corpus_clean_v5.jsonl:L829",
+        "corpus_clean_v5.jsonl:L9900",
+        "corpus_clean_v5.jsonl:L43",
+        "corpus_clean_v5.jsonl:L9189",
+        "corpus_clean_v5.jsonl:L9190",
+        "corpus_clean_v5.jsonl:L45",
+        "corpus_clean_v5.jsonl:L9164",
+        "corpus_clean_v5.jsonl:L38",
+        "corpus_clean_v5.jsonl:L9192",
+        "corpus_clean_v5.jsonl:L837"
       ]
     },
     {
@@ -1996,12 +2869,19 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L593"
+        "corpus_clean_v5.jsonl:L1029"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L1332",
-        "corpus_clean_v4.jsonl:L593",
-        "corpus_clean_v4.jsonl:L589"
+        "corpus_clean_v5.jsonl:L9237",
+        "corpus_clean_v5.jsonl:L1029",
+        "corpus_clean_v5.jsonl:L1026",
+        "corpus_clean_v5.jsonl:L9237",
+        "corpus_clean_v5.jsonl:L1029",
+        "corpus_clean_v5.jsonl:L1027",
+        "corpus_clean_v5.jsonl:L1028",
+        "corpus_clean_v5.jsonl:L1026",
+        "corpus_clean_v5.jsonl:L1030",
+        "corpus_clean_v5.jsonl:L1043"
       ]
     },
     {
@@ -2009,16 +2889,23 @@
       "ground_truths": [
         "EE 42"
       ],
-      "prediction": "EECS 151",
+      "prediction": "EE 117",
       "em": false,
-      "f1": 0,
+      "f1": 0.5,
       "retrieval_recall": false,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L316",
-        "corpus_clean_v4.jsonl:L318",
-        "corpus_clean_v4.jsonl:L536"
+        "corpus_clean_v5.jsonl:L498",
+        "corpus_clean_v5.jsonl:L495",
+        "corpus_clean_v5.jsonl:L778",
+        "corpus_clean_v5.jsonl:L492",
+        "corpus_clean_v5.jsonl:L867",
+        "corpus_clean_v5.jsonl:L662",
+        "corpus_clean_v5.jsonl:L843",
+        "corpus_clean_v5.jsonl:L581",
+        "corpus_clean_v5.jsonl:L399",
+        "corpus_clean_v5.jsonl:L377"
       ]
     },
     {
@@ -2029,13 +2916,22 @@
       "prediction": "EECS 126.",
       "em": false,
       "f1": 0.5,
-      "retrieval_recall": false,
+      "retrieval_recall": true,
       "gt_url_chunk_file": null,
-      "content_match_chunk_files": [],
+      "content_match_chunk_files": [
+        "corpus_clean_v5.jsonl:L852"
+      ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L409",
-        "corpus_clean_v4.jsonl:L303",
-        "corpus_clean_v4.jsonl:L376"
+        "corpus_clean_v5.jsonl:L852",
+        "corpus_clean_v5.jsonl:L587",
+        "corpus_clean_v5.jsonl:L851",
+        "corpus_clean_v5.jsonl:L938",
+        "corpus_clean_v5.jsonl:L860",
+        "corpus_clean_v5.jsonl:L843",
+        "corpus_clean_v5.jsonl:L557",
+        "corpus_clean_v5.jsonl:L852",
+        "corpus_clean_v5.jsonl:L377",
+        "corpus_clean_v5.jsonl:L382"
       ]
     },
     {
@@ -2049,12 +2945,19 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L402"
+        "corpus_clean_v5.jsonl:L581"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L402",
-        "corpus_clean_v4.jsonl:L368",
-        "corpus_clean_v4.jsonl:L354"
+        "corpus_clean_v5.jsonl:L581",
+        "corpus_clean_v5.jsonl:L853",
+        "corpus_clean_v5.jsonl:L839",
+        "corpus_clean_v5.jsonl:L852",
+        "corpus_clean_v5.jsonl:L532",
+        "corpus_clean_v5.jsonl:L492",
+        "corpus_clean_v5.jsonl:L382",
+        "corpus_clean_v5.jsonl:L867",
+        "corpus_clean_v5.jsonl:L662",
+        "corpus_clean_v5.jsonl:L377"
       ]
     },
     {
@@ -2068,13 +2971,26 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L114",
-        "corpus_clean_v4.jsonl:L541"
+        "corpus_clean_v5.jsonl:L670",
+        "corpus_clean_v5.jsonl:L782",
+        "corpus_clean_v5.jsonl:L781",
+        "corpus_clean_v5.jsonl:L43",
+        "corpus_clean_v5.jsonl:L780",
+        "corpus_clean_v5.jsonl:L779",
+        "corpus_clean_v5.jsonl:L9190",
+        "corpus_clean_v5.jsonl:L34"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L114",
-        "corpus_clean_v4.jsonl:L114",
-        "corpus_clean_v4.jsonl:L541"
+        "corpus_clean_v5.jsonl:L670",
+        "corpus_clean_v5.jsonl:L670",
+        "corpus_clean_v5.jsonl:L782",
+        "corpus_clean_v5.jsonl:L781",
+        "corpus_clean_v5.jsonl:L10132",
+        "corpus_clean_v5.jsonl:L43",
+        "corpus_clean_v5.jsonl:L780",
+        "corpus_clean_v5.jsonl:L779",
+        "corpus_clean_v5.jsonl:L9190",
+        "corpus_clean_v5.jsonl:L34"
       ]
     },
     {
@@ -2088,12 +3004,19 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L114"
+        "corpus_clean_v5.jsonl:L670"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L114",
-        "corpus_clean_v4.jsonl:L541",
-        "corpus_clean_v4.jsonl:L114"
+        "corpus_clean_v5.jsonl:L670",
+        "corpus_clean_v5.jsonl:L782",
+        "corpus_clean_v5.jsonl:L670",
+        "corpus_clean_v5.jsonl:L781",
+        "corpus_clean_v5.jsonl:L781",
+        "corpus_clean_v5.jsonl:L9190",
+        "corpus_clean_v5.jsonl:L782",
+        "corpus_clean_v5.jsonl:L778",
+        "corpus_clean_v5.jsonl:L34",
+        "corpus_clean_v5.jsonl:L40"
       ]
     },
     {
@@ -2107,13 +3030,21 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L539",
-        "corpus_clean_v4.jsonl:L114"
+        "corpus_clean_v5.jsonl:L781",
+        "corpus_clean_v5.jsonl:L670",
+        "corpus_clean_v5.jsonl:L777"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L539",
-        "corpus_clean_v4.jsonl:L114",
-        "corpus_clean_v4.jsonl:L1656"
+        "corpus_clean_v5.jsonl:L781",
+        "corpus_clean_v5.jsonl:L670",
+        "corpus_clean_v5.jsonl:L374",
+        "corpus_clean_v5.jsonl:L9561",
+        "corpus_clean_v5.jsonl:L44",
+        "corpus_clean_v5.jsonl:L9073",
+        "corpus_clean_v5.jsonl:L9080",
+        "corpus_clean_v5.jsonl:L384",
+        "corpus_clean_v5.jsonl:L949",
+        "corpus_clean_v5.jsonl:L777"
       ]
     },
     {
@@ -2127,13 +3058,24 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L581",
-        "corpus_clean_v4.jsonl:L37"
+        "corpus_clean_v5.jsonl:L832",
+        "corpus_clean_v5.jsonl:L40",
+        "corpus_clean_v5.jsonl:L9659",
+        "corpus_clean_v5.jsonl:L782",
+        "corpus_clean_v5.jsonl:L670",
+        "corpus_clean_v5.jsonl:L9164"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L581",
-        "corpus_clean_v4.jsonl:L581",
-        "corpus_clean_v4.jsonl:L37"
+        "corpus_clean_v5.jsonl:L832",
+        "corpus_clean_v5.jsonl:L832",
+        "corpus_clean_v5.jsonl:L40",
+        "corpus_clean_v5.jsonl:L9659",
+        "corpus_clean_v5.jsonl:L782",
+        "corpus_clean_v5.jsonl:L670",
+        "corpus_clean_v5.jsonl:L723",
+        "corpus_clean_v5.jsonl:L9190",
+        "corpus_clean_v5.jsonl:L9164",
+        "corpus_clean_v5.jsonl:L786"
       ]
     },
     {
@@ -2147,12 +3089,20 @@
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
-        "corpus_clean_v4.jsonl:L581"
+        "corpus_clean_v5.jsonl:L832",
+        "corpus_clean_v5.jsonl:L9662"
       ],
       "retrieved_files": [
-        "corpus_clean_v4.jsonl:L581",
-        "corpus_clean_v4.jsonl:L581",
-        "corpus_clean_v4.jsonl:L1687"
+        "corpus_clean_v5.jsonl:L832",
+        "corpus_clean_v5.jsonl:L832",
+        "corpus_clean_v5.jsonl:L9659",
+        "corpus_clean_v5.jsonl:L9662",
+        "corpus_clean_v5.jsonl:L40",
+        "corpus_clean_v5.jsonl:L670",
+        "corpus_clean_v5.jsonl:L781",
+        "corpus_clean_v5.jsonl:L10893",
+        "corpus_clean_v5.jsonl:L782",
+        "corpus_clean_v5.jsonl:L9662"
       ]
     }
   ]
