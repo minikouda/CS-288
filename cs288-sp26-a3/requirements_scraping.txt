@@ -1,0 +1,5 @@
+# Requirements for data scraping and corpus cleaning only.
+# These are NOT needed by the autograder — install only for local preprocessing.
+aiohttp>=3.8.0
+beautifulsoup4>=4.11.0
+lxml>=4.9.0
