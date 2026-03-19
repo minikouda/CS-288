@@ -21,17 +21,57 @@ A Retrieval-Augmented Generation (RAG) system for answering Berkeley EECS questi
 
 ## 1. Prerequisites
 
-### Conda Environment
+### Creating the Conda Environment
 
-All commands must be run inside the `cs288_a3` conda environment, which has all required packages (`faiss-cpu`, `sentence-transformers`, `rank-bm25`, etc.).
+There are two separate requirement sets in this project:
+
+| File | Purpose |
+|---|---|
+| `requirements.txt` | RAG inference — needed by the autograder and for running/evaluating the model |
+| `requirements_scraping.txt` | Data collection only — `aiohttp`, `beautifulsoup4`, `lxml` |
+
+#### RAG environment (required for all Steps 1–4)
+
+Create the environment once:
+
+```bash
+conda create -n cs288_a3 python=3.10.12 -y
+conda activate cs288_a3
+pip install -r requirements.txt
+```
+
+The autograder uses **Python 3.10.12** exactly. Match this locally to avoid version surprises.
+
+#### Scraping extras (only needed to re-crawl the EECS website)
+
+With `cs288_a3` active, install the additional scraping packages:
+
+```bash
+pip install -r requirements_scraping.txt
+```
+
+These packages (`aiohttp`, `beautifulsoup4`, `lxml`) are **not** included in `requirements.txt` because the autograder does not need them.
+
+#### Activating the environment
+
+Every time you open a new terminal, activate the environment before running any command:
 
 ```bash
 conda activate cs288_a3
 ```
 
+Verify the environment is correct:
+
+```bash
+python --version          # should print Python 3.10.x
+python -c "import faiss; import sentence_transformers; import rank_bm25; print('OK')"
+```
+
+---
+
 ### API Key
 
-The generation step calls [OpenRouter](https://openrouter.ai) to serve the LLM. Set your key before running any generation or evaluation:
+The generation step calls OpenRouter to serve the LLM. Set your key before running any generation or evaluation:
 
 ```bash
 export OPENROUTER_API_KEY="sk-or-..."
@@ -58,7 +98,7 @@ cs288-sp26-a3/
 │   ├── cleaned/                # Output of async cleaner
 │   └── reference.jsonl         # Gold Q&A pairs for evaluation
 ├── models/
-│   └── retrieval_clean/        # Built index (FAISS + BM25)
+│   └── retrieval/              # Built index (FAISS + BM25)
 │       ├── index.faiss
 │       ├── bm25.pkl
 │       ├── chunks.json
@@ -125,7 +165,7 @@ Reads the cleaned JSONL, recursively chunks each document, encodes chunks with a
 ```bash
 python -m src.retrieval.build_index \
     --data   data/cleaned/corpus_clean_v5.jsonl \
-    --output models/retrieval_clean
+    --output models/retrieval
 ```
 
 ### Arguments
@@ -174,7 +214,7 @@ python main.py data/questions.txt predictions.txt
 
 ### What happens internally
 
-1. **Retriever** loads the index from `models/retrieval/` (hardcoded path — see [Configuration Reference](#7-configuration-reference) to change it).
+1. **Retriever** loads the index from `models/retrieval/`.
 2. For each question:
    - **Dense retrieval** — top-30 chunks via FAISS cosine similarity
    - **BM25 retrieval** — top-30 chunks via keyword scoring
@@ -183,11 +223,6 @@ python main.py data/questions.txt predictions.txt
    - **Keyword boosting** — bumps chunks whose title/URL match person names or course codes in the query
    - **Generator** sends top-5 chunks to the LLM and returns a short answer
 3. Answers are written one per line (newlines stripped).
-
-> **Tip:** To use the index built in Step 2, update the index path in `main.py` line 16:
-> ```python
-> retriever = Retriever("models/retrieval_clean")
-> ```
 
 ---
 
@@ -242,10 +277,7 @@ Results are printed to stdout and saved to `experiments/last_eval_results.json`:
 }
 ```
 
-> **Note:** `evaluate_rag.py` hardcodes the index path as `models/retrieval`. To evaluate against the new index, edit line 56:
-> ```python
-> retriever = Retriever("models/retrieval_clean")
-> ```
+> **Note:** `evaluate_rag.py` uses `models/retrieval` as the index path, which is the current active index.
 
 ---
 
@@ -320,7 +352,7 @@ src/
     __init__.py
     generator.py
 models/
-  retrieval_clean/              ← pre-built index (the one you built in Step 2)
+  retrieval/                    ← pre-built index
     index.faiss
     bm25.pkl
     chunks.json
@@ -336,7 +368,7 @@ src/crawler/                    ← scraping code
 src/processing/                 ← cleaning code
 src/utils/                      ← utilities only used offline
 experiments/                    ← evaluation scripts, not needed by grader
-models/retrieval/               ← old index directory (if present)
+models/legacy/                  ← old index snapshots (if present)
 *.pyc / __pycache__/            ← compiled bytecode
 submission.zip                  ← don't nest zips
 ```
@@ -345,20 +377,7 @@ submission.zip                  ← don't nest zips
 
 ### Pre-submission checklist
 
-#### 1. Fix the index path in `main.py`
-
-`main.py` currently points to `models/retrieval`. Since you built the new index at `models/retrieval_clean`, update line 16:
-
-```python
-# main.py line 16 — change from:
-retriever = Retriever("models/retrieval")
-# to:
-retriever = Retriever("models/retrieval_clean")
-```
-
-All paths must be **relative** to the project root. Never use absolute paths like `/Users/yourname/...`.
-
-#### 2. Verify `run.sh`
+#### 1. Verify `run.sh`
 
 The autograder calls exactly:
 
@@ -373,17 +392,19 @@ Your `run.sh` must use `python3` (not `python`):
 python3 main.py "$1" "$2"
 ```
 
-#### 3. Do NOT modify `llm.py`
+All paths in the code are **relative** to the project root. Never use absolute paths like `/Users/yourname/...`.
+
+#### 2. Do NOT modify `llm.py`
 
 The grader **overwrites** `src/llm.py` with its own copy before running. Any changes you made to that file will be lost. All LLM calls must go through `call_llm()` from `src/llm.py` only — calling OpenRouter directly from any other file will result in a **score of 0**.
 
-#### 4. Verify output format
+#### 3. Verify output format
 
 - One prediction per line, same order as input questions.
 - No newlines inside any prediction (the pipeline already calls `.replace("\n", " ")`).
 - Total line count must equal the number of input questions.
 
-#### 5. Check autograder constraints
+#### 4. Check autograder constraints
 
 | Constraint | Requirement |
 |---|---|
@@ -408,7 +429,7 @@ zip -r submission.zip \
   src/__init__.py \
   src/retrieval/ \
   src/generation/ \
-  models/retrieval_clean/ \
+  models/retrieval/ \
   --exclude "**/__pycache__/*" \
   --exclude "**/*.pyc"
 ```
@@ -419,7 +440,7 @@ Verify the contents before uploading:
 unzip -l submission.zip
 ```
 
-Make sure `run.sh` is at the top level of the zip (not inside a subdirectory), and `models/retrieval_clean/` contains all four index files.
+Make sure `run.sh` is at the top level of the zip (not inside a subdirectory), and `models/retrieval/` contains all four index files.
 
 ---
 
