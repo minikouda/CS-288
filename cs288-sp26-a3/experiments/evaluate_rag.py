@@ -52,9 +52,9 @@ def metric_max_over_ground_truths(metric_fn, prediction, ground_truths):
         scores_for_ground_truths.append(score)
     return max(scores_for_ground_truths)
 
-def run_evaluation(reference_path, k=10):
+def run_evaluation(reference_path, k=10, model="meta-llama/llama-3.1-8b-instruct"):
     retriever = Retriever("models/retrieval")
-    generator = Generator(model="meta-llama/llama-3.1-8b-instruct")
+    generator = Generator(model=model)
 
     with open(reference_path, 'r', encoding='utf-8') as f:
         references = [json.loads(line) for line in f]
@@ -139,4 +139,4 @@ def run_evaluation(reference_path, k=10):
         }, f, indent=2)
 
 if __name__ == "__main__":
-    run_evaluation("data/reference.jsonl", k=10)
+    run_evaluation("data/reference.jsonl", k=10, model="meta-llama/llama-3.1-8b-instruct")

@@ -1,15 +1,15 @@
 {
-  "overall_em": 0.5178571428571429,
-  "overall_f1": 0.696009595563167,
+  "overall_em": 0.48214285714285715,
+  "overall_f1": 0.6254952359731771,
   "details": [
     {
       "question": "How many COMPSCI 198 group courses are offered in the CS Spring 2026 schedule?",
       "ground_truths": [
         "5"
       ],
-      "prediction": "8",
-      "em": false,
-      "f1": 0,
+      "prediction": "5",
+      "em": true,
+      "f1": 1.0,
       "retrieval_recall": true,
       "gt_url_chunk_file": "corpus_clean_v5.jsonl:L820",
       "content_match_chunk_files": [
@@ -72,7 +72,7 @@
       "ground_truths": [
         "4"
       ],
-      "prediction": "I don't know.",
+      "prediction": "5",
       "em": false,
       "f1": 0,
       "retrieval_recall": true,
@@ -103,7 +103,7 @@
       "ground_truths": [
         "4"
       ],
-      "prediction": "I don't know",
+      "prediction": "Not specified",
       "em": false,
       "f1": 0,
       "retrieval_recall": true,
@@ -131,7 +131,7 @@
       "ground_truths": [
         "No"
       ],
-      "prediction": "No.",
+      "prediction": "No",
       "em": true,
       "f1": 1.0,
       "retrieval_recall": true,
@@ -166,7 +166,7 @@
       "ground_truths": [
         "No"
       ],
-      "prediction": "No.",
+      "prediction": "No",
       "em": true,
       "f1": 1.0,
       "retrieval_recall": true,
@@ -198,7 +198,7 @@
       "ground_truths": [
         "Yes"
       ],
-      "prediction": "Yes.",
+      "prediction": "Yes",
       "em": true,
       "f1": 1.0,
       "retrieval_recall": true,
@@ -250,9 +250,9 @@
       "ground_truths": [
         "3"
       ],
-      "prediction": "3",
-      "em": true,
-      "f1": 1.0,
+      "prediction": "5",
+      "em": false,
+      "f1": 0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -283,7 +283,7 @@
       "ground_truths": [
         "Yes"
       ],
-      "prediction": "Yes.",
+      "prediction": "Yes",
       "em": true,
       "f1": 1.0,
       "retrieval_recall": false,
@@ -307,9 +307,9 @@
       "ground_truths": [
         "They may be dropped"
       ],
-      "prediction": "You may be dropped.",
+      "prediction": "May be dropped",
       "em": false,
-      "f1": 0.75,
+      "f1": 0.8571428571428571,
       "retrieval_recall": false,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [],
@@ -331,9 +331,9 @@
       "ground_truths": [
         "Non-CS approved technical electives or EE/EECS"
       ],
-      "prediction": "Non-CS technical elective courses from the approved list.",
+      "prediction": "Non-CS approved technical elective courses",
       "em": false,
-      "f1": 0.4615384615384615,
+      "f1": 0.5454545454545454,
       "retrieval_recall": false,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [],
@@ -355,7 +355,7 @@
       "ground_truths": [
         "2"
       ],
-      "prediction": "I don't know.",
+      "prediction": "1",
       "em": false,
       "f1": 0,
       "retrieval_recall": true,
@@ -386,7 +386,7 @@
       "ground_truths": [
         "CS 161"
       ],
-      "prediction": "CS 161.",
+      "prediction": "CS 161",
       "em": true,
       "f1": 1.0,
       "retrieval_recall": true,
@@ -417,9 +417,9 @@
         "Grayson Johnston",
         "Carol Marshall"
       ],
-      "prediction": "Gina Garcia, Grayson Johnston, Floriberto Garcia, Carol Marshall.",
-      "em": false,
-      "f1": 0.4,
+      "prediction": "Gina Garcia",
+      "em": true,
+      "f1": 1.0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -444,7 +444,7 @@
       "ground_truths": [
         "Syed Tahmid Mahbub"
       ],
-      "prediction": "Syed Tahmid Mahbub.",
+      "prediction": "Syed Tahmid Mahbub",
       "em": true,
       "f1": 1.0,
       "retrieval_recall": true,
@@ -470,7 +470,7 @@
       "ground_truths": [
         "Lester Edwin Reukema"
       ],
-      "prediction": "I don't know.",
+      "prediction": "Lee Julian Purnell",
       "em": false,
       "f1": 0,
       "retrieval_recall": false,
@@ -522,9 +522,9 @@
       "ground_truths": [
         "2/18/26"
       ],
-      "prediction": "2/18/26",
-      "em": true,
-      "f1": 1.0,
+      "prediction": "3/5/26",
+      "em": false,
+      "f1": 0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -548,9 +548,9 @@
       "ground_truths": [
         "KU Leuven"
       ],
-      "prediction": "KU Leuven, Belgium",
-      "em": false,
-      "f1": 0.8,
+      "prediction": "KU Leuven",
+      "em": true,
+      "f1": 1.0,
       "retrieval_recall": true,
       "gt_url_chunk_file": "corpus_clean_v5.jsonl:L370",
       "content_match_chunk_files": [
@@ -574,7 +574,7 @@
       "ground_truths": [
         "Stanford University"
       ],
-      "prediction": "I don't know.",
+      "prediction": "I don't know",
       "em": false,
       "f1": 0,
       "retrieval_recall": false,
@@ -598,7 +598,7 @@
       "ground_truths": [
         "2"
       ],
-      "prediction": "I don't know.",
+      "prediction": "4",
       "em": false,
       "f1": 0,
       "retrieval_recall": true,
@@ -632,7 +632,7 @@
       "ground_truths": [
         "6+"
       ],
-      "prediction": "I don't know.",
+      "prediction": "8-11 units",
       "em": false,
       "f1": 0,
       "retrieval_recall": true,
@@ -665,9 +665,9 @@
       "ground_truths": [
         "Wozniak Lounge"
       ],
-      "prediction": "Wozniak Lounge",
-      "em": true,
-      "f1": 1.0,
+      "prediction": "Hogan Room",
+      "em": false,
+      "f1": 0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -718,9 +718,9 @@
       "ground_truths": [
         "12"
       ],
-      "prediction": "12 semester units maximum.",
-      "em": false,
-      "f1": 0.4,
+      "prediction": "12",
+      "em": true,
+      "f1": 1.0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -776,8 +776,8 @@
       "ground_truths": [
         "A-"
       ],
-      "prediction": "A- or better.",
-      "em": false,
+      "prediction": "A-",
+      "em": true,
       "f1": 0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
@@ -811,9 +811,9 @@
       "ground_truths": [
         "B+"
       ],
-      "prediction": "B+ or better.",
-      "em": false,
-      "f1": 0.5,
+      "prediction": "B-",
+      "em": true,
+      "f1": 1.0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -902,9 +902,9 @@
       "ground_truths": [
         "6.0"
       ],
-      "prediction": "At least 6.0.",
-      "em": false,
-      "f1": 0.5,
+      "prediction": "6.0",
+      "em": true,
+      "f1": 1.0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -928,9 +928,9 @@
       "ground_truths": [
         "My Academics and Class Enrollment"
       ],
-      "prediction": "My Academics tab and Class Enrollment.",
+      "prediction": "CalCentral > My Academics tab and Class Enrollment",
       "em": false,
-      "f1": 0.9090909090909091,
+      "f1": 0.8333333333333333,
       "retrieval_recall": false,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [],
@@ -952,9 +952,9 @@
       "ground_truths": [
         "enrolled in classes and fees paid"
       ],
-      "prediction": "enrolled in classes and paid your fees.",
+      "prediction": "enrolled in at least 12 units and registered (or on Filing",
       "em": false,
-      "f1": 0.923076923076923,
+      "f1": 0.3529411764705882,
       "retrieval_recall": false,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [],
@@ -976,9 +976,9 @@
       "ground_truths": [
         "9 am - 12 pm and 1 pm - 4 pm"
       ],
-      "prediction": "9 am - 12 pm and 1 pm - 4 pm.",
-      "em": true,
-      "f1": 1.0,
+      "prediction": "9 am \u2013 12 pm and 1 pm \u2013 4 pm",
+      "em": false,
+      "f1": 0.9,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -1002,9 +1002,9 @@
       "ground_truths": [
         "387 Soda Hall"
       ],
-      "prediction": "387 Soda Hall",
-      "em": true,
-      "f1": 1.0,
+      "prediction": "253 Cory Hall",
+      "em": false,
+      "f1": 0.3333333333333333,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -1030,9 +1030,9 @@
       "ground_truths": [
         "Carissa Caloud"
       ],
-      "prediction": "Carissa Caloud",
-      "em": true,
-      "f1": 1.0,
+      "prediction": "grads-cs@berkeley.edu",
+      "em": false,
+      "f1": 0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -1056,9 +1056,9 @@
       "ground_truths": [
         "215 Cory"
       ],
-      "prediction": "215 Cory",
-      "em": true,
-      "f1": 1.0,
+      "prediction": "253 Cory",
+      "em": false,
+      "f1": 0.5,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -1084,9 +1084,9 @@
       "ground_truths": [
         "Kate Riley"
       ],
-      "prediction": "Sheila Humphreys",
-      "em": false,
-      "f1": 0,
+      "prediction": "Kate Riley",
+      "em": true,
+      "f1": 1.0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -1110,9 +1110,9 @@
       "ground_truths": [
         "Berkeley Excellence in Advising Awards"
       ],
-      "prediction": "Berkeley Excellence in Advising Awards",
-      "em": true,
-      "f1": 1.0,
+      "prediction": "Excellence in Advising & Student Services Award",
+      "em": false,
+      "f1": 0.5454545454545454,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -1136,7 +1136,7 @@
       "ground_truths": [
         "Eric Paulos"
       ],
-      "prediction": "Eric Paulos.",
+      "prediction": "Eric Paulos",
       "em": true,
       "f1": 1.0,
       "retrieval_recall": true,
@@ -1170,7 +1170,7 @@
         "Sarah E. Chasins",
         "John Wright"
       ],
-      "prediction": "Yuan Cao, Sarah E. Chasins, and John Wright.",
+      "prediction": "Yuan Cao, Sarah E. Chasins, and John Wright",
       "em": false,
       "f1": 0.5454545454545454,
       "retrieval_recall": true,
@@ -1234,7 +1234,7 @@
       "ground_truths": [
         "SDS 940"
       ],
-      "prediction": "I don't know.",
+      "prediction": "I don't know",
       "em": false,
       "f1": 0,
       "retrieval_recall": false,
@@ -1259,9 +1259,9 @@
         "Jessica Boles",
         "Armando Fox"
       ],
-      "prediction": "Professors Jessica Boles and Armando Fox.",
+      "prediction": "Prof. Jessica Boles and Prof. Armando Fox",
       "em": false,
-      "f1": 0.5,
+      "f1": 0.4444444444444445,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -1342,9 +1342,9 @@
         "Daniel Klein",
         "Stuart J. Russell"
       ],
-      "prediction": "Dan Klein and Stuart J Russell.",
+      "prediction": "Dan Klein",
       "em": false,
-      "f1": 0.6666666666666666,
+      "f1": 0.5,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -1368,7 +1368,7 @@
       "ground_truths": [
         "Jitendra Malik"
       ],
-      "prediction": "Jiantao Jiao",
+      "prediction": "Many professors listed have research interests that include Artificial Intelligence, Control, Intelligent Systems",
       "em": false,
       "f1": 0,
       "retrieval_recall": true,
@@ -1396,7 +1396,7 @@
       "ground_truths": [
         "Ken Goldberg"
       ],
-      "prediction": "I don't know",
+      "prediction": "Thomas Funkhouser",
       "em": false,
       "f1": 0,
       "retrieval_recall": true,
@@ -1422,9 +1422,9 @@
       "ground_truths": [
         "746 Sutardja Dai Hall"
       ],
-      "prediction": "746",
+      "prediction": "Not explicitly stated in the provided sources.",
       "em": false,
-      "f1": 0.4,
+      "f1": 0,
       "retrieval_recall": true,
       "gt_url_chunk_file": "corpus_clean_v5.jsonl:L370",
       "content_match_chunk_files": [
@@ -1533,9 +1533,9 @@
       "ground_truths": [
         "4.0 hours"
       ],
-      "prediction": "4.0 hours of laboratory per week.",
+      "prediction": "4",
       "em": false,
-      "f1": 0.5,
+      "f1": 0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -1560,9 +1560,9 @@
       "ground_truths": [
         "COMPSCI189/289A or equivalent"
       ],
-      "prediction": "COMPSCI189/289A or equivalent.",
-      "em": true,
-      "f1": 1.0,
+      "prediction": "CS 189/289A",
+      "em": false,
+      "f1": 0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -1586,7 +1586,7 @@
       "ground_truths": [
         "Center for Advancing Women in Technology"
       ],
-      "prediction": "I don't know.",
+      "prediction": "Hopper-Dean Foundation",
       "em": false,
       "f1": 0,
       "retrieval_recall": false,
@@ -1663,7 +1663,7 @@
       "ground_truths": [
         "Berkeley Citation"
       ],
-      "prediction": "The Berkeley Citation.",
+      "prediction": "Berkeley Citation",
       "em": true,
       "f1": 1.0,
       "retrieval_recall": true,
@@ -1692,7 +1692,7 @@
       "ground_truths": [
         "early stage investments in pioneering technologies"
       ],
-      "prediction": "Early stage investments in pioneering technologies.",
+      "prediction": "early stage investments in pioneering technologies",
       "em": true,
       "f1": 1.0,
       "retrieval_recall": true,
@@ -1719,9 +1719,9 @@
       "ground_truths": [
         "Equal Access Assistance (EAAA) program"
       ],
-      "prediction": "Equal Access Assistance (EAAA) program.",
-      "em": true,
-      "f1": 1.0,
+      "prediction": "Equal Access to Application Assistance Program",
+      "em": false,
+      "f1": 0.7272727272727272,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -1747,9 +1747,9 @@
       "ground_truths": [
         "SUPERB"
       ],
-      "prediction": "Summer Undergraduate Program in Engineering Research at Berkeley (SUPERB)",
-      "em": false,
-      "f1": 0.19999999999999998,
+      "prediction": "SUPERB",
+      "em": true,
+      "f1": 1.0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -1779,7 +1779,7 @@
       "ground_truths": [
         "January 29th, 2025"
       ],
-      "prediction": "January 29th, 2025.",
+      "prediction": "January 29th, 2025",
       "em": true,
       "f1": 1.0,
       "retrieval_recall": true,
@@ -1831,9 +1831,9 @@
       "ground_truths": [
         "The Big/Little Sister Mentoring Program"
       ],
-      "prediction": "CS Kickstart",
+      "prediction": "AWE Mentorship Program",
       "em": false,
-      "f1": 0,
+      "f1": 0.28571428571428575,
       "retrieval_recall": false,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [],
@@ -1855,7 +1855,7 @@
       "ground_truths": [
         "John R. Whinnery, 1972"
       ],
-      "prediction": "Chenming Hu",
+      "prediction": "Not specified",
       "em": false,
       "f1": 0,
       "retrieval_recall": false,
@@ -1879,9 +1879,9 @@
       "ground_truths": [
         "David A. Patterson"
       ],
-      "prediction": "David Patterson (2017)",
-      "em": false,
-      "f1": 0.8,
+      "prediction": "David Patterson",
+      "em": true,
+      "f1": 1.0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -1909,7 +1909,7 @@
       "ground_truths": [
         "Dan Garcia, 2025"
       ],
-      "prediction": "Dan Garcia, 2025.",
+      "prediction": "Dan Garcia 2025",
       "em": true,
       "f1": 1.0,
       "retrieval_recall": false,
@@ -1962,9 +1962,9 @@
       "ground_truths": [
         "Cloud at Cal"
       ],
-      "prediction": "Cloud at Cal",
-      "em": true,
-      "f1": 1.0,
+      "prediction": "Cloud at California",
+      "em": false,
+      "f1": 0.6666666666666666,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -1988,9 +1988,9 @@
       "ground_truths": [
         "Eta Kappa Nu (HKN)"
       ],
-      "prediction": "Eta Kappa Nu (HKN)",
-      "em": true,
-      "f1": 1.0,
+      "prediction": "HKN",
+      "em": false,
+      "f1": 0.4,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -2041,9 +2041,9 @@
       "ground_truths": [
         "Shafi Goldwasser"
       ],
-      "prediction": "Shafi Goldwasser",
-      "em": true,
-      "f1": 1.0,
+      "prediction": "Silvio Micali",
+      "em": false,
+      "f1": 0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -2094,7 +2094,7 @@
       "ground_truths": [
         "Andrea Goldsmith"
       ],
-      "prediction": "Andrea Goldsmith.",
+      "prediction": "Andrea Goldsmith",
       "em": true,
       "f1": 1.0,
       "retrieval_recall": true,
@@ -2126,7 +2126,7 @@
         "biological applications",
         "biological and in vivo imaging"
       ],
-      "prediction": "Biological and in vivo imaging.",
+      "prediction": "biological and in vivo imaging",
       "em": true,
       "f1": 1.0,
       "retrieval_recall": true,
@@ -2152,9 +2152,9 @@
       "ground_truths": [
         "The 5th Year M.S."
       ],
-      "prediction": "The 5th Year M.S.",
-      "em": true,
-      "f1": 1.0,
+      "prediction": "Five Year B.A./M.S. or 5th Year M.S",
+      "em": false,
+      "f1": 0.6,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -2212,7 +2212,7 @@
       "ground_truths": [
         "comprehensive review"
       ],
-      "prediction": "Comprehensive Review",
+      "prediction": "Comprehensive review",
       "em": true,
       "f1": 1.0,
       "retrieval_recall": true,
@@ -2266,9 +2266,9 @@
       "ground_truths": [
         "Faculty Vice Chair"
       ],
-      "prediction": "The Faculty Vice Chair.",
-      "em": true,
-      "f1": 1.0,
+      "prediction": "The CS Vice Chair and Director of CS Student Affairs",
+      "em": false,
+      "f1": 0.3333333333333333,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -2320,9 +2320,9 @@
       "ground_truths": [
         "one course"
       ],
-      "prediction": "at least one course.",
+      "prediction": "At least one",
       "em": false,
-      "f1": 0.6666666666666666,
+      "f1": 0.4,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -2346,9 +2346,9 @@
       "ground_truths": [
         "3000 characters"
       ],
-      "prediction": "3000 characters (or 1 page)",
-      "em": false,
-      "f1": 0.5714285714285715,
+      "prediction": "3000 characters",
+      "em": true,
+      "f1": 1.0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -2372,7 +2372,7 @@
       "ground_truths": [
         "Cecilia Rodriguez Aragon"
       ],
-      "prediction": "Cecilia Aragon.",
+      "prediction": "Cecilia Aragon",
       "em": false,
       "f1": 0.8,
       "retrieval_recall": true,
@@ -2399,7 +2399,7 @@
       "ground_truths": [
         "Sheila Morrin Humphreys"
       ],
-      "prediction": "Sheila Humphreys.",
+      "prediction": "Sheila Humphreys",
       "em": false,
       "f1": 0.8,
       "retrieval_recall": true,
@@ -2425,9 +2425,9 @@
       "ground_truths": [
         "Berkeley Artificial Intelligence Research Lab"
       ],
-      "prediction": "RISELab.",
+      "prediction": "Sky Computing Lab",
       "em": false,
-      "f1": 0,
+      "f1": 0.25,
       "retrieval_recall": false,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [],
@@ -2449,7 +2449,7 @@
       "ground_truths": [
         "Joseph M. Hellerstein"
       ],
-      "prediction": "I don't know.",
+      "prediction": "I don't know",
       "em": false,
       "f1": 0,
       "retrieval_recall": false,
@@ -2473,7 +2473,7 @@
       "ground_truths": [
         "Apache Spark"
       ],
-      "prediction": "Apache Spark.",
+      "prediction": "Apache Spark",
       "em": true,
       "f1": 1.0,
       "retrieval_recall": true,
@@ -2529,7 +2529,7 @@
       "ground_truths": [
         "EECS Joint Colloquium"
       ],
-      "prediction": "EECS Colloquium.",
+      "prediction": "EECS Colloquium",
       "em": false,
       "f1": 0.8,
       "retrieval_recall": false,
@@ -2553,7 +2553,7 @@
       "ground_truths": [
         "faculty-initiated research project"
       ],
-      "prediction": "Faculty-initiated research project.",
+      "prediction": "Faculty-initiated research project",
       "em": true,
       "f1": 1.0,
       "retrieval_recall": true,
@@ -2580,7 +2580,7 @@
       "ground_truths": [
         "Ph.D. Dissertations"
       ],
-      "prediction": "I don't know.",
+      "prediction": "Research Archives",
       "em": false,
       "f1": 0,
       "retrieval_recall": false,
@@ -2604,9 +2604,9 @@
       "ground_truths": [
         "Berkeley Laboratory for Usable and Experimental Security"
       ],
-      "prediction": "Berkeley Laboratory for Usable and Experimental Security",
-      "em": true,
-      "f1": 1.0,
+      "prediction": "RDI (Berkeley Center for Responsible, Decentralized Intelligence)",
+      "em": false,
+      "f1": 0.2857142857142857,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -2630,9 +2630,9 @@
       "ground_truths": [
         "Berkeley Center for Responsible, Decentralized Intelligence"
       ],
-      "prediction": "Berkeley Center for Responsible, Decentralized Intelligence (RDI)",
+      "prediction": "RDI",
       "em": false,
-      "f1": 0.923076923076923,
+      "f1": 0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -2660,9 +2660,9 @@
       "ground_truths": [
         "Agile Robotics And Perception Lab"
       ],
-      "prediction": "Agile Robotics And Perception Lab (ARPL)",
+      "prediction": "Arts Research Center (ARC)",
       "em": false,
-      "f1": 0.9090909090909091,
+      "f1": 0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -2686,7 +2686,7 @@
       "ground_truths": [
         "HP Auditorium, 306 Soda Hall"
       ],
-      "prediction": "I don't know.",
+      "prediction": "I don't know",
       "em": false,
       "f1": 0,
       "retrieval_recall": false,
@@ -2710,9 +2710,9 @@
       "ground_truths": [
         "four"
       ],
-      "prediction": "Four business days.",
-      "em": false,
-      "f1": 0.5,
+      "prediction": "four",
+      "em": true,
+      "f1": 1.0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -2740,9 +2740,9 @@
       "ground_truths": [
         "Master of Science (M.S.)"
       ],
-      "prediction": "The 2-year M.S. degree in EECS.",
+      "prediction": "M.S.",
       "em": false,
-      "f1": 0.22222222222222224,
+      "f1": 0.4,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -2769,9 +2769,9 @@
       "ground_truths": [
         "3.0"
       ],
-      "prediction": "3.0 (B)",
-      "em": false,
-      "f1": 0.6666666666666666,
+      "prediction": "3.0",
+      "em": true,
+      "f1": 1.0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -2802,9 +2802,9 @@
       "ground_truths": [
         "December 1"
       ],
-      "prediction": "December 1",
-      "em": true,
-      "f1": 1.0,
+      "prediction": "December 16th, 2024 at 8:59 pm PST",
+      "em": false,
+      "f1": 0.22222222222222224,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -2829,7 +2829,7 @@
       "ground_truths": [
         "GRE"
       ],
-      "prediction": "GRE scores.",
+      "prediction": "GRE scores",
       "em": false,
       "f1": 0.6666666666666666,
       "retrieval_recall": true,
@@ -2863,9 +2863,9 @@
       "ground_truths": [
         "Edward Chang & Gopala Anumanchipalli"
       ],
-      "prediction": "Edward Chang & Gopala Anumanchipalli",
-      "em": true,
-      "f1": 1.0,
+      "prediction": "Edward Chang and Gopala Anumanchipalli",
+      "em": false,
+      "f1": 0.888888888888889,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -2889,9 +2889,9 @@
       "ground_truths": [
         "EE 42"
       ],
-      "prediction": "EE 117",
+      "prediction": "I don't know",
       "em": false,
-      "f1": 0.5,
+      "f1": 0,
       "retrieval_recall": false,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [],
@@ -2913,9 +2913,9 @@
       "ground_truths": [
         "EE 126"
       ],
-      "prediction": "EECS 126.",
-      "em": false,
-      "f1": 0.5,
+      "prediction": "EE 126",
+      "em": true,
+      "f1": 1.0,
       "retrieval_recall": true,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [
@@ -2939,7 +2939,7 @@
       "ground_truths": [
         "EE 108"
       ],
-      "prediction": "EE 108.",
+      "prediction": "EE 108",
       "em": true,
       "f1": 1.0,
       "retrieval_recall": true,
@@ -2965,7 +2965,7 @@
       "ground_truths": [
         "Apple"
       ],
-      "prediction": "Apple.",
+      "prediction": "Apple",
       "em": true,
       "f1": 1.0,
       "retrieval_recall": true,
@@ -2998,7 +2998,7 @@
       "ground_truths": [
         "Rikky Muller"
       ],
-      "prediction": "Rikky Muller.",
+      "prediction": "Rikky Muller",
       "em": true,
       "f1": 1.0,
       "retrieval_recall": true,
@@ -3024,7 +3024,7 @@
       "ground_truths": [
         "EE 194"
       ],
-      "prediction": "EE 194.",
+      "prediction": "EE 194",
       "em": true,
       "f1": 1.0,
       "retrieval_recall": true,
@@ -3083,7 +3083,7 @@
       "ground_truths": [
         "two"
       ],
-      "prediction": "Up to two-semesters.",
+      "prediction": "up to two-semesters",
       "em": false,
       "f1": 0,
       "retrieval_recall": true,
