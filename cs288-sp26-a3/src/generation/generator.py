@@ -30,7 +30,7 @@ class Generator:
             query=prompt,
             system_prompt=system_prompt,
             model=self.model,
-            max_tokens=128,
+            max_tokens=16,
             temperature=0.0
         )
         return response
