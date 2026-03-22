@@ -5,12 +5,13 @@ import numpy as np
 import pickle
 import re
 from sentence_transformers import SentenceTransformer, CrossEncoder
+from src.llm import call_llm
 
 def tokenize(text):
     return text.lower().split()
 
 class Retriever:
-    def __init__(self, index_dir, model_name="all-MiniLM-L12-v2"):
+    def __init__(self, index_dir, model_name="BAAI/bge-base-en-v1.5"):
         self.model = SentenceTransformer(model_name)
         # Tiny but powerful re-ranker (Fits in 4GB RAM)
         self.reranker = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')
@@ -44,9 +45,24 @@ class Retriever:
                     boost_scores[i] += 0.5 # Metadata match boost
         return boost_scores
 
+    def hypothetical_answer(self, query):
+        """HyDE: generate a short hypothetical answer to embed for dense retrieval."""
+        try:
+            return call_llm(
+                query=f"Question: {query}\nWrite a short factual answer as if you know it. 1-2 sentences only.",
+                system_prompt="You are a knowledgeable Berkeley EECS assistant. Answer concisely with facts.",
+                model="meta-llama/llama-3.1-8b-instruct",
+                max_tokens=64,
+                temperature=0,
+            )
+        except Exception:
+            return query  # fallback to original query on failure
+
     def retrieve(self, query, k=10):
         # 1. Broad Hybrid Retrieval
-        dense_indices = self.retrieve_dense(query, k=40)
+        # HyDE: embed a hypothetical answer for dense retrieval; BM25 uses original query
+        hyp = self.hypothetical_answer(query)
+        dense_indices = self.retrieve_dense(hyp, k=40)
         bm25_indices = self.retrieve_bm25(query, k=40)
 
         # 2. RRF Fusion

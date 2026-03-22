@@ -90,7 +90,7 @@ def iter_documents(data_source):
         with open(file_path, 'r', encoding='utf-8') as f:
             yield json.load(f), os.path.basename(file_path)
 
-def build_index(data_dir, output_dir, model_name="all-MiniLM-L12-v2"):
+def build_index(data_dir, output_dir, model_name="BAAI/bge-base-en-v1.5"):
     os.makedirs(output_dir, exist_ok=True)
     
     # Check if augmented data exists, otherwise fallback to processed
@@ -164,7 +164,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Build hybrid retrieval index from JSON pages or JSONL corpus.")
     parser.add_argument("--data", default="data/processed", help="Input data source (directory of .json or a .jsonl file)")
     parser.add_argument("--output", default="models/retrieval", help="Output index directory")
-    parser.add_argument("--model", default="all-MiniLM-L12-v2", help="SentenceTransformer embedding model")
+    parser.add_argument("--model", default="BAAI/bge-base-en-v1.5", help="SentenceTransformer embedding model")
     args = parser.parse_args()
 
     build_index(args.data, args.output, model_name=args.model)
