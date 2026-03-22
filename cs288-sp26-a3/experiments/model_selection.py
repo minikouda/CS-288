@@ -106,11 +106,11 @@ def main():
     # Models to test
     models = [
         "meta-llama/llama-3.1-8b-instruct",
-        "qwen/qwen-2.5-7b-instruct"
+        # "qwen/qwen-2.5-7b-instruct"
     ]
     
     # K values to test
-    k_values = [5, 10]
+    k_values = list(range(8,13))
     
     output_file = "experiments/model_selection_results.csv"
     all_details = {}
