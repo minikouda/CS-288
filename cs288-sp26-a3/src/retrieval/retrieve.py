@@ -46,33 +46,41 @@ class Retriever:
 
     def retrieve(self, query, k=10):
         # 1. Broad Hybrid Retrieval
-        dense_indices = self.retrieve_dense(query, k=30)
-        bm25_indices = self.retrieve_bm25(query, k=30)
-        
+        dense_indices = self.retrieve_dense(query, k=40)
+        bm25_indices = self.retrieve_bm25(query, k=40)
+
         # 2. RRF Fusion
         rrf_scores = {}
         for rank, idx in enumerate(dense_indices):
             rrf_scores[idx] = rrf_scores.get(idx, 0) + 1.0 / (60 + rank)
         for rank, idx in enumerate(bm25_indices):
             rrf_scores[idx] = rrf_scores.get(idx, 0) + 1.0 / (60 + rank)
-            
-        # Select top 20 candidates for re-ranking
-        candidate_indices = sorted(rrf_scores.keys(), key=lambda x: rrf_scores[x], reverse=True)[:20]
+
+        # Select top 25 candidates for re-ranking
+        candidate_indices = sorted(rrf_scores.keys(), key=lambda x: rrf_scores[x], reverse=True)[:25]
         candidate_texts = [self.chunks[idx] for idx in candidate_indices]
         candidate_meta = [self.metadata[idx] for idx in candidate_indices]
-        
+
         # 3. Cross-Encoder Re-ranking (Semantic relevance)
         pairs = [[query, text] for text in candidate_texts]
         rerank_scores = self.reranker.predict(pairs)
-        
+
         # 4. Keyword Boosting
         boosts = self.keyword_boost(query, candidate_meta)
         final_scores = rerank_scores + boosts
-        
-        # 5. Rank and return top k
+
+        # 5. Rank and deduplicate, then return top k unique chunks
         ranked_results = sorted(zip(candidate_indices, final_scores), key=lambda x: x[1], reverse=True)
-        final_indices = [idx for idx, score in ranked_results[:k]]
-        
+        seen_content = set()
+        final_indices = []
+        for idx, score in ranked_results:
+            content = self.chunks[idx]
+            if content not in seen_content:
+                seen_content.add(content)
+                final_indices.append(idx)
+            if len(final_indices) == k:
+                break
+
         results = []
         for idx in final_indices:
             results.append({
