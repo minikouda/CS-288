@@ -30,7 +30,7 @@ def main():
             
         # Retrieve
         try:
-            context_chunks = retriever.retrieve(query, k=12)
+            context_chunks = retriever.retrieve(query, k=20)
             # Generate
             prediction = generator.generate(query, context_chunks)
         except Exception as e:
