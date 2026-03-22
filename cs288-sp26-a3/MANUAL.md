@@ -228,11 +228,42 @@ python main.py data/questions.txt predictions.txt
 
 ## 6. Step 4 — Evaluate
 
-Runs the full RAG pipeline against `data/reference.jsonl` and reports Exact Match, F1, and Retrieval Recall.
+Runs the full RAG pipeline against a reference file and reports Exact Match, F1, and Retrieval Recall.
+
+### Arguments
+
+| Argument | Default | Description |
+|---|---|---|
+| `--reference` | `data/hidden_dev.jsonl` | Path to first (or only) reference JSONL file |
+| `--reference2` | _(none)_ | Path to second reference JSONL file; when provided, both are evaluated and combined totals are reported |
+| `--index` | `models/retrieval` | Path to the retrieval index directory |
+| `--k` | `10` | Number of chunks to retrieve per query |
+
+### Usage examples
 
 ```bash
-python -m experiments.evaluate_rag
+# Default — hidden_dev with the standard index
+python experiments/evaluate_rag.py
+
+# Single file, custom index
+python experiments/evaluate_rag.py \
+    --reference data/reference.jsonl \
+    --index models/retrieval_bs
+
+# Both reference sets, new corpus, report combined totals
+python experiments/evaluate_rag.py \
+    --reference data/reference.jsonl \
+    --reference2 data/hidden_dev.jsonl \
+    --index models/retrieval_bs
+
+# Increase retrieved chunks
+python experiments/evaluate_rag.py \
+    --reference data/hidden_dev.jsonl \
+    --index models/retrieval \
+    --k 15
 ```
+
+When `--reference2` is provided the script prints per-file metrics followed by combined totals across all samples.
 
 ### Reference file format
 
@@ -277,7 +308,7 @@ Results are printed to stdout and saved to `experiments/last_eval_results.json`:
 }
 ```
 
-> **Note:** `evaluate_rag.py` uses `models/retrieval` as the index path, which is the current active index.
+> **Note:** The default index is `models/retrieval`. Use `--index` to point at any other built index (e.g. `models/retrieval_bs`).
 
 ---
 
@@ -287,8 +318,8 @@ Results are printed to stdout and saved to `experiments/last_eval_results.json`:
 |-----------------------------------|-----------------------|------------------------------------------|
 | `main.py` line 16                 | `Retriever("models/retrieval")` | Index used for batch predictions  |
 | `main.py` line 17                 | `Generator(model=...)` | LLM model for predictions               |
-| `experiments/evaluate_rag.py` line 56 | `Retriever("models/retrieval")` | Index used for evaluation         |
-| `experiments/evaluate_rag.py` line 57 | `Generator(model=...)` | LLM model for evaluation               |
+| `experiments/evaluate_rag.py` | `--index` argument (default `models/retrieval`) | Index used for evaluation |
+| `experiments/evaluate_rag.py` | `--reference` / `--reference2` arguments | Reference file(s) for evaluation |
 | `src/retrieval/retrieve.py` line 47 | `k=10` default       | Number of final chunks returned          |
 | `src/retrieval/build_index.py` line 127 | `chunk_size`, `overlap` | Chunking parameters               |
 
