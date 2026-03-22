@@ -101,6 +101,7 @@
         "No"
       ],
       "prediction": "No",
+      "prediction": "No",
       "em": true,
       "f1": 1.0,
       "retrieval_recall": true,
@@ -246,6 +247,7 @@
       "ground_truths": [
         "Yes"
       ],
+      "prediction": "Yes",
       "prediction": "Yes",
       "em": true,
       "f1": 1.0,
@@ -1028,6 +1030,7 @@
         "Electric substation design"
       ],
       "prediction": "I don't know",
+      "prediction": "I don't know",
       "em": false,
       "f1": 0,
       "retrieval_recall": false,
@@ -1627,7 +1630,7 @@
       ],
       "prediction": "I don't know",
       "em": false,
-      "f1": 0,
+      "f1": 0.28571428571428575,
       "retrieval_recall": false,
       "gt_url_chunk_file": null,
       "content_match_chunk_files": [],
