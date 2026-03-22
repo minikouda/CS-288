@@ -1,4 +1,4 @@
-timestamp,reference,index,k,n_samples,em,f1,retrieval_recall
+timestamp,reference,index,k,n_samples,em,f1,retrieval_recall,Gradescope
 2026-03-21 22:57:53,data/hidden_dev.jsonl,models/retrieval_total,11,100,42.00,50.05,72.00
 2026-03-21 23:02:15,data/hidden_dev.jsonl,models/retrieval_total,10,100,38.00,47.18,67.00
 2026-03-21 23:07:41,data/hidden_dev.jsonl,models/retrieval,10,100,49.00,56.56,79.00
@@ -8,4 +8,6 @@ timestamp,reference,index,k,n_samples,em,f1,retrieval_recall
 2026-03-21 23:44:02,data/hidden_dev.jsonl,models/retrieval_total,10,100,43.00,51.60,67.00
 2026-03-21 23:48:30,data/hidden_dev.jsonl,models/retrieval,10,100,52.00,59.95,79.00
 2026-03-21 23:54:12,data/hidden_dev.jsonl,models/retrieval,11,100,52.00,60.06,80.00
-2026-03-21 23:58:52,data/hidden_dev.jsonl,models/retrieval,12,100,56.00,62.26,80.00
+2026-03-21 23:58:52,data/hidden_dev.jsonl,models/retrieval,12,100,56.00,62.26,80.00 # Change k to 12, 55.764
+2026-03-22 13:35:38,data/hidden_dev.jsonl,models/retrieval,12,100,52.00,59.23,81.00 # Remove the duplicated chunks and reduce over-refusal in the prompt; enlarge the retrivla result, 55.029
+2026-03-22 13:48:29,data/hidden_dev.jsonl,models/retrieval,12,100,52.00,59.95,81.00 # Refine the `how many' type question; offer longer context for the llm to count, 
