@@ -7,3 +7,7 @@ __pycache__/
 .vscode/
 
 legacy/
+data/raw.old/
+models/legacy/
+RAG_IMPLEMENTATION_STATUS.md
+DATA_ISSUES.md
