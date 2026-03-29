@@ -127,7 +127,7 @@ cs288-sp26-a3/
 │   └── CS288_a3_report.pdf     # Full written report
 ├── main.py                     # Batch prediction entrypoint
 ├── run.sh                      # Autograder entrypoint
-├── MANUAL.md                   # Full step-by-step usage guide
+├── MANUAL.md                   # Full usage guide
 └── requirements.txt
 ```
 
