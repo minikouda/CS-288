@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Berkeley EECS RAG — Demo</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --surface2: #21262d;
+      --border: #30363d;
+      --blue: #58a6ff;
+      --green: #3fb950;
+      --orange: #f0883e;
+      --purple: #bc8cff;
+      --yellow: #e3b341;
+      --red: #f85149;
+      --text: #e6edf3;
+      --text-muted: #8b949e;
+      --berkeley-blue: #003262;
+      --berkeley-gold: #fdb515;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, var(--berkeley-blue) 0%, #005a9c 100%);
+      border-bottom: 3px solid var(--berkeley-gold);
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+    header .badge {
+      display: inline-block;
+      background: rgba(253,181,21,0.15);
+      border: 1px solid var(--berkeley-gold);
+      color: var(--berkeley-gold);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+    header h1 {
+      font-size: clamp(24px, 5vw, 42px);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    header h1 span { color: var(--berkeley-gold); }
+    header p {
+      color: rgba(255,255,255,0.75);
+      font-size: 16px;
+      max-width: 600px;
+      margin: 0 auto 24px;
+    }
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .stat {
+      text-align: center;
+    }
+    .stat-val {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--berkeley-gold);
+    }
+    .stat-label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.6);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── Layout ── */
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    section { margin-bottom: 64px; }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    h2::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ── Pipeline ── */
+    .pipeline {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+      overflow-x: auto;
+      padding-bottom: 8px;
+    }
+    .pipe-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 130px;
+    }
+    .pipe-group-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    .pipe-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 12px;
+      text-align: center;
+      width: 120px;
+      transition: border-color 0.2s, transform 0.2s;
+      cursor: default;
+      position: relative;
+    }
+    .pipe-card:hover {
+      transform: translateY(-3px);
+    }
+    .pipe-card .icon {
+      font-size: 24px;
+      margin-bottom: 6px;
+    }
+    .pipe-card .name {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .pipe-card .detail {
+      font-size: 10px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* color themes for pipeline stages */
+    .pipe-card.blue  { border-color: var(--blue);   } .pipe-card.blue  .icon { color: var(--blue); }
+    .pipe-card.green { border-color: var(--green);  } .pipe-card.green .icon { color: var(--green); }
+    .pipe-card.orange{ border-color: var(--orange); } .pipe-card.orange .icon { color: var(--orange); }
+    .pipe-card.purple{ border-color: var(--purple); } .pipe-card.purple .icon { color: var(--purple); }
+    .pipe-card.yellow{ border-color: var(--yellow); } .pipe-card.yellow .icon { color: var(--yellow); }
+
+    .pipe-arrow {
+      display: flex;
+      align-items: center;
+      padding: 0 4px;
+      margin-top: 32px; /* align with card center */
+      color: var(--text-muted);
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    /* Sub-steps inside a group */
+    .pipe-sub {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-top: 6px;
+    }
+    .sub-step {
+      background: var(--surface2);
+      border-radius: 6px;
+      padding: 5px 8px;
+      font-size: 10px;
+      color: var(--text-muted);
+      text-align: left;
+      width: 120px;
+      border-left: 2px solid var(--border);
+    }
+    .sub-step.active { border-left-color: var(--blue); color: var(--text); }
+
+    /* ── Retrieval detail box ── */
+    .retrieval-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 12px;
+    }
+    .retrieval-box h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 16px;
+    }
+    .ret-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+    }
+    .ret-card {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px;
+    }
+    .ret-card .ret-title {
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .ret-card .ret-desc {
+      font-size: 11px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .ret-card.dense .ret-title { color: var(--blue); }
+    .ret-card.sparse .ret-title { color: var(--orange); }
+    .ret-card.hyde .ret-title { color: var(--purple); }
+    .ret-card.rerank .ret-title { color: var(--green); }
+    .ret-card.boost .ret-title { color: var(--yellow); }
+
+    /* ── Demo section ── */
+    .demo-container {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .demo-header {
+      background: var(--surface2);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .demo-header span { color: var(--text); }
+    .demo-body { padding: 24px; }
+
+    .example-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .chip {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 12px;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .chip:hover, .chip.active {
+      border-color: var(--blue);
+      color: var(--blue);
+      background: rgba(88,166,255,0.08);
+    }
+
+    .qa-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .qa-card {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    .qa-card:hover { border-color: var(--blue); }
+    .qa-q {
+      padding: 14px 16px;
+      font-size: 14px;
+      color: var(--text);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .qa-q::before {
+      content: 'Q';
+      background: var(--blue);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      width: 18px;
+      height: 18px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .qa-a {
+      padding: 14px 16px;
+      font-size: 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .qa-a::before {
+      content: 'A';
+      background: var(--green);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      width: 18px;
+      height: 18px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .qa-answer { color: var(--green); font-weight: 600; }
+    .qa-source {
+      margin-top: 6px;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+    .qa-source a { color: var(--blue); text-decoration: none; }
+    .qa-source a:hover { text-decoration: underline; }
+
+    /* Pipeline trace animation */
+    .trace-box {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 16px;
+      line-height: 1.8;
+    }
+    .trace-box .step { display: flex; gap: 10px; }
+    .trace-box .step-num { color: var(--blue); min-width: 20px; }
+    .trace-box .step-label { color: var(--text-muted); min-width: 140px; }
+    .trace-box .step-val { color: var(--text); }
+    .trace-box .step-val.green { color: var(--green); }
+    .trace-box .step-val.orange { color: var(--orange); }
+    .trace-box .step-val.purple { color: var(--purple); }
+
+    /* ── Performance ── */
+    .perf-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .perf-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .perf-card .metric-name {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+    .perf-card .metric-val {
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .perf-card .metric-val.gold { color: var(--berkeley-gold); }
+    .perf-card .metric-val.green { color: var(--green); }
+    .perf-card .metric-val.blue { color: var(--blue); }
+    .progress-bar {
+      background: var(--surface2);
+      border-radius: 4px;
+      height: 6px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 1.5s cubic-bezier(0.4,0,0.2,1);
+    }
+    .fill-gold { background: var(--berkeley-gold); }
+    .fill-green { background: var(--green); }
+    .fill-blue { background: var(--blue); }
+
+    .ablation-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    .ablation-table th {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      text-align: left;
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+    .ablation-table td {
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      color: var(--text);
+    }
+    .ablation-table tr:last-child td { color: var(--green); font-weight: 600; }
+    .ablation-table tr:hover td { background: var(--surface2); }
+    .ablation-table td.highlight { color: var(--berkeley-gold); }
+
+    /* ── Tech stack ── */
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 10px;
+    }
+    .stack-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-size: 12px;
+    }
+    .stack-item .stack-role {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+    .stack-item .stack-name { font-weight: 600; color: var(--blue); }
+
+    /* ── Responsive ── */
+    @media (max-width: 700px) {
+      .pipeline { flex-direction: column; align-items: flex-start; }
+      .pipe-arrow { transform: rotate(90deg); margin: 4px auto; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════ HEADER ═══════════════ -->
+<header>
+  <div class="badge">CS 288 · Spring 2026</div>
+  <h1>Berkeley EECS <span>RAG</span> System</h1>
+  <p>Retrieval-Augmented Generation for factual Q&amp;A over UC Berkeley EECS web content — combining dense, sparse, and re-ranking signals.</p>
+  <div class="stats-row">
+    <div class="stat"><div class="stat-val">21K+</div><div class="stat-label">Chunks Indexed</div></div>
+    <div class="stat"><div class="stat-val">11,349</div><div class="stat-label">Source Documents</div></div>
+    <div class="stat"><div class="stat-val">61%</div><div class="stat-label">F1 Score</div></div>
+    <div class="stat"><div class="stat-val">88%</div><div class="stat-label">Retrieval Recall</div></div>
+    <div class="stat"><div class="stat-val">112</div><div class="stat-label">Gold Q&amp;A Pairs</div></div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ═══════════════ DATA PIPELINE ═══════════════ -->
+  <section>
+    <h2>Data Pipeline</h2>
+    <div class="pipeline">
+
+      <!-- Stage 1: Crawl -->
+      <div class="pipe-group">
+        <div class="pipe-group-label">Ingest</div>
+        <div class="pipe-card blue">
+          <div class="icon">🕷️</div>
+          <div class="name">Web Crawler</div>
+          <div class="detail">Async aiohttp<br/>eecs.berkeley.edu</div>
+        </div>
+        <div class="pipe-sub">
+          <div class="sub-step active">Rate-limit guard</div>
+          <div class="sub-step">WAF-aware delays</div>
+          <div class="sub-step">~11K pages</div>
+        </div>
+      </div>
+      <div class="pipe-arrow">→</div>
+
+      <!-- Stage 2: Clean -->
+      <div class="pipe-group">
+        <div class="pipe-group-label">Clean</div>
+        <div class="pipe-card orange">
+          <div class="icon">🧹</div>
+          <div class="name">LLM Cleaner</div>
+          <div class="detail">Remove nav, boilerplate, footers</div>
+        </div>
+        <div class="pipe-sub">
+          <div class="sub-step active">Markdown output</div>
+          <div class="sub-step">Deduplication</div>
+          <div class="sub-step">JSONL corpus</div>
+        </div>
+      </div>
+      <div class="pipe-arrow">→</div>
+
+      <!-- Stage 3: Chunk -->
+      <div class="pipe-group">
+        <div class="pipe-group-label">Chunk</div>
+        <div class="pipe-card yellow">
+          <div class="icon">✂️</div>
+          <div class="name">Chunker</div>
+          <div class="detail">Recursive semantic split</div>
+        </div>
+        <div class="pipe-sub">
+          <div class="sub-step active">size = 1,000</div>
+          <div class="sub-step">overlap = 200</div>
+          <div class="sub-step">→ 21K+ chunks</div>
+        </div>
+      </div>
+      <div class="pipe-arrow">→</div>
+
+      <!-- Stage 4: Index -->
+      <div class="pipe-group">
+        <div class="pipe-group-label">Index</div>
+        <div class="pipe-card purple">
+          <div class="icon">🗄️</div>
+          <div class="name">Dual Index</div>
+          <div class="detail">FAISS + BM25 in parallel</div>
+        </div>
+        <div class="pipe-sub">
+          <div class="sub-step active">BGE-base-en-v1.5</div>
+          <div class="sub-step">BM25Okapi</div>
+          <div class="sub-step">62 MB FAISS</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════ QUERY PIPELINE ═══════════════ -->
+  <section>
+    <h2>Query Pipeline</h2>
+    <div class="pipeline">
+
+      <div class="pipe-group">
+        <div class="pipe-group-label">Input</div>
+        <div class="pipe-card blue">
+          <div class="icon">❓</div>
+          <div class="name">Question</div>
+          <div class="detail">Free-text natural language</div>
+        </div>
+      </div>
+      <div class="pipe-arrow">→</div>
+
+      <div class="pipe-group">
+        <div class="pipe-group-label">Expand</div>
+        <div class="pipe-card purple">
+          <div class="icon">✨</div>
+          <div class="name">HyDE</div>
+          <div class="detail">Hypothetical document embedding</div>
+        </div>
+        <div class="pipe-sub">
+          <div class="sub-step active">LLM drafts answer</div>
+          <div class="sub-step">Embed answer text</div>
+        </div>
+      </div>
+      <div class="pipe-arrow">→</div>
+
+      <div class="pipe-group">
+        <div class="pipe-group-label">Retrieve</div>
+        <div class="pipe-card orange">
+          <div class="icon">🔍</div>
+          <div class="name">Hybrid Search</div>
+          <div class="detail">Dense k=40 + BM25 k=40</div>
+        </div>
+        <div class="pipe-sub">
+          <div class="sub-step active">RRF fusion</div>
+          <div class="sub-step">→ top 25</div>
+        </div>
+      </div>
+      <div class="pipe-arrow">→</div>
+
+      <div class="pipe-group">
+        <div class="pipe-group-label">Re-rank</div>
+        <div class="pipe-card green">
+          <div class="icon">🏆</div>
+          <div class="name">Cross-Encoder</div>
+          <div class="detail">ms-marco-MiniLM-L-6-v2</div>
+        </div>
+        <div class="pipe-sub">
+          <div class="sub-step active">Keyword boost</div>
+          <div class="sub-step">→ top k=20</div>
+        </div>
+      </div>
+      <div class="pipe-arrow">→</div>
+
+      <div class="pipe-group">
+        <div class="pipe-group-label">Generate</div>
+        <div class="pipe-card yellow">
+          <div class="icon">🤖</div>
+          <div class="name">LLM Answer</div>
+          <div class="detail">Llama 3.1 8B via OpenRouter</div>
+        </div>
+        <div class="pipe-sub">
+          <div class="sub-step active">Extractive only</div>
+          <div class="sub-step">No hallucination</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Retrieval detail -->
+    <div class="retrieval-box" style="margin-top:20px;">
+      <h3>Retrieval Strategy Details</h3>
+      <div class="ret-grid">
+        <div class="ret-card hyde">
+          <div class="ret-title">HyDE Query Expansion</div>
+          <div class="ret-desc">Generate a hypothetical answer document, then embed it. Bridges the phrasing gap between questions ("Who is X?") and corpus documents ("X is a professor of…").</div>
+        </div>
+        <div class="ret-card dense">
+          <div class="ret-title">Dense Retrieval (FAISS)</div>
+          <div class="ret-desc">BGE-base-en-v1.5 embeddings in a FAISS Flat L2 index. Captures semantic similarity even for paraphrased queries. Returns k=40 candidates.</div>
+        </div>
+        <div class="ret-card sparse">
+          <div class="ret-title">Sparse Retrieval (BM25)</div>
+          <div class="ret-desc">BM25Okapi over tokenized chunks. Critical for exact-match queries: course codes like CS188, faculty names, URLs. Returns k=40 candidates.</div>
+        </div>
+        <div class="ret-card rerank">
+          <div class="ret-title">RRF + Cross-Encoder</div>
+          <div class="ret-desc">Reciprocal Rank Fusion merges the two ranked lists. Cross-encoder (ms-marco-MiniLM-L-6-v2) scores each candidate against the query; top 20 pass to the LLM.</div>
+        </div>
+        <div class="ret-card boost">
+          <div class="ret-title">Keyword Boosting</div>
+          <div class="ret-desc">Regex detects person names and course codes in the query. Matching chunks receive +0.5 score bonus — low-cost, high-impact for structured lookups.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ Q&A DEMO ═══════════════ -->
+  <section>
+    <h2>Q&amp;A Examples</h2>
+    <div class="demo-container">
+      <div class="demo-header">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5.5" stroke="#3fb950" stroke-width="1"/><circle cx="6" cy="6" r="2" fill="#3fb950"/></svg>
+        <span>Gold Evaluation Set</span> — 112 hand-labeled Q&amp;A pairs from EECS web content
+      </div>
+      <div class="demo-body">
+        <div class="example-chips" id="filterChips">
+          <div class="chip active" onclick="filterCards('all', this)">All</div>
+          <div class="chip" onclick="filterCards('faculty', this)">Faculty</div>
+          <div class="chip" onclick="filterCards('courses', this)">Courses</div>
+          <div class="chip" onclick="filterCards('policy', this)">Policy</div>
+          <div class="chip" onclick="filterCards('research', this)">Research</div>
+          <div class="chip" onclick="filterCards('awards', this)">Awards</div>
+        </div>
+
+        <div class="qa-cards" id="qaCards">
+
+          <div class="qa-card" data-cat="faculty">
+            <div class="qa-q">Where did Dan Klein get his PhD?</div>
+            <div class="qa-a">
+              <div>
+                <span class="qa-answer">Stanford University</span>
+                <div class="qa-source">Source: <a href="https://eecs.berkeley.edu/book/faculty/" target="_blank">eecs.berkeley.edu/book/faculty</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="qa-card" data-cat="faculty">
+            <div class="qa-q">How many courses is Dan Garcia scheduled to teach in Spring 2026 according to the EECS teaching faculty page?</div>
+            <div class="qa-a">
+              <div>
+                <span class="qa-answer">4</span>
+                <div class="qa-source">Source: <a href="https://www2.eecs.berkeley.edu/Faculty/Lists/teaching.html" target="_blank">www2.eecs.berkeley.edu/Faculty/Lists/teaching.html</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="qa-card" data-cat="courses">
+            <div class="qa-q">How many COMPSCI 198 group courses are offered in the CS Spring 2026 schedule?</div>
+            <div class="qa-a">
+              <div>
+                <span class="qa-answer">5</span>
+                <div class="qa-source">Source: <a href="https://www2.eecs.berkeley.edu/Scheduling/CS/schedule.html" target="_blank">www2.eecs.berkeley.edu/Scheduling/CS</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="qa-card" data-cat="policy">
+            <div class="qa-q">For transfer students admitted in Fall 2024 onward who did not select CS on their UC Berkeley application, are they allowed to change their major to CS?</div>
+            <div class="qa-a">
+              <div>
+                <span class="qa-answer">No</span>
+                <div class="qa-source">Source: <a href="https://eecs.berkeley.edu/resources/undergrads/cs/how-to-declare-cs/" target="_blank">eecs.berkeley.edu — How to Declare CS</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="qa-card" data-cat="policy">
+            <div class="qa-q">If a student is taking prerequisites concurrently for a CS class with enforced prerequisites, what may happen at the instructor's request?</div>
+            <div class="qa-a">
+              <div>
+                <span class="qa-answer">They may be dropped</span>
+                <div class="qa-source">Source: <a href="https://eecs.berkeley.edu/resources/undergrads/cs/enrollment-policy/" target="_blank">eecs.berkeley.edu — Enrollment Policy</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="qa-card" data-cat="awards">
+            <div class="qa-q">Which EECS graduate student was awarded a 2025 Paul &amp; Daisy Soros Fellowship for New Americans?</div>
+            <div class="qa-a">
+              <div>
+                <span class="qa-answer">Syed Tahmid Mahbub</span>
+                <div class="qa-source">Source: <a href="https://eecs.berkeley.edu/news/graduate-student-syed-tahmid-mahbub-awarded-paul-daisy-soros-fellowship/" target="_blank">EECS News</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="qa-card" data-cat="policy">
+            <div class="qa-q">Can students who already hold another industry-sponsored full fellowship be considered for the Apple Masters Scholarship in Integrated Systems?</div>
+            <div class="qa-a">
+              <div>
+                <span class="qa-answer">No</span>
+                <div class="qa-source">Source: <a href="https://eecs.berkeley.edu/academics/graduate/fellowships/apple-ms-scholarship/" target="_blank">eecs.berkeley.edu — Apple MS Scholarship</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="qa-card" data-cat="research">
+            <div class="qa-q">How many research centers related to theory are listed on the Berkeley EECS Theory research area page?</div>
+            <div class="qa-a">
+              <div>
+                <span class="qa-answer">4</span>
+                <div class="qa-source">Source: <a href="https://www2.eecs.berkeley.edu/Research/Areas/THY/" target="_blank">www2.eecs.berkeley.edu/Research/Areas/THY</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="qa-card" data-cat="courses">
+            <div class="qa-q">How many CS courses are listed as open upper-division classes available to any UC Berkeley or visiting undergraduate students?</div>
+            <div class="qa-a">
+              <div>
+                <span class="qa-answer">2</span>
+                <div class="qa-source">Source: <a href="https://eecs.berkeley.edu/resources/undergrads/cs/enrollment-policy/" target="_blank">eecs.berkeley.edu — Enrollment Policy</a></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Trace example -->
+        <div style="margin-top:24px;">
+          <div style="font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.8px; color:var(--text-muted); margin-bottom:8px;">Pipeline Trace — Example Query</div>
+          <div class="trace-box">
+            <div class="step"><span class="step-num">1</span><span class="step-label">Input question</span><span class="step-val">"Where did Dan Klein get his PhD?"</span></div>
+            <div class="step"><span class="step-num">2</span><span class="step-label">HyDE expansion</span><span class="step-val purple">"Dan Klein received his PhD from Stanford University…"</span></div>
+            <div class="step"><span class="step-num">3</span><span class="step-label">Dense (BGE)</span><span class="step-val">Top 40 semantically similar chunks</span></div>
+            <div class="step"><span class="step-num">4</span><span class="step-label">Sparse (BM25)</span><span class="step-val orange">Top 40 exact-match chunks (name boost: +0.5)</span></div>
+            <div class="step"><span class="step-num">5</span><span class="step-label">RRF fusion</span><span class="step-val">Merge → 25 unique candidates</span></div>
+            <div class="step"><span class="step-num">6</span><span class="step-label">Cross-encoder</span><span class="step-val">Re-score → top k=20 passed to LLM</span></div>
+            <div class="step"><span class="step-num">7</span><span class="step-label">LLM generation</span><span class="step-val green">"Stanford University"</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ PERFORMANCE ═══════════════ -->
+  <section>
+    <h2>Performance</h2>
+    <div class="perf-grid" style="margin-bottom:24px;">
+      <div class="perf-card">
+        <div class="metric-name">F1 Score (Test Set)</div>
+        <div class="metric-val gold">61.0%</div>
+        <div class="progress-bar"><div class="progress-fill fill-gold" style="width:61%"></div></div>
+      </div>
+      <div class="perf-card">
+        <div class="metric-name">Retrieval Recall</div>
+        <div class="metric-val green">88%</div>
+        <div class="progress-bar"><div class="progress-fill fill-green" style="width:88%"></div></div>
+      </div>
+      <div class="perf-card">
+        <div class="metric-name">Dev Set F1 (BGE+HyDE)</div>
+        <div class="metric-val blue">62.66%</div>
+        <div class="progress-bar"><div class="progress-fill fill-blue" style="width:62.66%"></div></div>
+      </div>
+    </div>
+
+    <div style="margin-bottom:12px; font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.8px; color:var(--text-muted);">Ablation History</div>
+    <table class="ablation-table">
+      <thead>
+        <tr>
+          <th>Stage</th>
+          <th>Dev F1</th>
+          <th>Retrieval Recall</th>
+          <th>Key Change</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Baseline</td>
+          <td>47.18%</td>
+          <td>67%</td>
+          <td>Initial system, noisy corpus</td>
+        </tr>
+        <tr>
+          <td>Corpus Cleanup</td>
+          <td>59.21%</td>
+          <td>79%</td>
+          <td>LLM cleaner + deduplication</td>
+        </tr>
+        <tr>
+          <td>k Tuning + Strict Prompt</td>
+          <td>62.26%</td>
+          <td>80%</td>
+          <td>k=12, extractive-only prompt</td>
+        </tr>
+        <tr>
+          <td>BGE + HyDE (Final)</td>
+          <td class="highlight">62.66%</td>
+          <td class="highlight">88%</td>
+          <td>BGE-base-en-v1.5, HyDE query expansion</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ═══════════════ TECH STACK ═══════════════ -->
+  <section>
+    <h2>Tech Stack</h2>
+    <div class="stack-grid">
+      <div class="stack-item"><div class="stack-role">Embedding</div><div class="stack-name">BGE-base-en-v1.5</div></div>
+      <div class="stack-item"><div class="stack-role">Dense Index</div><div class="stack-name">FAISS (Flat L2)</div></div>
+      <div class="stack-item"><div class="stack-role">Sparse Index</div><div class="stack-name">BM25Okapi</div></div>
+      <div class="stack-item"><div class="stack-role">Re-ranker</div><div class="stack-name">ms-marco-MiniLM-L6</div></div>
+      <div class="stack-item"><div class="stack-role">LLM Generator</div><div class="stack-name">Llama 3.1 8B</div></div>
+      <div class="stack-item"><div class="stack-role">LLM API</div><div class="stack-name">OpenRouter</div></div>
+      <div class="stack-item"><div class="stack-role">Query Expansion</div><div class="stack-name">HyDE</div></div>
+      <div class="stack-item"><div class="stack-role">Fusion</div><div class="stack-name">RRF (Reciprocal Rank)</div></div>
+      <div class="stack-item"><div class="stack-role">Web Crawler</div><div class="stack-name">aiohttp + BS4</div></div>
+      <div class="stack-item"><div class="stack-role">ML Framework</div><div class="stack-name">sentence-transformers</div></div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  function filterCards(cat, el) {
+    document.querySelectorAll('#filterChips .chip').forEach(c => c.classList.remove('active'));
+    el.classList.add('active');
+    document.querySelectorAll('#qaCards .qa-card').forEach(card => {
+      card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+    });
+  }
+
+  // Animate progress bars on scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('.progress-fill').forEach(bar => {
+          bar.style.width = bar.style.width; // trigger reflow
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.perf-card').forEach(c => observer.observe(c));
+</script>
+
+</body>
+</html>
